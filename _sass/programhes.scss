@@ -29,7 +29,7 @@ html[data-theme="dark"] {
 */
 
 html[data-theme="dark"] {
-    --bold-color: #D0C7ED;
+    --bold-color: #BFC0C2;
     --box-background-color: hsl(0, 0%, 20%);
     --highlight-color: hsl(0, 0%, 60%);
     --light-border-color: hsl(0, 0%, 30%);
@@ -37,7 +37,7 @@ html[data-theme="dark"] {
     --link-color: #D9653B;
     --link-color-visited: hsl(250, 100%, 60%);
     --main-background-color: #131421;
-    --main-text-color: rgb(139, 139, 139);
+    --main-text-color: #A3A3A1;
     --second-text-color: #444A73;
     --transparent-text-color: rgba(139, 139, 139, .44);
     --medium-text-color: hsl(0, 0%, 70%);
@@ -75,7 +75,7 @@ html[data-theme="light"] {
      /* Dark Mode */
     html,
     html[data-theme="dark"] {
-        --bold-color: #C8D3F5;
+        --bold-color: #BFC0C2;
         --box-background-color: hsl(0, 0%, 20%);
         --highlight-color: hsl(0, 0%, 60%);
         --light-border-color: hsl(0, 0%, 30%);
@@ -83,10 +83,9 @@ html[data-theme="light"] {
         --link-color: #D9653B;
         --nav-color: #131313;
         --search-color: #FF7901;
-        --nav-link-color: rgba(255, 255, 255, .5);
         --link-color-visited: hsl(250, 100%, 60%);
         --main-background-color: #131421;
-        --main-text-color: rgb(139, 139, 139);
+        --main-text-color: #A3A3A1;
         --second-text-color: #444A73;
         --transparent-text-color: rgba(139, 139, 139, .44);
         --medium-text-color: hsl(0, 0%, 70%);
@@ -243,8 +242,8 @@ a{
     margin-top: 10px !important;
 }
 .card {
-    //margin: 20px !important;
-    //padding: 20px !important;
+    margin: 20px !important;
+    padding: 20px !important;
     background-color: var(--card-background-color) !important;
 }
 
@@ -667,8 +666,8 @@ span.navigation {
 
 
 .company-logo {
-    width: 100px;
-    height: 100px;
+    width: 80%;
+    //height: 100px;
 }
 
 .author-profile-img {
@@ -921,8 +920,11 @@ span.navigation {
     height: 100%;
 }
 
-.listfeaturedtag .card {
+.listfeaturedtag .card,
+.card-group .card {
     height: auto;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .listfeaturedtag .wrapfooter {

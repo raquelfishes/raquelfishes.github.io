@@ -130,13 +130,15 @@ I understand that sometimes footer links or any links to external websites are n
 
 ## Style Palette
 
-#### Dark
-
-## Syntax Palette
+#### Dark Style
 
 | Scope                     | Color                                              | HEX     | RGB                |
 | ------------------------- | -------------------------------------------------- | ------- | ------------------ |
 | Main Background           | ![#131421](https://placehold.it/35/131421/?text=+) | #131421 | rgb(19, 20, 33)    |
 | Head & Footer Background  | ![#191A2A](https://placehold.it/35/191A2A/?text=+) | #191A2A | rgb(25, 26, 42)    |
 | Card Background           | ![#1E2030](https://placehold.it/35/1E2030/?text=+) | #1E2030 | rgb(30, 32, 48)    |
-| Bold Color                | ![#D0C7ED](https://placehold.it/35/D0C7ED/?text=+) | #D0C7ED | rgb(208, 199, 237) |
+| Title Color               | ![#BFC0C2](https://placehold.it/35/BFC0C2/?text=+) | #BFC0C2 | rgb(191, 192, 194) |
+| Text Color                | ![#A3A3A1](https://placehold.it/35/A3A3A1/?text=+) | #A3A3A1 | rgb(163, 163, 161) |
+
+
+#### Light Style
