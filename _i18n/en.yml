@@ -57,3 +57,13 @@ author_education_details:
   - college_name: UCM
     college_degree: Computer Engineer
     description: Computer Science Degree
+
+
+#############
+# Blog page
+#############
+featured: Featured
+all_stories: All stories
+editor_pic: Editor's Pick
+recent: Most recent
+popular: Popular

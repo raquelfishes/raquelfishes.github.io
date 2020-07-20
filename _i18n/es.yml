@@ -59,3 +59,13 @@ author_education_details:
   - college_name: UCM
     college_degree: Ingeniería Informática
     description: Licenciatura en Ingeniería Superior Informática
+
+
+#############
+# Blog page
+#############
+featured: Es tendencia
+all_stories: Todas las historias
+editor_pic: Selección
+recent: Más reciente
+popular: Popular

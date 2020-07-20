@@ -18,7 +18,7 @@
     {% elsif page == 1 %}
       <span class="ml-1 mr-1"><a href="{{ paginator.previous_page_path | prepend: site.baseurl_root | replace: '//', '/' }}">{{ page }}</a></span>
     {% else %}
-      <span class="ml-1 mr-1"><a href="{{  site.paginate_path | prepend: site.baseurl_root | replace: '//', '/' }}">{{ page }}</a></span>
+      <span class="ml-1 mr-1"><a href="{{  site.paginate_path | prepend: site.baseurl_root | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></span>
     {% endif %}
   {% endfor %}
 
