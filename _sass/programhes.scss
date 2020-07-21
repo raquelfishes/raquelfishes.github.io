@@ -324,13 +324,14 @@ a{
 /* Contact page */
 .contact {
     background-image: url(../img/dots_map.png);
+    opacity: .5;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
 }
 
 .contact .card{
-    opacity: .7;
+    opacity: .9;
 }
 
 /*
@@ -1071,6 +1072,17 @@ section.recent-posts {
 }
 
 
+.wrapthumbnail:hover img, 
+.maxthumb:hover img {
+    transform: scale(1.2);
+}
+.wrapthumbnail img, 
+.maxthumb img {
+    transition: .3s;
+}
+
+
+
 /* Override bootstrap */
 .mb-30px {
     margin-bottom: 30px;
@@ -1252,7 +1264,6 @@ ul.tags li a:hover {
     margin-left: 0;
     font-size: 0.9rem;
 }
-
 
 .article-post blockquote {
     border-left: 4px solid var( --blockquote-color );
