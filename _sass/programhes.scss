@@ -320,6 +320,19 @@ a{
     background-color: var(--main-background-color);
     text-decoration: none;
 }
+
+/* Contact page */
+.contact {
+    background-image: url(../img/dots_map.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact .card{
+    opacity: .7;
+}
+
 /*
 .pagination {
     display: -ms-flexbox;
