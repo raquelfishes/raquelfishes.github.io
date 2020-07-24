@@ -123,14 +123,38 @@ I understand that sometimes footer links or any links to external websites are n
 
 
 
+### programhes-jekyll - A Cool Jekyll Theme
+
+
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+
+The Theme supports Light and Dark style with a custom switch. Highly Customizable and No Hosting or Maintainence Cost is required!
+The Theme also support multiple languages for texts and blog posts. This is a key feature!
 
 
 
+### Demo (Hosted Apps)
+
+- Github Pages Demo - [here](https://raquelfishes.github.io)
 
 
-## Style Palette
+#### Features :
 
-#### Dark Style
+- CMS Admin Support using [Jekyll Admin](https://jekyll.github.io/jekyll-admin/)
+- Supports Latest [Jekyll 4.x](https://jekyllrb.com) and [Bundler](https://bundler.io)
+- Stylesheet built using Sass
+- Comments using [Hyvor](https://talk.hyvor.com/) and [Disqus](https://disqus.com/)
+- Google SEO and Analytics Optimized
+- Send Newsletters using [Mailchimp](https://mailchimp.com/)
+- Contact Forms using [Formspree](https://formspree.io/)
+- Coding Activity using [Wakatime](https://wakatime.com/)
+- Hosting Support for [Github Pages](https://pages.github.com)
+- Multiple Languages thanks to [jekyll-multiple-languages-plugin](https://github.com/kurtsson/jekyll-multiple-languages-plugin)
+
+
+##### Style Palette
+
+###### Dark Style
 
 | Scope                     | Color                                              | HEX     | RGB                |
 | ------------------------- | -------------------------------------------------- | ------- | ------------------ |
@@ -141,4 +165,42 @@ I understand that sometimes footer links or any links to external websites are n
 | Text Color                | ![#A3A3A1](https://placehold.it/35/A3A3A1/?text=+) | #A3A3A1 | rgb(163, 163, 161) |
 
 
-#### Light Style
+###### Light Style
+
+
+
+## Release Changes :
+
+You can check out the latest changes [here](https://www.buymeacoffee.com/raquelfishes)
+
+
+
+## Contributors:
+
+I created this project for my personal site.
+
+Contributions are more than just welcome. Fork this repo and create a new branch, then submit a pull request
+
+- 1.Fork it [http://github.com/raquelfishes/programhes-jekyll/fork](http://github.com/raquelfishes/programhes-jekyll/fork )
+
+- 2.Create your feature branch
+`git checkout -b my-new-feature`
+
+- 3.Commit your changes
+`git commit -am 'Add some feature'`
+
+- 4.Push to the branch
+`git push origin my-new-feature`
+
+- 5.Create new Pull Request
+
+
+### For Help :
+
+You can contact me, if you need any help via [Email](mailto:raquelpm23@gmail.com). If you like the project. Don't forget to :star: !
+
+## Licence
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT). You can do anything you want, including projects for your clients, as long as you mention an attribution back (credit links in footer). See the [Licence](https://github.com/raquelfishes/programhes-jekyll/blob/master/LICENSE) file
+
+I understand that sometimes footer links or any links to external websites are not convenient, so you have the option to remove credits/footer links by buying me a coffee to help me at [Backer](https://www.buymeacoffee.com/raquelfishes).

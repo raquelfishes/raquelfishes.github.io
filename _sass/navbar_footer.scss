@@ -13,7 +13,7 @@ html[data-theme="dark"] {
 
 html[data-theme="dark"] {
     --header-background-color: #191A2A;
-    --nav-link-color: #BF6D65;
+    --nav-link-color:#BFC0C2;
     --footer-background-color:#191A2A;
     --footer-text-color:#A39593;
 }
@@ -31,7 +31,7 @@ html[data-theme="light"] {
     html,
     html[data-theme="dark"] {
         --header-background-color: #191A2A;
-        --nav-link-color: #BF6D65;
+        --nav-link-color: #BFC0C2;
         --footer-background-color:#191A2A;
         --footer-text-color:#A39593;
     }
