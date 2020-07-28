@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "devlopr"
-  spec.version       = "0.4.5"
-  spec.authors       = ["Sujay Kundu"]
-  spec.email         = ["sujaykundu777@gmail.com"]
+  spec.name          = "programhes"
+  spec.version       = "1.0.0"
+  spec.authors       = ["Raquel Peces"]
+  spec.email         = ["raquelpm23@gmail.com"]
 
-  spec.summary       = %q{ A Jekyll Theme built for developers }
-  spec.homepage      = "https://github.com/sujaykundu777/devlopr-jekyll"
+  spec.summary       = %q{ A Multi-Language Jekyll theme built for Programmers }
+  spec.homepage      = "https://github.com/raquelfishes/programhes-jekyll"
   spec.license       = "MIT"
 
   spec.metadata["plugin_type"] = "theme"
@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
     f.match(%r{^(assets|categories|tags|_(includes|layouts|sass)/|(LICENSE|README)((\.(txt|md|markdown)|$)))}i)
   end
 
-  spec.add_runtime_dependency "jekyll", ">= 3.5", "< 5.0"
+  spec.add_runtime_dependency "jekyll", ">= 4.0", "< 5.0"
   spec.add_runtime_dependency "jekyll-sitemap", '~> 1.4.0'
   spec.add_runtime_dependency "jekyll-feed", '~> 0.13.0'
   spec.add_runtime_dependency "jekyll-seo-tag", '~> 2.6.1'
