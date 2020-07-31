@@ -1,11 +1,9 @@
 source "https://rubygems.org"
 
-#gem 'jekyll', '~> 4.0'
-gem 'bundler'
-gem 'kramdown'
-#gem 'rack-jekyll'
-gem 'rake'
-gem 'puma'
+#gem 'jekyll', '~> 4.0.0'
+gem 'bundler', '~> 2.1.4'
+gem 'kramdown', '~> 1.17.0'
+gem 'rake', '~> 13.0'
 
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -14,19 +12,17 @@ gem "github-pages", group: :jekyll_plugins
 
 # Plugins
 group :jekyll_plugins do
-    gem 'devlopr'
-    gem 'jgd'
-    gem 'jekyll-feed'
-    gem 'jekyll-paginate'
-    gem 'jekyll-gist'
-    gem 'jekyll-seo-tag'
-    gem 'jekyll-sitemap'
-    gem 'jekyll-menus'
-    gem 'jekyll-admin'
-    gem 'jekyll-multiple-languages-plugin'   
-
-    gem 'jekyll-archives'
-    gem 'rouge'
+    #gem 'programhes' // WIP: Creating custom gem
+    gem 'jekyll-admin', '~> 0.10.2'
+    gem 'jekyll-archives', '~> 2.2.1'
+    gem 'jekyll-feed', '~> 0.13.0'
+    gem 'jekyll-gist', '~> 1.5.0'
+    gem 'jekyll-multiple-languages-plugin', '~> 1.7.0'
+    gem 'jekyll-paginate', '~> 1.1.0'
+    gem 'jekyll-seo-tag', '~> 2.6.1'
+    gem 'jekyll-sitemap', '~> 1.4.0'
+    gem 'jgd', '~> 1.12'
+    gem 'rouge', "~> 3.19.0"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

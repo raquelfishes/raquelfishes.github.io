@@ -20,7 +20,7 @@ footer: true
     <!-- ========== Featured ========== -->
     <section class="featured-posts">
       <div class="section-title">
-          <h2><span>Featured</span></h2>
+          <h2><span>{% translate featured %}</span></h2>
       </div>
       <div class="row">
         {% for post in site.posts %}
@@ -34,7 +34,7 @@ footer: true
     <!-- ========== Posts Index ========== -->
     <section class="recent-posts">
       <div class="section-title">
-          <h2><span>All Stories</span></h2>
+          <h2><span>{% translate all_stories %}</span></h2>
       </div>
 
       <div class="row listrecent">
@@ -61,7 +61,7 @@ footer: true
 	<div class="d-md-flex h-100">
 		<div class="col-md-4 transpdark align-self-center text-center h-100">
       <div class="d-md-flex align-items-center justify-content-center h-100">
-          <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+          <h2 class="d-md-block align-self-center py-1 font-weight-light">{% translate blog_explore %} <span class="d-none d-md-inline">→</span></h2>
       </div>
 		</div>
 		<div class="col-md-8 p-5 align-self-center text-center">
