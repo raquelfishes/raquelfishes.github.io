@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "¡Crea tu web gratis con Github Pages!"
-summary: Cómo crear tu pagina web gratis con Github Pages, la forma más rápida y fácil de crear tu blog o web.
+title:  "Create your free website with Github Pages!"
+summary: How to create a website for free with Github Pages, the unbelievably quic and easy way for creating and publishing a free blog or website.
 author: Raquel Peces
 date: '2020-08-08 14:35:23 +0530'
 category: 
@@ -11,14 +11,14 @@ thumbnail: /assets/img/posts/ghpages.png
 image: /assets/img/posts/ghpages.png
 ---
 <blockquote>
-<p>Github Pages permite convertir cualquier repositorio en una página web con solo un par de clicks.</p>
+<p>Github Pages allows to turn any repository on Github into a website with a couple of clicks.</p>
 </blockquote>
 
-Si estás buscando un lugar en el que crear tu portfolio con proyectos personales o de trabajo, o si quieres crear tu blog o web de empresa y no sabes por donde empezar, quizá este sea tu sitio. Es probable que no quieras pagar por un servicio de hosting, dominio y todo lo que implica tener tu web "en el aire". 
+If you need an online portfolio of your personal and work projects. If you want to create your blog or business site and don't know how to start. If you don't wnat to deal o pay for website hosting, domain names and all everything else to launch or website
 
-Entonces este post es para ti.
+This one's for you!
 
-### ¿Por qué debería tener una web?
+### Why should I have a website?
 
 La verdad es que en el mundo en el que vivimos, es difícil imaginar que podría no beneficiarte de tener tu propia web. Puedes querer mostrar tu portfolio a futuras empresas o como freelance. Mostrar tus proyectos de estudiante y compartirlos con la comunidad universitaria Puedes querer tener tu propio blog donde contar los lugares que te gustan o qué estás haciendo. También puedes querer hacer publicidad o compartir tu negocio y abrirte a la venta online...
 
