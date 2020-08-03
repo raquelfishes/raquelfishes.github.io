@@ -20,55 +20,56 @@ This one's for you!
 
 ### Why should I have a website?
 
-La verdad es que en el mundo en el que vivimos, es difícil imaginar que podría no beneficiarte de tener tu propia web. Puedes querer mostrar tu portfolio a futuras empresas o como freelance. Mostrar tus proyectos de estudiante y compartirlos con la comunidad universitaria Puedes querer tener tu propio blog donde contar los lugares que te gustan o qué estás haciendo. También puedes querer hacer publicidad o compartir tu negocio y abrirte a la venta online...
+Nowadays, it's really hard to imagine anyone who wouldn't benefit from having his own website. You might need to display your portfolio for potential employers or as a freelance. You might need to display your student proyects and share it with all the University Community. You might create your own blog about places you've been or what you're doing. You might need to advertise yourself or your business and open your own shop online...
 
-Una página web es el modo de conectarte con el mundo y una gran herramienta de comunicación. Es el modo de crear, construir y controlar tu imagen online. Además cuanto menos tiempo gastes en consstruir esa web, más tiempo tendrás para construir tu imagen y llegar a la gente que te interesa. Una web, puede ayudarte a alcanzar y superar a tus competidores.
+A website is the play to connect yourself with the world and the best communication tool. It's how you can create, build and control your online image. Plus, the sooner you build your place, the more time you'll have to build your online presence and reach the people you want to reach. It can help you stand out in of competitors.
 
-Y, todos sabemos que no es lo más sencillo de crear si no sabes lo que estás haciendo.
+And, we all know that it's also not the easiest thing if you don't know what you're doing!
 
-Si estás empezando a informarte sobre como crear tu propia web, seguro que has oído hablar de algunas de las opciones mas sencillas, por un lado está Wordpress, pero yo quiero presentarte a Github.
+If you are a beginner, surely you have heard about some simplest options. The main one is Wordpress, but I want to introduce to Github.
 
-Wordpress es la herramienta para principiantes por excelencia, para los que sólo quieren configurar algunos parámetros y escribir. Es una gran herramienta para las personas que quieren una web rápida sin tener ningún conocimiento técnico. El problema con Wordpress es que su plan gratuito no te deja configurar prácticamente nada. Es demasiado obvio que estamos usando Wordpress en nuestra página, tienes el logo de wordpress en todas las páginas, la direccion acaba con wordpress.com y las plantillas y personalización es mínima.
+Wordpress is the excelence beginners tool! You only have to configure some parameters and start writing. It's great for those who want to create a site fast and without any technical knowledge. The main problem with Wordpress is that you can't configure almost nothing with the free plan. It's too obvius that you are using Wordpress, you have to use Wordpress logo, your domain has wordpress.com and customization and templates are minimal.
 
-Si eres una persona un poco técnica seguro que conocerás Github como gestor de repositorio de código. Si eres una persona técnica que le gusta programar y tener sus proyectos en un mismo sitio seguro que tienes una cuenta de Github, con al menos un proyecto.
-Lo que puede que no conozcas es la funcionalidad de Github Pages, por qué no crear tu web en Github y alojarla directamente ahí, en tu repositorio, sin necesitar nada más.
+If you are a begginer tech person, you will know Github like a code repository for sure. If you are in tech world and love to program, for sure you will have a Github account with at least one project. But maybe you don't know about Github Pages functionality. You can create your web in Github and host it directly there, in your code repository, and needing no more.
 
-Si quieres mantener el código de tu web en secreto, quizá este artículo debería acabar aquí para ti. Si por el contrario te gusta colaborar con la filosofía de Código Libre y ayudar e inspirar a todos los que vengan detrás de ti. Esa es la gran idea de Github, compartir tu conocimiento y trabajo. Cuando tu compartes tus proyectos en Github, la gente puede ver tu código, ver qué haces y cómo lo haces, e incluso sugerirte mejoras. Sería la gran biblioteca del código hoy en día. 
-La mayoría de las personas técnicas ya usan Git y/o Github de algún modo. Tener tu web en el mismo sitio es un plus, y además ayudará a subir las contribuciones en tu perfil =)
+If you are really jealous of your code, or want to keep your site code in secret, this article might end it here for you. Putting your code on Github shows that you like contributing to open source philosophy. You can help and inspire everyone who cames after with your ideas. That's the big Githup idea, share knowledge and work. When you share your proects on Github, people can see your code, what you're doing, how you're doing, they can suggest some improvements or features. It's like the Alexandria library of code nowadays.
+retty much everyone in tech right now is using Git and Github in some way. Having your website right there is a plus, and it will sind up with a repository and some commints on your profile page =)
 
-Si eres totalmente nuevo a todo lo que estoy contando, quizá deberías echar un vistazo a "Comenzar con Git y Github: Guía completa para novatos" En ese artículo puedes aprender lo básico de Git y Github, conceptos como "repositorio" o "rama". De aquí en adelante asumiré que conoces lo básico.
+If you're a total brand new to everything Git and Github, you might want to check my previous post "Getting Started with Git and GitHub: the total beginner's guide". That article will show you the basics of Git and Github, concepts like "repository" or "branch". 
+
+From now on I'm assuming that you know the basics.
 
 
-### Empecemos con nuestra web
+### Let's start with my web!
 
-Hay dos modos de empezar tu página web. Puede que comiences totalmente desde cero, no tienes nada, ni index.hmtl. O puedes tener una web o plantilla html ya creada, pero no sabes como subirla a Github y así poder tenerla online de forma gratuita.
+There are two ways of getting started with your website. You might be starting completely from scratch! You don't have anything, neither index.html file. On the other hand you might have a website that you've already design and put together, but you don't know how to use Github to launch it as a free website.
 
-### Ya tengo los ficheros de mi web, pero no sé qué hacer con ellos
+### I have my website files, but I don't know what to do with them!
 
-Este es el caso más sencillo. Github hace todo el trabajo por ti. Asumiendo que ya tienes una cuenta de Github y que sabes lo que es un repositorio, sino, deberías echar un vistazo a mi anterior artículo sobre como empezar con Git y Github.
+This is the simplest case. Github will make all the work for you. Asumming that you already have a Github account and you know what a respository is, if not, you should check my previous article about how to start with Git and Github.
 
-Digamos que nuestro repositorio será como el cascarón de un huevo, es donde nuestro proyecto vivie. Ahí puedes organizarlo por carpetas, añadir imagenes, videos, cualquier cosa que tu proyecto necesite puede estar en el repositorio.
+A repository is like a eggshell, where your project will live. That is the place where you'll keep your folders, add images, videos and anything else your project needs in your repository.
 
-Si todavía no lo has hecho, inicializa tu proyecto con un repositorio, o puedes crear un repositorio y añadir tus ficheros. Si en el directorio raíz ya tienes un fichero llamado `index.html` Github sabrá perfectamente qué hacer.
+If you haven't already, go ahead and initialize your project with a repository, or create a new repository and upload all your files. If you have a file called `index.html` Github will understand what you wnat to do.
 
-Ahora vas a aprender a aprovecharte de Github Pages. Tienes que ir a tu repositorio de Github y hacer click en `Settings`
+Now you're going to learn about taking advange of Github Pages. Go to your Github repository and click `Settings`
 ![github settings](/assets/img/posts/gh_settings.png){:class="img-fluid"}
 
-Una vez que estamos en la página de configuración hay que hacer scroll en la página hacia abajo hasta llegar a la seccion de `Github Pages`
+Once we are at settings page, you have to make scroll down until the `Github Pages` section.
 ![github pages](/assets/img/posts/gh_settings_pages.png){:class="img-fluid"}
 
-Ahora desplega el menú de `Source` y selecciona la opción de `Master branch`. Esto hará que nuestra página tome como rama para mostrar nuestra página principal la rama master del repositorio, que sería como la rama principal por defecto del repositorio.
+Now drop the `Source` dropdown menu and select `Master branch` option. This will make that our website take the home page the master branch of our reository, it's pretty much publish your repositori as-is.
 ![github pages source](/assets/img/posts/gh_settings_pages_source.png){:class="img-fluid"}
 
-En este caso verás una notificacion como que tu sitio está listo para ser publicado.
+You are going to see a notification that your site is ready to be published.
 ![github publishing](/assets/img/posts/gh_settings_publishing.png){:class="img-fluid"}
 
-Sé paciente, puede tomar un par de minutos, entonces refresca la página y verás que la notificación ha cambiado y te dice que tu página ya ha sido publicada con la direccion web en la que podrás ver tu página.
+Be patient, wait a minute or two, and then refresh the page or try the link if you wante. Once your site has been published, the notification has changed, your site has been published, you'll see this:
 ![github published](/assets/img/posts/gh_settings_published.png){:class="img-fluid"}
 
-Prueba a hacer click en el link y ¡MAGIA!
+Try clicking on that link and MAGIC!
 
-¡¡Ya tienes tu web gratis publicada!!
+You have a published free website!
 
 
 ### No sé ni por donde empezar
