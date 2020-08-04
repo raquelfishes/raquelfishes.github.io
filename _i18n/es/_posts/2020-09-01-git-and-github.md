@@ -3,7 +3,7 @@ layout: post
 title:  ""
 summary: Cómo empezar con Git y Github, la guía completa para principiantes.
 author: Raquel Peces
-date: '2020-08-08 14:35:23 +0530'
+date: '2020-09-01 14:35:23 +0530'
 category: 
         - git
         - github

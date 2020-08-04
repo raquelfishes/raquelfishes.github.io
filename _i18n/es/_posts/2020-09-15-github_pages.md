@@ -3,7 +3,7 @@ layout: post
 title:  "¡Crea tu web gratis con Github Pages!"
 summary: Cómo crear tu pagina web gratis con Github Pages, la forma más rápida y fácil de crear tu blog o web.
 author: Raquel Peces
-date: '2020-08-08 14:35:23 +0530'
+date: '2020-09-15 14:35:23 +0530'
 category: 
         - jekyll
         - github pages
@@ -20,7 +20,7 @@ Entonces este post es para ti.
 
 ### ¿Por qué debería tener una web?
 
-La verdad es que en el mundo en el que vivimos, es difícil imaginar que podría no beneficiarte de tener tu propia web. Puedes querer mostrar tu portfolio a futuras empresas o como freelance. Mostrar tus proyectos de estudiante y compartirlos con la comunidad universitaria Puedes querer tener tu propio blog donde contar los lugares que te gustan o qué estás haciendo. También puedes querer hacer publicidad o compartir tu negocio y abrirte a la venta online...
+La verdad es que en el mundo en el que vivimos, es difícil imaginar que podría no beneficiarte de tener tu propia web. Puedes querer mostrar tu portfolio a futuras empresas o como freelance. Mostrar tus proyectos de estudiante y compartirlos con la comunidad universitaria. Puedes querer tener tu propio blog donde contar los lugares que te gustan o qué estás haciendo. También puedes querer hacer publicidad o compartir tu negocio y abrirte a la venta online...
 
 Una página web es el modo de conectarte con el mundo y una gran herramienta de comunicación. Es el modo de crear, construir y controlar tu imagen online. Además cuanto menos tiempo gastes en consstruir esa web, más tiempo tendrás para construir tu imagen y llegar a la gente que te interesa. Una web, puede ayudarte a alcanzar y superar a tus competidores.
 
@@ -104,7 +104,7 @@ Ahora haz click en el link y podrás ver tu página.
 
 ### ¿Pero esto no es un poco feo?
 
-Te doy la razón, esta web es un poco bastante fea, si vuelves a tu repositorio podrás er que lo que se está mostrando es lo que hay en tu fichero `README.md`.
+Te doy la razón, esta web es un poco bastante fea, si vuelves a tu repositorio podrás ver que lo que se está mostrando es lo que hay en tu fichero `README.md`.
 ![github readme](/assets/img/posts/gh_readme.png){:class="img-fluid"}
 
 Si quieres hacer algunos cambios, puedes ir a la parte de arriba y editar tu fichero, para editar lo que quieres que la gente vea. Para hacer esto, vuelve al repositorio, haz click en el icono del lapiz que puedes encontrar en el fichero README y modíficalo a tu antojo.
@@ -113,7 +113,7 @@ Si quieres hacer algunos cambios, puedes ir a la parte de arriba y editar tu fic
 Ten en cuenta que estás modificando un fichero de tipo Markdown. Si no sabes mucho sobre este formato, puedes dirigirte a este [enlace](https://www.markdownguide.org/getting-started/) para ver la de opciones que te ofrece.
 
 
-Este tipo de ficheros es en realidad un lenguaje de programación, este post está escrito en formato Markdown, donde puedes añadir el formato de los elementos mientras escribes en texto plano. Incluye funcionalidades para añadir texto, lins, imágenes, colores e incluso formato de código. Aquí puedes encontrar la [Guía Gásica de la sintaxis de Markdown](https://www.markdownguide.org/basic-syntax/)
+Este tipo de ficheros es en realidad un lenguaje de programación, este post está escrito en formato Markdown, donde puedes añadir el formato de los elementos mientras escribes en texto plano. Incluye funcionalidades para añadir texto, links, imágenes, colores e incluso formato de código. Aquí puedes encontrar la [Guía Gásica de la sintaxis de Markdown](https://www.markdownguide.org/basic-syntax/)
 
 ¡Ahora vuelve a tu web, y comprueba como queda con los últimos cambios!
 ![github web2](/assets/img/posts/gh_basic_web2.png){:class="img-fluid"}
@@ -126,4 +126,5 @@ Ten en cuenta que a veces puede tomar varios minutos hasta que los cambios apare
 Pues sí, sí se puede hacer mejor, a partir de aquí se pone interesante. Pero eso lo explicaré en otro post en el que os presentare Jekyll, framework con el que he creado yo esta página.
 Mientras espero que este tutorial os haya servido para abrir el apetito.
 
+¡Gracias por leer!
 =)

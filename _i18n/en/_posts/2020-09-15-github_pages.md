@@ -3,7 +3,7 @@ layout: post
 title:  "Create your free website with Github Pages!"
 summary: How to create a website for free with Github Pages, the unbelievably quic and easy way for creating and publishing a free blog or website.
 author: Raquel Peces
-date: '2020-08-08 14:35:23 +0530'
+date: '2020-09-15 14:35:23 +0530'
 category: 
         - jekyll
         - github pages
@@ -72,59 +72,61 @@ Try clicking on that link and MAGIC!
 You have a published free website!
 
 
-### No sé ni por donde empezar
+### I don't know how to get started!
 
-No voy a explicar como hacer una web, ni las diferentes librerias de diseño que puedes usar, sino que me voy a enfocar en lo básico.
-Prefiero que conozcas como crear algo de cero usando la herramienta que estoy presentando aquí y que con todo el tiempo que dispongas y las ganas que le pongas explores todo este mundo de diseño y programación web. Lo que voy a explicar aquí es como si eres totalmente nuevo crear una web en Github Pages.
-Lo primero vamos a crear un repositorio
+I'm not gonna explain how to create a website, neither all design librarys you can use, this is the basics.
+I prefer that you know how to create something from zero with the tool that I'm introducing here and then, with all your time and motivation available explore all this new world. This option is for total beginners, I'm going to show how to do everything on the Github to create a website.
+
+Well, go ahead and first thing, create a new repository.
 ![github repository](/assets/img/posts/gh_new_repo.png){:class="img-fluid"}
 
-Rellena los datos de tu repositorio, nombre, descripcion y selecciona la opción de inicializiar el repositorio con un README `Initialize this repository with a README` y entonces dile que lo cree `Create repository`
+Fill in with all your repository data: name, descripcion and select the option to initialize the repository with a README `Initialize this repository with a README` and then click `Create repository`
 ![github create](/assets/img/posts/gh_create_repo.png){:class="img-fluid"}
 
-Ahora al igual que en la sección anterior tienes que ir a `Settings`, cerca de la parte alta de la página al lado derecho de la pantalla
+Now, the same as previous section, you have to go to `Settings` section, near the top right-hand side of the screen.
 ![github settings](/assets/img/posts/gh_settings.png){:class="img-fluid"}
 
-Una vez que estés aquí, haz scroll en la página hacia abajo hasta llegar a la sección de `Github Pages`
+Once you are here, scroll down to `Github Pages` section.
 ![github pages](/assets/img/posts/gh_settings_pages.png){:class="img-fluid"}
 
-Ahora desplega el menú de `Source` y selecciona la opción de `Master branch`. Esto hará que nuestra página tome como rama para mostrar nuestra página principal la rama master del repositorio, que sería como la rama principal por defecto del repositorio.
+Drop the dropdown `Source` menu and select `Master branch` option.
 ![github pages source](/assets/img/posts/gh_settings_pages_source.png){:class="img-fluid"}
 
-En este caso verás una notificacion como que tu sitio está listo para ser publicado.
+First, you will see a notification like your site is ready to be published.
 ![github publishing](/assets/img/posts/gh_settings_publishing.png){:class="img-fluid"}
 
-Sé paciente, puede tomar un par de minutos, entonces refresca la página y verás que la notificación ha cambiado y te dice que tu página ya ha sido publicada con la direccion web en la que podrás ver tu página.
+Please, be patient, this might take some minutes, then refresh the page and you will see like notification has changed and show that your site has been published with the web domain where you could visit your web.
 ![github published](/assets/img/posts/gh_settings_published.png){:class="img-fluid"}
 
-Ahora haz click en el link y podrás ver tu página.
+Now click in the link:
 ![github web](/assets/img/posts/gh_basic_web.png){:class="img-fluid"}
 
-¡Enhorabuena! ¡Ya estás online!
+Congratulations! You are online!
 
 
-### ¿Pero esto no es un poco feo?
+### But, this is really ugly.
 
-Te doy la razón, esta web es un poco bastante fea, si vuelves a tu repositorio podrás er que lo que se está mostrando es lo que hay en tu fichero `README.md`.
+Oks, you are right, this website is really ugly and boring. If you come back to your repository, you can see that what is showing is your `README.md` file.
 ![github readme](/assets/img/posts/gh_readme.png){:class="img-fluid"}
 
-Si quieres hacer algunos cambios, puedes ir a la parte de arriba y editar tu fichero, para editar lo que quieres que la gente vea. Para hacer esto, vuelve al repositorio, haz click en el icono del lapiz que puedes encontrar en el fichero README y modíficalo a tu antojo.
+If you want to make some quick changes, you can go ahead and edit your file to display what you want people to see. To do that, go back into your repository, click the little pencil icon in your README file and make it better!
 ![github edit readme](/assets/img/posts/gh_edit_readme.png){:class="img-fluid"}
 
-Ten en cuenta que estás modificando un fichero de tipo Markdown. Si no sabes mucho sobre este formato, puedes dirigirte a este [enlace](https://www.markdownguide.org/getting-started/) para ver la de opciones que te ofrece.
+Keep in mind that you are editing a Markdown file. If you don't know about this format, visit the [Markdown Getting Started Official Site](https://www.markdownguide.org/getting-started/) for anyone who hasn't worked with it before.
 
+This kind of files are a programming languate, this post is written in Markdown format, where you can add element formats writting plain text. There are a lot of things that you can add to with this files, like adding images, colors, links or even programming code.
+If you are curious about this format, explore the [Basic Syntax Markdown Guide](https://www.markdownguide.org/basic-syntax/)
 
-Este tipo de ficheros es en realidad un lenguaje de programación, este post está escrito en formato Markdown, donde puedes añadir el formato de los elementos mientras escribes en texto plano. Incluye funcionalidades para añadir texto, lins, imágenes, colores e incluso formato de código. Aquí puedes encontrar la [Guía Gásica de la sintaxis de Markdown](https://www.markdownguide.org/basic-syntax/)
-
-¡Ahora vuelve a tu web, y comprueba como queda con los últimos cambios!
+Now go back to your web domain, and see how it looks the last changes!
 ![github web2](/assets/img/posts/gh_basic_web2.png){:class="img-fluid"}
 
-Ten en cuenta que a veces puede tomar varios minutos hasta que los cambios aparecen en la web publicada. También puedes tener algunos problemas con la cache de tu navegador, borrar la cache del navegador o abrir el enlace en un navegador con sesión oculta puede ayudar a ver los cambios antes.
+Be aware that sometimes takes a few minutes for the changes to go through your published web. Try waiting a couple of minutes and refreshing. You can also have to delete your browser cache or open the link in a privacy browser sesion to see before all the changes.
 
 
-### ¿No se puede hacer nada mejor?
+### That is an improvement, can it get better?
 
-Pues sí, sí se puede hacer mejor, a partir de aquí se pone interesante. Pero eso lo explicaré en otro post en el que os presentare Jekyll, framework con el que he creado yo esta página.
-Mientras espero que este tutorial os haya servido para abrir el apetito.
+Yes, it can get really better, this is the point where everything start to get interesting. But, I'm going to explain it in a new post where I will introduce Jekyll, the framework wich I used to create this website.
+I hope this tutorial has helping to whet your appetite.
 
+Thanks for reading!
 =)
