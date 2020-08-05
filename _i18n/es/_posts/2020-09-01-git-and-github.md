@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  ""
-summary: Cómo empezar con Git y Github, la guía completa para principiantes.
+title:  "Cómo empezar con Git y Github: guía completa para principiantes."
+summary: .
 author: Raquel Peces
 date: '2020-09-01 14:35:23 +0530'
 category: 
