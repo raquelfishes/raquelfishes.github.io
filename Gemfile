@@ -13,7 +13,7 @@ gem "github-pages", group: :jekyll_plugins
 # Plugins
 group :jekyll_plugins do
     #gem 'programhes' // WIP: Creating custom gem
-    gem 'jekyll-admin', '~> 0.10.2'
+    #gem 'jekyll-admin', '~> 0.10.2' // Create dependency with rack~>1.5, vulnerability dependency
     gem 'jekyll-archives', '~> 2.2.1'
     gem 'jekyll-feed', '~> 0.13.0'
     gem 'jekyll-gist', '~> 1.5.0'
