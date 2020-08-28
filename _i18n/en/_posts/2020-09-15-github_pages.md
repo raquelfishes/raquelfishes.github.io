@@ -39,6 +39,8 @@ If you're a total brand new to everything Git and Github, you might want to chec
 
 From now on I'm assuming that you know the basics.
 
+So, there we go!
+
 
 ### Let's start with my web!
 
