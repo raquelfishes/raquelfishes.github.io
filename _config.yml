@@ -52,7 +52,7 @@ typewrite_loop: true
 typewrite_loopCount: Infinity
 typewrite_cursorChar: '|'
 
-
+# Work experiences
 author_work_experiences:
             - company_name: Next Limit
               company_logo: nextlimit.webp
@@ -63,6 +63,7 @@ author_work_experiences:
               company_url: https://ilion.com
               visibility: true
 
+# Education experiences
 author_education_details:
               - college_logo: urjc.webp
                 college_name: URJC
@@ -73,7 +74,7 @@ author_education_details:
                 college_url: https://ucm.es
                 visibility: true
 
-                
+# Project experiences       
 # author_project_details:
 #               - project_thumbnail: gamershub.png
 #                 project_title: Gamers Hub
@@ -125,6 +126,9 @@ google_analytics: UA-166953347-1
 adsense: "disabled"
 adsense-data-ad-client: "ca-pub-3412143450191416"
 adsense-data-ad-slot: "1363087678"
+
+# Reading time
+read_speed: 180.0
 
 # Choose what to show ( can be true or false)
 show_author_work_experiences: true

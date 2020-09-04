@@ -2,13 +2,13 @@
 layout: post
 title:  "Cómo empezar con Git y Github: guía completa para principiantes."
 summary: .
-author: Raquel Peces
+author: Raquel
 date: '2020-09-01 14:35:23 +0530'
 category: 
         - git
         - github
-thumbnail: /assets/img/posts/git.png
-image: /assets/img/posts/git.png
+thumbnail: assets/img/posts/git_github.png
+image: assets/img/posts/git_github.png
 ---
 
 <blockquote>
@@ -28,4 +28,6 @@ Este artículo es un repaso por todo lo básico. Hay mucho trabajo más allá pa
 Así que, ¡allá vamos!
 
 ### ¿Qué es Git? ¿Qué es Github? 
+
+Git es el software de control de versiones utilizado por prácticamente todo el mundo a día de hoy, desde desarrolladores hasta diseñadores. Github es la plataforma para alojar el código más utilizada en la actualidad. Se trata de una plataforma social donde puedes seguir y leer código de casi cualquier programador, probar y descubrir nuevas tecnologías. Es un lugar donde aprender y colaborar. Puedes almacenar tu
 

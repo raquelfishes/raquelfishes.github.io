@@ -34,10 +34,10 @@ authors:
     twitter: https://twitter.com/wowthemesnet
     description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
   raquel:
-    name: Raquel Peces
+    name: Raquel
     display_name: Raquel Peces
     avatar: 'assets/images/avatar.png'
-    gravatar: b1cc14991db7a456fcd761680bbc8f81
+    gravatar: 
     email: testing@gmail.com
     web: https://raquelfishes.github.io
     twitter: https://twitter.com/raquelfishes
