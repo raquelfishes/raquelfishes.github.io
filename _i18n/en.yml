@@ -69,3 +69,12 @@ recent: Most recent
 popular: Popular
 blog_explore: Explore
 
+# Blog authors description
+authors:
+  sal:
+    description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
+  john:
+    description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
+  raquel:
+    description: "Author of this site."
+

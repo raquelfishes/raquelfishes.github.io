@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Multiples Idiomas para Jekyll y Github Pages!"
-author: Raquel
+author: raquel
 date: '2020-08-13 14:35:23 +0530'
 category: 
         - jekyll

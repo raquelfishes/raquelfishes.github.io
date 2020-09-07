@@ -2,7 +2,7 @@
 layout: post
 title:  "Medio año de teletrabajo: ¿es el futuro?"
 description: Da igual que te guste o no, esta temporada .
-author: Raquel
+author: raquel
 date: '2020-09-01 14:35:23 +0530'
 category: 
         - opinion

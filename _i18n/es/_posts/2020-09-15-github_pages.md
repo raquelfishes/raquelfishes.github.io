@@ -2,7 +2,7 @@
 layout: post
 title:  "¡Crea tu web gratis con Github Pages!"
 summary: Cómo crear tu pagina web gratis con Github Pages, la forma más rápida y fácil de crear tu blog o web.
-author: Raquel Peces
+author: raquel
 date: '2020-09-15 14:35:23 +0530'
 category: 
         - jekyll

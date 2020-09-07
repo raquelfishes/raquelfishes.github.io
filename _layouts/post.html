@@ -44,13 +44,26 @@ post_class: post-template
                     </div>
                     <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
                         <a target="_blank" class="link-dark" href="{{ author.web }}">{{ author.display_name }}</a><a target="_blank" href="{{ author.twitter }}" class="btn follow">Follow</a>
-                        <span class="author-description">{{ author.description }}</span>
+                        {% assign translated_author = site.translations[site.lang]["authors"][page.author] %}
+                        <span class="author-description">{{ translated_author.description }}</span>
                     </div>
                 </div>
                 {% endif %}
 
                 <!-- Post Title -->
                 <h1 class="posttitle">{{ page.title }}</h1>
+
+                <!-- Date and reading time -->
+                <!-- Post Date -->
+              <p>
+                <small>
+                  <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
+                  {% if page.last_modified_at %}
+                  (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
+                  {% endif %}
+                  <span class=post-date> · {{ page.content | number_of_words | divided_by:site.read_speed | ceil }} mins</span>
+                </small>
+              </p>
 
             </div>
 
