@@ -9,8 +9,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 include: ["_pages"]
 
 ### Multi-Language config
-#languages: ["es", "en"]
-languages: ["es"]
+languages: ["es", "en"]
+#languages: ["es"]
 default_lang: "es"
 exclude_from_localizations: ["assets", "gallery", "_sass"]
 
@@ -122,10 +122,10 @@ permalink: pretty
 # google analytics
 google_analytics: UA-166953347-1
 
-# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
-adsense: "disabled"
+# Adsense (change to "enabled"/"disabled" to activate/deactivate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "enabled"
 adsense-data-ad-client: "ca-pub-3685282497834778"
-adsense-data-ad-slot: "1363087678"
+adsense-data-ad-slot: ""
 
 # Reading time
 read_speed: 180.0
