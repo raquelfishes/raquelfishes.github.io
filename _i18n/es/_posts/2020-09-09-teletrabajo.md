@@ -15,4 +15,7 @@ image: assets/img/posts/telework_6months.jpg
 Muchos de nosotros en estos meses nos hemos enfrentado a esa realidad conocida como teletrabajo.
 Puede que la apoyaramos, o que prefiriesemos el trabajo de oficina. Puede que nos haya dado facilidades pero también hemos perdido contacto social y otros beneficios. Puede que te haya permitido desarrollar todas tus funciones al 100% o más, o por el contrario veas que hay tareas que no puedes realizar desde tu casa.
 Son muchas las variantes y los matices que este modelo de trabajo puede tener, y los puntos de vista subjetivos de una medida, cuanto menos a debate.
+Yo no soy una experta en el campo, ni en psicología, pero sí que siempre he sido su defensora y ahora quiero hacer su evaluación. 
+
+Así que, ¡allá vamos!
 
