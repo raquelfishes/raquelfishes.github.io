@@ -29,5 +29,5 @@ Así que, ¡allá vamos!
 
 ### ¿Qué es Git? ¿Qué es Github? 
 
-Git es el software de control de versiones utilizado por prácticamente todo el mundo a día de hoy, desde desarrolladores hasta diseñadores. Github es la plataforma para alojar el código más utilizada en la actualidad. Se trata de una plataforma social donde puedes seguir y leer código de casi cualquier programador, probar y descubrir nuevas tecnologías. Es un lugar donde aprender y colaborar. Puedes almacenar tu
+Git es el software de control de versiones utilizado por prácticamente todo el mundo a día de hoy, desde desarrolladores hasta diseñadores. Github es la plataforma para alojar el código más utilizada en la actualidad. Se trata de una plataforma social donde puedes seguir y leer código de casi cualquier programador, probar y descubrir nuevas tecnologías. Es un lugar donde aprender y colaborar. Puedes almacenar tu código de tus proyectos o de la universidad, y también puedes 
 

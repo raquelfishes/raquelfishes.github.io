@@ -40,7 +40,7 @@
                 <span class="author-meta">
                 <span class="post-name"><a target="_blank" href="{{ author.web }}">{{ author.display_name }}</a></span><br/>
                 {% endif %}
-                <span class="post-date">{{ post.date | date_to_string }} · {{ post.content | number_of_words | divided_by:site.read_speed | ceil }} mins <i class="fab fa-star"></i></span>
+                <span class="post-date">{{ post.date | date_to_string }} · {{ post.content | number_of_words | divided_by:site.read_speed | ceil }} mins <i class="fas fa-star"></i></span>
                 </span>
                 
                 <span class="post-read-more">
