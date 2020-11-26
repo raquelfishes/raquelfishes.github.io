@@ -2,7 +2,7 @@
 layout: post
 title:  "Create your website for free with Github Pages!"
 summary: How to create a website with Github Pages, the unbelievably quick and easy way for creating and publishing a free blog or website.
-author: Raquel Peces
+author: raquel
 date: '2020-09-15 14:35:23 +0530'
 category: 
         - jekyll
