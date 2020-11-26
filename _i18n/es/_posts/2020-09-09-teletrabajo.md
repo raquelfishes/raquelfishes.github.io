@@ -5,6 +5,7 @@ description: Da igual que te guste o no, esta temporada .
 author: raquel
 categories: [ opinion ]
 image: assets/img/posts/telework_6months.jpg
+hidden: true
 ---
 
 <blockquote>

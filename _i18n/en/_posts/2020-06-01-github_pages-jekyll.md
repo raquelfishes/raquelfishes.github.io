@@ -7,6 +7,7 @@ category:
         - jekyll
         - github pages
 thumbnail: /assets/img/posts/ghpages_jekyll.png
+hidden: true
 ---
 
 

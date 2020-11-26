@@ -10,4 +10,5 @@ category:
         - seo
 thumbnail: /assets/img/posts/jekyll_seo.jpg
 image: assets/img/posts/jekyll_seo.jpg
+hidden: true
 ---

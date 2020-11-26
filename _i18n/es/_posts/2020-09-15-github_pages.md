@@ -7,8 +7,8 @@ date: '2020-09-15 14:35:23 +0530'
 category: 
         - jekyll
         - github pages
-thumbnail: /assets/img/posts/ghpages.png
-image: /assets/img/posts/ghpages.png
+image: assets/img/posts/ghpages.jpg
+featured: true
 ---
 <blockquote>
 <p>Github Pages permite convertir cualquier repositorio en una página web con solo un par de clicks.</p>

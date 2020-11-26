@@ -6,6 +6,7 @@ author: raquel
 date: '2020-09-15 14:35:23 +0530'
 categories: [ jekyll, github pages ]
 image: /assets/img/posts/ghpages_jekyll.png
+hidden: true
 ---
 
 <blockquote>

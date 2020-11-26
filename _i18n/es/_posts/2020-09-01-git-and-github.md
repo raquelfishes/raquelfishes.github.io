@@ -9,6 +9,7 @@ category:
         - github
 thumbnail: assets/img/posts/git_github.png
 image: assets/img/posts/git_github.png
+hidden: true
 ---
 
 <blockquote>
