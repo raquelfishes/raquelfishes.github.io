@@ -52,19 +52,19 @@ Digamos que nuestro repositorio será como el cascarón de un huevo, es donde nu
 Si todavía no lo has hecho, inicializa tu proyecto con un repositorio, o puedes crear un repositorio y añadir tus ficheros. Si en el directorio raíz ya tienes un fichero llamado `index.html` Github sabrá perfectamente qué hacer.
 
 Ahora vas a aprender a aprovecharte de Github Pages. Tienes que ir a tu repositorio de Github y hacer click en `Settings`
-![github settings](/assets/img/posts/gh_settings.png){:class="img-fluid"}
+![github settings](/assets/img/posts/ghpages/gh_settings.png){:class="img-fluid"}
 
 Una vez que estamos en la página de configuración hay que hacer scroll en la página hacia abajo hasta llegar a la seccion de `Github Pages`
-![github pages](/assets/img/posts/gh_settings_pages.png){:class="img-fluid"}
+![github pages](/assets/img/posts/ghpages/gh_settings_pages.png){:class="img-fluid"}
 
 Ahora desplega el menú de `Source` y selecciona la opción de `Master branch`. Esto hará que nuestra página tome como rama para mostrar nuestra página principal la rama master del repositorio, que sería como la rama principal por defecto del repositorio.
-![github pages source](/assets/img/posts/gh_settings_pages_source.png){:class="img-fluid"}
+![github pages source](/assets/img/posts/ghpages/gh_settings_pages_source.png){:class="img-fluid"}
 
 En este caso verás una notificacion como que tu sitio está listo para ser publicado.
-![github publishing](/assets/img/posts/gh_settings_publishing.png){:class="img-fluid"}
+![github publishing](/assets/img/posts/ghpages/gh_settings_publishing.png){:class="img-fluid"}
 
 Sé paciente, puede tomar un par de minutos, entonces refresca la página y verás que la notificación ha cambiado y te dice que tu página ya ha sido publicada con la direccion web en la que podrás ver tu página.
-![github published](/assets/img/posts/gh_settings_published.png){:class="img-fluid"}
+![github published](/assets/img/posts/ghpages/gh_settings_published.png){:class="img-fluid"}
 
 Prueba a hacer click en el link y ¡MAGIA!
 
@@ -76,28 +76,28 @@ Prueba a hacer click en el link y ¡MAGIA!
 No voy a explicar como hacer una web, ni las diferentes librerias de diseño que puedes usar, sino que me voy a enfocar en lo básico.
 Prefiero que conozcas como crear algo de cero usando la herramienta que estoy presentando aquí y que con todo el tiempo que dispongas y las ganas que le pongas explores todo este mundo de diseño y programación web. Lo que voy a explicar aquí es como si eres totalmente nuevo crear una web en Github Pages.
 Lo primero vamos a crear un repositorio
-![github repository](/assets/img/posts/gh_new_repo.png){:class="img-fluid"}
+![github repository](/assets/img/posts/ghpages/gh_new_repo.png){:class="img-fluid"}
 
 Rellena los datos de tu repositorio, nombre, descripcion y selecciona la opción de inicializiar el repositorio con un README `Initialize this repository with a README` y entonces dile que lo cree `Create repository`
-![github create](/assets/img/posts/gh_create_repo.png){:class="img-fluid"}
+![github create](/assets/img/posts/ghpages/gh_create_repo.png){:class="img-fluid"}
 
 Ahora al igual que en la sección anterior tienes que ir a `Settings`, cerca de la parte alta de la página al lado derecho de la pantalla
-![github settings](/assets/img/posts/gh_settings.png){:class="img-fluid"}
+![github settings](/assets/img/posts/ghpages/gh_settings.png){:class="img-fluid"}
 
 Una vez que estés aquí, haz scroll en la página hacia abajo hasta llegar a la sección de `Github Pages`
-![github pages](/assets/img/posts/gh_settings_pages.png){:class="img-fluid"}
+![github pages](/assets/img/posts/ghpages/gh_settings_pages.png){:class="img-fluid"}
 
 Ahora desplega el menú de `Source` y selecciona la opción de `Master branch`. Esto hará que nuestra página tome como rama para mostrar nuestra página principal la rama master del repositorio, que sería como la rama principal por defecto del repositorio.
-![github pages source](/assets/img/posts/gh_settings_pages_source.png){:class="img-fluid"}
+![github pages source](/assets/img/posts/ghpages/gh_settings_pages_source.png){:class="img-fluid"}
 
 En este caso verás una notificacion como que tu sitio está listo para ser publicado.
-![github publishing](/assets/img/posts/gh_settings_publishing.png){:class="img-fluid"}
+![github publishing](/assets/img/posts/ghpages/gh_settings_publishing.png){:class="img-fluid"}
 
 Sé paciente, puede tomar un par de minutos, entonces refresca la página y verás que la notificación ha cambiado y te dice que tu página ya ha sido publicada con la direccion web en la que podrás ver tu página.
-![github published](/assets/img/posts/gh_settings_published.png){:class="img-fluid"}
+![github published](/assets/img/posts/ghpages/gh_settings_published.png){:class="img-fluid"}
 
 Ahora haz click en el link y podrás ver tu página.
-![github web](/assets/img/posts/gh_basic_web.png){:class="img-fluid"}
+![github web](/assets/img/posts/ghpages/gh_basic_web.png){:class="img-fluid"}
 
 ¡Enhorabuena! ¡Ya estás online!
 
@@ -105,10 +105,13 @@ Ahora haz click en el link y podrás ver tu página.
 ### ¿Pero esto no es un poco feo?
 
 Te doy la razón, esta web es un poco bastante fea, si vuelves a tu repositorio podrás ver que lo que se está mostrando es lo que hay en tu fichero `README.md`.
-![github readme](/assets/img/posts/gh_readme.png){:class="img-fluid"}
+![github readme](/assets/img/posts/ghpages/gh_readme.png){:class="img-fluid"}
 
 Si quieres hacer algunos cambios, puedes ir a la parte de arriba y editar tu fichero, para editar lo que quieres que la gente vea. Para hacer esto, vuelve al repositorio, haz click en el icono del lapiz que puedes encontrar en el fichero README y modíficalo a tu antojo.
-![github edit readme](/assets/img/posts/gh_edit_readme.png){:class="img-fluid"}
+![github edit readme](/assets/img/posts/ghpages/gh_edit_readme.png){:class="img-fluid"}
+
+Una vez que hayas acabado de modificar el fichero README, no te olvides de hacer commit del archivo. Si no lo haces perderás todo el trabajo. Aquí también puedes añadir un pequeño mensaje de commit para explicar los cambios que has hecho.
+![github commit readme](/assets/img/posts/ghpages/gh_commit_readme.png){:class="img-fluid"}
 
 Ten en cuenta que estás modificando un fichero de tipo Markdown. Si no sabes mucho sobre este formato, puedes dirigirte a este [enlace](https://www.markdownguide.org/getting-started/) para ver la de opciones que te ofrece.
 
@@ -116,7 +119,7 @@ Ten en cuenta que estás modificando un fichero de tipo Markdown. Si no sabes mu
 Este tipo de ficheros es en realidad un lenguaje de programación, este post está escrito en formato Markdown, donde puedes añadir el formato de los elementos mientras escribes en texto plano. Incluye funcionalidades para añadir texto, links, imágenes, colores e incluso formato de código. Aquí puedes encontrar la [Guía Gásica de la sintaxis de Markdown](https://www.markdownguide.org/basic-syntax/)
 
 ¡Ahora vuelve a tu web, y comprueba como queda con los últimos cambios!
-![github web2](/assets/img/posts/gh_basic_web2.png){:class="img-fluid"}
+![github web2](/assets/img/posts/ghpages/gh_basic_web2.png){:class="img-fluid"}
 
 Ten en cuenta que a veces puede tomar varios minutos hasta que los cambios aparecen en la web publicada. También puedes tener algunos problemas con la cache de tu navegador, borrar la cache del navegador o abrir el enlace en un navegador con sesión oculta puede ayudar a ver los cambios antes.
 
