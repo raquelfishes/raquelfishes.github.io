@@ -9,13 +9,13 @@ category:
 image: assets/img/posts/jekyll_multilingual.jpg
 featured: true
 ---
-In this post, I will explain how to add multi-languages to your Jekyll template in [Github Pages](github_pages).
-To apply the multilingual feature, It is better to use some plugin, but Github does not support any other plugins with itself other than a few basic plugins for security reasons, you can find the supported plugins [here](jekyll_allowed_plugins). So we can have our page working locally, but throwing errors in the Github build process.
+In this post, I will explain how to add multi-languages to your Jekyll template in [Github Pages][github_pages].
+To apply the multilingual feature, It is better to use some plugin, but Github does not support any other plugins with itself other than a few basic plugins for security reasons, you can find the supported plugins [here][jekyll_allowed_plugins]. So we can have our page working locally, but throwing errors in the Github build process.
 It might help us skip the build process of Github to push pages that have been generated on your local environment to the repository `master` branch, we can still control the versions of your Jekyll project by creating a new branch for you projects to be pushed.
 
 ## Installing jekyll-multiple-laguages plug-in
 
-There are several ways to install [jekyll-multiple-languages](jekyll_multile_languages). If you need more info, you will find the full documentation in their project repository. They are looking for more maintainers!!!
+There are several ways to install [jekyll-multiple-languages][jekyll_multile_languages]. If you need more info, you will find the full documentation in their project repository. They are looking for more maintainers!!!
 
 ### Using Ruby gem
 
