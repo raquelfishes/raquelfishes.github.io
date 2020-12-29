@@ -15,7 +15,7 @@ Para añadir esta funcionalidad a nuestra web lo mejor es usar uno de los plugin
 
 ## jekyll-multiple-laguages plug-in
 
-Hay varios modos de instalar el plugin [jekyll-multiple-languages](jekyll_multile_languages). Si necesitáis más información podeis dirigiros al repositorio del proyecto. ¡Buscan colaboradores!
+Hay varios modos de instalar el plugin [jekyll-multiple-languages](jekyll_multiple_languages). Si necesitáis más información podeis dirigiros al repositorio del proyecto. ¡Buscan colaboradores!
 
 ### Usando una gema de Ruby
 
@@ -276,4 +276,4 @@ Espero que este artículo así como su correspondiente también en inglés ayude
 
 [github_pages]: https://pages.github.com/
 [jekyll_allowed_plugins]: https://pages.github.com/versions/
-[jekyll_multile_languages]: https://github.com/kurtsson/jekyll-multiple-languages-plugin
+[jekyll_multiple_languages]: https://github.com/kurtsson/jekyll-multiple-languages-plugin
