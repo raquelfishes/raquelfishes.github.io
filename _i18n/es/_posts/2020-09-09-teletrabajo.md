@@ -5,6 +5,7 @@ description: Da igual que te guste o no, esta temporada .
 author: raquel
 categories: [ opinion ]
 image: assets/img/posts/telework_6months.jpg
+hidden: true
 ---
 
 <blockquote>
@@ -18,4 +19,7 @@ Son muchas las variantes y los matices que este modelo de trabajo puede tener, y
 Yo no soy una experta en el campo, ni en psicología, pero sí que siempre he sido su defensora y ahora quiero hacer su evaluación. 
 
 Así que, ¡allá vamos!
+
+¿Qué he experimentado en todo este tiempo?
+
 

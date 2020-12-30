@@ -29,12 +29,50 @@ Pero primero...
 ### ¿Qué es Jekyll?
 
 Jekyll es un generador para sitios web estáticos, es decir, el sitio se sube al repositorio tal cual es y se muestra igual a todos los usuarios. Es muy simple de utilizar y tiene capacidades para crear un blog. Muy adecuado para sitios web personales, proyectos u organizaciones. 
-Jekyll fue escrito en lenguaje Ruby por Tom Preston-Werner en 2008, el cofundador de Github y es por esto por lo que la integración con la plataforma es muy buena. Además se trata de un proyecto de software libre, puesto que se distribuye bajo la licencia MIT.
+Jekyll fue escrito en lenguaje Ruby por Tom Preston-Werner en 2008, el cofundador de Github y es por esto por lo que la integración con la plataforma es muy buena. Además se trata de un proyecto de software libre, puesto que se distribuye bajo la licencia [MIT](mit_license).
 En lugar de usar bases de datos, Jekyll coge el texto escrito en los formatos Markdown o Liquid y usa el layout para generar el sitio web. Aunque te parezca que la palabra estático te va a suponer un problema para escalar tu web, en el fondo Jekyll es muy flexible y admite contextos frontend como Bootstrap, semantic y mucho más.
 Si quieres saber un poco más, te recomiendo que le eches un vistazo a su [web oficial](jekyll_site)
 
+### Ya sé lo que és, vamos a continuar
+
+Si ya has realizado la primera parte del tutorial y has seguido los pasos sobre cómo [Crear tu web gratis con Github Pages](github_pages_post) o ya tienes tu web creada.
+
+Ve a "GitHub Pages", sección "Settings" y haz click en "Choose a theme."
+![github choose theme](/assets/img/posts/ghpages/gh_choose_theme.jpg){:class="img-fluid"}
+
+Ahí podrás ver una selección de temas, puedes escoger el que más te guste:
+![github themes](/assets/img/posts/ghpages/gh_themes.jpg){:class="img-fluid"}
+
+Veamos como queda nuestra antigua web, seleccionando una de las plantillas, para ello, elige la que más te guste y haz click en "Select theme":
+![github select theme](/assets/img/posts/ghpages/gh_select_theme.jpg){:class="img-fluid"}
+
+Y con solo unos clicks de esfuerzo, y un tiempo para que se actualice, ¡ya tenemos algo mucho mejor!
+![github new web](/assets/img/posts/ghpages/gh_web_jekyll.jpg){:class="img-fluid"}
+
+Con esto puedes crear tu propia web para tu negocio, blog o portfolio, el cual estaría alojado en un repositorio de Github, y estaría online totalmente gratis. ¡Ya tienes tu ventana al mundo!
+
+### ¿Y ahora qué?
+
+Si te fijas en los ficheros de tu repositorio, podrás ver que ha aparecido uno de ellos llamado `_config.yml`. Aquí tienes toda la información del tema y su configuración. Si quieres puedes echarle un ojo y ver todas las opciones que puedes añadir ahí.
+![github config](/assets/img/posts/ghpages/gh_config_yml.jpg){:class="img-fluid"}
+
+Hay muchos temas que puedes probar, uno de ellos para empezar, y de los más simples es [Jekyll Now](jekyll_now) con un blog ya pre-configurado.
+Si te arrepientes de haber añadido un tema y quieres dejar tu web tal y como estaba, siempre puedes eliminar el fichero de configuración.
+Puedes probar los temas que hay en github o descargar y comprar de otros sitios, como de la propia página de [temas de Jekyll para Github](jekyll_github_themes)
+
+### Esto es sólo el principio
+
+Jekyll no sólo te sirve para ponerle un tema y ya está, al igual que WordPress tiene multitud de temas y plugins para ampliar su funcionalidad con los que podras añadir y hacer una web tan completa como en la que estas leyendo esto. Como en todo, el límite eres tú y tu tiempo.
+
+Ahora, ¡a divertirse!
+
+¡Gracias por leer!
+=)
 
 
 
-
+[mit_license]: https://opensource.org/licenses/MIT
 [jekyll_site]: https://jekyllrb.com/
+[github_pages_post]: {% post_url 2020-09-15-github_pages %}
+[jekyll_now]: https://www.jekyllnow.com/
+[jekyll_github_themes]: https://jekyllthemes.io/github-pages-themes

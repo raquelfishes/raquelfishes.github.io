@@ -2,13 +2,13 @@
 layout: post
 title:  "Create your website for free with Github Pages!"
 summary: How to create a website with Github Pages, the unbelievably quick and easy way for creating and publishing a free blog or website.
-author: Raquel Peces
+author: raquel
 date: '2020-09-15 14:35:23 +0530'
 category: 
         - jekyll
         - github pages
-thumbnail: /assets/img/posts/ghpages.png
-image: /assets/img/posts/ghpages.png
+image: assets/img/posts/ghpages.jpg
+featured: true
 ---
 <blockquote>
 <p>Github Pages allows to turn any repository on Github into a website with a couple of clicks.</p>
@@ -55,19 +55,19 @@ A repository is like a eggshell, where your project will live. That is the place
 If you haven't already, go ahead and initialize your project with a repository, or create a new repository and upload all your files. If you have a file called `index.html` Github will understand what you wnat to do.
 
 Now you're going to learn about taking advange of Github Pages. Go to your Github repository and click `Settings`
-![github settings](/assets/img/posts/gh_settings.png){:class="img-fluid"}
+![github settings](/assets/img/posts/ghpages/gh_settings.png){:class="img-fluid"}
 
 Once we are at settings page, you have to make scroll down until the `Github Pages` section.
-![github pages](/assets/img/posts/gh_settings_pages.png){:class="img-fluid"}
+![github pages](/assets/img/posts/ghpages/gh_settings_pages.png){:class="img-fluid"}
 
 Now drop the `Source` dropdown menu and select `Master branch` option. This will make that our website take the home page the master branch of our reository, it's pretty much publish your repositori as-is.
-![github pages source](/assets/img/posts/gh_settings_pages_source.png){:class="img-fluid"}
+![github pages source](/assets/img/posts/ghpages/gh_settings_pages_source.png){:class="img-fluid"}
 
 You are going to see a notification that your site is ready to be published.
-![github publishing](/assets/img/posts/gh_settings_publishing.png){:class="img-fluid"}
+![github publishing](/assets/img/posts/ghpages/gh_settings_publishing.png){:class="img-fluid"}
 
 Be patient, wait a minute or two, and then refresh the page or try the link if you wante. Once your site has been published, the notification has changed, your site has been published, you'll see this:
-![github published](/assets/img/posts/gh_settings_published.png){:class="img-fluid"}
+![github published](/assets/img/posts/ghpages/gh_settings_published.png){:class="img-fluid"}
 
 Try clicking on that link and MAGIC!
 
@@ -80,28 +80,28 @@ I'm not gonna explain how to create a website, neither all design librarys you c
 I prefer that you know how to create something from zero with the tool that I'm introducing here and then, with all your time and motivation available explore all this new world. This option is for total beginners, I'm going to show how to do everything on the Github to create a website.
 
 Well, go ahead and first thing, create a new repository.
-![github repository](/assets/img/posts/gh_new_repo.png){:class="img-fluid"}
+![github repository](/assets/img/posts/ghpages/gh_new_repo.png){:class="img-fluid"}
 
 Fill in with all your repository data: name, descripcion and select the option to initialize the repository with a README `Initialize this repository with a README` and then click `Create repository`
-![github create](/assets/img/posts/gh_create_repo.png){:class="img-fluid"}
+![github create](/assets/img/posts/ghpages/gh_create_repo.png){:class="img-fluid"}
 
 Now, the same as previous section, you have to go to `Settings` section, near the top right-hand side of the screen.
-![github settings](/assets/img/posts/gh_settings.png){:class="img-fluid"}
+![github settings](/assets/img/posts/ghpages/gh_settings.png){:class="img-fluid"}
 
 Once you are here, scroll down to `Github Pages` section.
-![github pages](/assets/img/posts/gh_settings_pages.png){:class="img-fluid"}
+![github pages](/assets/img/posts/ghpages/gh_settings_pages.png){:class="img-fluid"}
 
 Drop the dropdown `Source` menu and select `Master branch` option.
-![github pages source](/assets/img/posts/gh_settings_pages_source.png){:class="img-fluid"}
+![github pages source](/assets/img/posts/ghpages/gh_settings_pages_source.png){:class="img-fluid"}
 
 First, you will see a notification like your site is ready to be published.
-![github publishing](/assets/img/posts/gh_settings_publishing.png){:class="img-fluid"}
+![github publishing](/assets/img/posts/ghpages/gh_settings_publishing.png){:class="img-fluid"}
 
 Please, be patient, this might take some minutes, then refresh the page and you will see like notification has changed and show that your site has been published with the web domain where you could visit your web.
-![github published](/assets/img/posts/gh_settings_published.png){:class="img-fluid"}
+![github published](/assets/img/posts/ghpages/gh_settings_published.png){:class="img-fluid"}
 
 Now click in the link:
-![github web](/assets/img/posts/gh_basic_web.png){:class="img-fluid"}
+![github web](/assets/img/posts/ghpages/gh_basic_web.png){:class="img-fluid"}
 
 Congratulations! You are online!
 
@@ -109,10 +109,13 @@ Congratulations! You are online!
 ### But, this is really ugly.
 
 Oks, you are right, this website is really ugly and boring. If you come back to your repository, you can see that what is showing is your `README.md` file.
-![github readme](/assets/img/posts/gh_readme.png){:class="img-fluid"}
+![github readme](/assets/img/posts/ghpages/gh_readme.png){:class="img-fluid"}
 
 If you want to make some quick changes, you can go ahead and edit your file to display what you want people to see. To do that, go back into your repository, click the little pencil icon in your README file and make it better!
-![github edit readme](/assets/img/posts/gh_edit_readme.png){:class="img-fluid"}
+![github edit readme](/assets/img/posts/ghpages/gh_edit_readme.png){:class="img-fluid"}
+
+Don't forget to commit your README file changes! If you don't do that, you will loose all the work. You can also add a short commit message explaining all the changes.
+![github commit readme](/assets/img/posts/ghpages/gh_commit_readme.png){:class="img-fluid"}
 
 Keep in mind that you are editing a Markdown file. If you don't know about this format, visit the [Markdown Getting Started Official Site](https://www.markdownguide.org/getting-started/) for anyone who hasn't worked with it before.
 
@@ -120,7 +123,7 @@ This kind of files are a programming languate, this post is written in Markdown 
 If you are curious about this format, explore the [Basic Syntax Markdown Guide](https://www.markdownguide.org/basic-syntax/)
 
 Now go back to your web domain, and see how it looks the last changes!
-![github web2](/assets/img/posts/gh_basic_web2.png){:class="img-fluid"}
+![github web2](/assets/img/posts/ghpages/gh_basic_web2.png){:class="img-fluid"}
 
 Be aware that sometimes takes a few minutes for the changes to go through your published web. Try waiting a couple of minutes and refreshing. You can also have to delete your browser cache or open the link in a privacy browser sesion to see before all the changes.
 
