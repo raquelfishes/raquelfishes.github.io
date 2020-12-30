@@ -133,5 +133,7 @@ Be aware that sometimes takes a few minutes for the changes to go through your p
 Yes, it can get really better, this is the point where everything start to get interesting. But, I'm going to explain it in a new post where I will introduce Jekyll, the framework wich I used to create this website.
 I hope this tutorial has helping to whet your appetite.
 
+Now, have fun!
+
 Thanks for reading!
 =)

@@ -10,61 +10,62 @@ thumbnail: /assets/img/posts/ghpages_jekyll.png
 hidden: true
 ---
 <blockquote>
-<p>Jekyll hace lo que se le dice que haga, ni más, ni menos. No intenta suplantar a los usuarios con suposiciones atrevidas, ni les agobia con complejidad y configuración innecesaria. Dicho de forma simple, se aparta de tu camino y te permite concentrarte en aquello que realmente importa: su contenido.</p>
+<p>Jekyll does what you tell it to do — no more, no less. It doesn't try to outsmart users by making bold assumptions, nor does it burden them with needless complexity and configuration. Put simply, Jekyll gets out of your way and allows you to concentrate on what truly matters: your content.</p>
 </blockquote>
 
-Si ya tienes creada tu web en Github Pages pero no quieres o no sabes mucho de CSS, pero quieres mejorar la apariencia visual de tu web, ¡puedes probar un tema de Jekyll! 
-Este artículo es una continuación de otro anterior para [crear tu web gratis con Github Pages]({{site.url}}{{site.baseurl_root}}{% post_url 2020-09-15-github_pages %}). Dónde explico como crear tu página personal, usando un repositorio.
+You have created your site at Github Pages, but you are a beginner in CSS or don't want to worry about that, but you want a more visual appeal, try a Jekyll theme!
+This article continues a previous one to [create your website for free with Github Pages]({{site.url}}{{site.baseurl_root}}{% post_url 2020-09-15-github_pages %}). There you can learn about creating your personal site using a repository.
 
-Así que, ¡allá vamos!
+So, there we go!
 
-### Ya tengo mi web, pero como hacerla más interesante
+### I have my site, but it could be more interesting
 
-Existen temas creados que puedes usar para hacer que tu página tenga una mejor apariencia con muy poco esfuerzo. ¡Jekyll y Github harán todo el trabajo por ti! Tú simplemente tendrás que pulsar un par de botones.
+There are prebuilt themes that can be used to make your site look a little better with any effort. Jekyll and Github will do all the work for you! Your job is to push a couple of clicks.
 
-Pero primero...
+But first...
 
-### ¿Qué es Jekyll?
+### What is Jekyll?
 
-Jekyll es un generador para sitios web estáticos, es decir, el sitio se sube al repositorio tal cual es y se muestra igual a todos los usuarios. Es muy simple de utilizar y tiene capacidades para crear un blog. Muy adecuado para sitios web personales, proyectos u organizaciones. 
-Jekyll fue escrito en lenguaje Ruby por Tom Preston-Werner en 2008, el cofundador de Github y es por esto por lo que la integración con la plataforma es muy buena. Además se trata de un proyecto de software libre, puesto que se distribuye bajo la licencia [MIT](mit_license).
-En lugar de usar bases de datos, Jekyll coge el texto escrito en los formatos Markdown o Liquid y usa el layout para generar el sitio web. Aunque te parezca que la palabra estático te va a suponer un problema para escalar tu web, en el fondo Jekyll es muy flexible y admite contextos frontend como Bootstrap, semantic y mucho más.
-Si quieres saber un poco más, te recomiendo que le eches un vistazo a su [web oficial](jekyll_site) o a la documentacion de [Github Pages y Jekyll](github_pages_jekyll)
+Jekyll is a static site generator. The site is published as it is, and show the same for all users. It's really simple to use, blog-aware for personal, project or organization sites.
+Jekyll is written in Rubby by Tom Preston-Werner at 2008, Github's co-founder. This is why is the engine behind Github Pages. It's also an open source project distributed under [MIT license](mit_license).
+As Jekyll is a static site generator, it does not use databases, it renders Markdown or Textile and Liquid templates, and produces a complete static website ready to be served by a web server. Don't think that the "static" word will be a problem to scale your project, Jekyll is really flexible and can be used in combination with front-end frameworks such as Bootstrap, Semantic UI and more.
+If you want to learn more, I encommend you to take a look at the [official Jekyll site](jekyll_site) or at [Github Pages and Jekyll documentation](github_pages_jekyll)
 
-### Ya sé lo que és, vamos a continuar
+### Ok, then I know what it is, let's continue
+
 
 Si ya has realizado la primera parte del tutorial y has seguido los pasos sobre cómo [Crear tu web gratis con Github Pages](github_pages_post) o ya tienes tu web creada.
 
-Ve a "GitHub Pages", sección "Settings" y haz click en "Choose a theme."
+Go to the "GitHub Pages" section in "Settings" and click on "Choose a theme."
 ![github choose theme](/assets/img/posts/ghpages/gh_choose_theme.jpg){:class="img-fluid"}
 
-Ahí podrás ver una selección de temas, puedes escoger el que más te guste:
+There you can see a theme selection, just choose the one you like most:
 ![github themes](/assets/img/posts/ghpages/gh_themes.jpg){:class="img-fluid"}
 
-Veamos como queda nuestra antigua web, seleccionando una de las plantillas, para ello, elige la que más te guste y haz click en "Select theme":
+Let’s see what our website looks like if we choose one of the themes that shows. All that you have to do is press the green "Select theme" button:
 ![github select theme](/assets/img/posts/ghpages/gh_select_theme.jpg){:class="img-fluid"}
 
-Y con solo unos clicks de esfuerzo, y un tiempo para que se actualice, ¡ya tenemos algo mucho mejor!
+Give it a couple of minutes to update our web, and with just a few clicks of effort, we're getting something better!
 ![github new web](/assets/img/posts/ghpages/gh_web_jekyll.jpg){:class="img-fluid"}
 
-Con esto puedes crear tu propia web para tu negocio, blog o portfolio, el cual estaría alojado en un repositorio de Github, y estaría online totalmente gratis. ¡Ya tienes tu ventana al mundo!
+That’s it! You created your own free website for your business, blog, or portfolio, hosted it through a GitHub repository, and it’s already up and running. You have your window to the world!
 
-### ¿Y ahora qué?
+### And... now what?
 
-Si te fijas en los ficheros de tu repositorio, podrás ver que ha aparecido uno de ellos llamado `_config.yml`. Aquí tienes toda la información del tema y su configuración. Si quieres puedes echarle un ojo y ver todas las opciones que puedes añadir ahí.
+If you take a look at your repository files, there is a new one named `_config.yml`. In that file you can find all the info about the theme and configuration. If you want, take a look at all the options you cand add there.
 ![github config](/assets/img/posts/ghpages/gh_config_yml.jpg){:class="img-fluid"}
 
-Hay muchos temas que puedes probar, uno de ellos para empezar, y de los más simples es [Jekyll Now](jekyll_now) con un blog ya pre-configurado.
-Si te arrepientes de haber añadido un tema y quieres dejar tu web tal y como estaba, siempre puedes eliminar el fichero de configuración.
-Puedes probar los temas que hay en github o descargar y comprar de otros sitios, como de la propia página de [temas de Jekyll para Github](jekyll_github_themes)
+There are so many themes you can choose, one of them and as starting point because is really simple is [Jekyll Now](jekyll_now) it has pre-build blog.
+If you decide that don't want to use the theme and want to go back to your original site. If you delete the config file, you delete the theme!
+You can choose themes from github pages or download and buy from other places, as in the official [Jekyll themes site for Github.](jekyll_github_themes)
 
-### Esto es sólo el principio
+### This is just the beginning
 
-Jekyll no sólo te sirve para ponerle un tema y ya está, al igual que WordPress tiene multitud de temas y plugins para ampliar su funcionalidad con los que podras añadir y hacer una web tan completa como en la que estas leyendo esto. Como en todo, el límite eres tú y tu tiempo.
+Jekyll is much more than select a theme and that's it, as Wordpress has multiple themes and plugins to update the funcionality, with them you can add others libraries or create a web as complete as this one you are reading. As always, you and your time are the limit!
 
-Ahora, ¡a divertirse!
+Now, have fun!
 
-¡Gracias por leer!
+Thanks for reading!
 =)
 
 
