@@ -3,7 +3,7 @@ layout: post
 title:  "¡Mejora tu web gratis en Github Pages con Jekyll!"
 summary: Cómo mejorar tu pagina web gratis en Github Pages.
 author: raquel
-date: '2020-09-15 14:35:23 +0530'
+date: '2020-09-29 14:35:23 +0530'
 category: 
         - jekyll
         - github pages
@@ -16,7 +16,7 @@ image: /assets/img/posts/ghpages_jekyll.png
 </blockquote>
 
 Si ya tienes creada tu web en Github Pages pero no quieres o no sabes mucho de CSS, pero quieres mejorar la apariencia visual de tu web, ¡puedes probar un tema de Jekyll! 
-Este artículo es una continuación de otro anterior para [crear tu web gratis con Github Pages](). Dónde explico como crear tu página personal, usando un repositorio.
+Este artículo es una continuación de otro anterior para [crear tu web gratis con Github Pages]({{site.url}}{{site.baseurl_root}}{% post_url 2020-09-15-github_pages %}). Dónde explico como crear tu página personal, usando un repositorio.
 
 Así que, ¡allá vamos!
 
@@ -31,7 +31,7 @@ Pero primero...
 Jekyll es un generador para sitios web estáticos, es decir, el sitio se sube al repositorio tal cual es y se muestra igual a todos los usuarios. Es muy simple de utilizar y tiene capacidades para crear un blog. Muy adecuado para sitios web personales, proyectos u organizaciones. 
 Jekyll fue escrito en lenguaje Ruby por Tom Preston-Werner en 2008, el cofundador de Github y es por esto por lo que la integración con la plataforma es muy buena. Además se trata de un proyecto de software libre, puesto que se distribuye bajo la licencia [MIT](mit_license).
 En lugar de usar bases de datos, Jekyll coge el texto escrito en los formatos Markdown o Liquid y usa el layout para generar el sitio web. Aunque te parezca que la palabra estático te va a suponer un problema para escalar tu web, en el fondo Jekyll es muy flexible y admite contextos frontend como Bootstrap, semantic y mucho más.
-Si quieres saber un poco más, te recomiendo que le eches un vistazo a su [web oficial](jekyll_site)
+Si quieres saber un poco más, te recomiendo que le eches un vistazo a su [web oficial](jekyll_site) o a la documentacion de [Github Pages y Jekyll](github_pages_jekyll)
 
 ### Ya sé lo que és, vamos a continuar
 
@@ -71,8 +71,9 @@ Ahora, ¡a divertirse!
 
 
 
+[github_pages_jekyll]: https://docs.github.com/en/github-ae@latest/github/working-with-github-pages/about-github-pages-and-jekyll
 [mit_license]: https://opensource.org/licenses/MIT
 [jekyll_site]: https://jekyllrb.com/
-[github_pages_post]: {% post_url 2020-09-15-github_pages %}
+[github_pages_post]: ({{site.url}}{{site.baseurl_root}}{% post_url 2020-09-15-github_pages %})
 [jekyll_now]: https://www.jekyllnow.com/
 [jekyll_github_themes]: https://jekyllthemes.io/github-pages-themes
