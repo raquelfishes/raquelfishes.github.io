@@ -1,14 +1,15 @@
 ---
 layout: post
-title:  "Posicionar tu página de Jekyll."
-summary: Cómo mejorar la posición en los buscadores de tu web en Jekyll.
+title:  "Posicionar tu página de Jekyll"
 author: raquel
-date: '2020-09-01 14:35:23 +0530'
+date: '2020-09-01'
 category: 
         - jekyll
         - github
         - seo
-thumbnail: /assets/img/posts/jekyll_seo.jpg
 image: assets/img/posts/jekyll_seo.jpg
-hidden: true
 ---
+
+<blockquote>
+El tiempo pone a cada uno en su lugar, y si haces SEO, un poco más arriba
+</blockquote>
