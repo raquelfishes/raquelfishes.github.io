@@ -8,8 +8,10 @@ category:
         - github
         - seo
 image: assets/img/posts/jekyll_seo.jpg
+hidden: true
 ---
 
 <blockquote>
 El tiempo pone a cada uno en su lugar, y si haces SEO, un poco más arriba
 </blockquote>
+

@@ -3,7 +3,7 @@ layout: post
 title:  "¡Mejora tu web gratis en Github Pages con Jekyll!"
 summary: Cómo mejorar tu pagina web gratis en Github Pages.
 author: raquel
-date: '2020-09-29'
+date: '2021-01-14'
 category: 
         - jekyll
         - github pages
@@ -15,7 +15,7 @@ image: /assets/img/posts/ghpages_jekyll.png
 </blockquote>
 
 Si ya tienes creada tu web en Github Pages pero no quieres o no sabes mucho de CSS, pero quieres mejorar la apariencia visual de tu web, ¡puedes probar un tema de Jekyll! 
-Este artículo es una continuación de otro anterior para [crear tu web gratis con Github Pages]({{site.url}}{{site.baseurl_root}}{% post_url 2020-09-15-github_pages %}). Dónde explico como crear tu página personal, usando un repositorio.
+Este artículo es una continuación de otro anterior para [crear tu web gratis con Github Pages]({{site.url}}{{site.baseurl_root}}{% post_url 2021-01-07-github_pages %}). Dónde explico como crear tu página personal, usando un repositorio.
 
 Así que, ¡allá vamos!
 
@@ -34,7 +34,7 @@ Si quieres saber un poco más, te recomiendo que le eches un vistazo a su [web o
 
 ### Ya sé lo que és, vamos a continuar
 
-Si ya has realizado la primera parte del tutorial y has seguido los pasos sobre cómo [Crear tu web gratis con Github Pages](github_pages_post) o ya tienes tu web creada.
+Si ya has realizado la primera parte del tutorial y has seguido los pasos sobre cómo [Crear tu web gratis con Github Pages]({{site.url}}{{site.baseurl_root}}{% post_url 2021-01-07-github_pages %}) o ya tienes tu web creada.
 
 Ve a "GitHub Pages", sección "Settings" y haz click en "Choose a theme."
 ![github choose theme](/assets/img/posts/ghpages/gh_choose_theme.jpg){:class="img-fluid"}
@@ -73,6 +73,5 @@ Ahora, ¡a divertirse!
 [github_pages_jekyll]: https://docs.github.com/en/github-ae@latest/github/working-with-github-pages/about-github-pages-and-jekyll
 [mit_license]: https://opensource.org/licenses/MIT
 [jekyll_site]: https://jekyllrb.com/
-[github_pages_post]: ({{site.url}}{{site.baseurl_root}}{% post_url 2020-09-15-github_pages %})
 [jekyll_now]: https://www.jekyllnow.com/
 [jekyll_github_themes]: https://jekyllthemes.io/github-pages-themes

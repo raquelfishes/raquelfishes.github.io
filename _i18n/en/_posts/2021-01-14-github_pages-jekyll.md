@@ -2,7 +2,7 @@
 layout: post
 title:  "Update free website with Jekyll and Github Pages!"
 author: raquel
-date: '2020-09-29'
+date: '2021-01-14'
 category: 
         - jekyll
         - github pages
@@ -14,7 +14,7 @@ image: /assets/img/posts/ghpages_jekyll.png
 </blockquote>
 
 You have created your site at Github Pages, but you are a beginner in CSS or don't want to worry about that, but you want a more visual appeal, try a Jekyll theme!
-This article continues a previous one to [create your website for free with Github Pages]({{site.url}}{{site.baseurl_root}}{% post_url 2020-09-15-github_pages %}). There you can learn about creating your personal site using a repository.
+This article continues a previous one to [create your website for free with Github Pages]({{site.url}}{{site.baseurl_root}}{% post_url 2021-01-07-github_pages %}). There you can learn about creating your personal site using a repository.
 
 So, there we go!
 
@@ -34,7 +34,7 @@ If you want to learn more, I encommend you to take a look at the [official Jekyl
 ### Ok, then I know what it is, let's continue
 
 
-Si ya has realizado la primera parte del tutorial y has seguido los pasos sobre cómo [Crear tu web gratis con Github Pages](github_pages_post) o ya tienes tu web creada.
+Si ya has realizado la primera parte del tutorial y has seguido los pasos sobre cómo [Crear tu web gratis con Github Pages]({{site.url}}{{site.baseurl_root}}{% post_url 2021-01-07-github_pages %}) o ya tienes tu web creada.
 
 Go to the "GitHub Pages" section in "Settings" and click on "Choose a theme."
 ![github choose theme](/assets/img/posts/ghpages/gh_choose_theme.jpg){:class="img-fluid"}
@@ -73,7 +73,6 @@ Thanks for reading!
 [github_pages_jekyll]: https://docs.github.com/en/github-ae@latest/github/working-with-github-pages/about-github-pages-and-jekyll
 [mit_license]: https://opensource.org/licenses/MIT
 [jekyll_site]: https://jekyllrb.com/
-[github_pages_post]: ({{site.url}}{{site.baseurl_root}}{% post_url 2020-09-15-github_pages %})
 [jekyll_now]: https://www.jekyllnow.com/
 [jekyll_github_themes]: https://jekyllthemes.io/github-pages-themes
 
