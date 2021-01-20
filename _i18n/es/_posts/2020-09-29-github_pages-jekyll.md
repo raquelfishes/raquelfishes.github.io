@@ -3,12 +3,11 @@ layout: post
 title:  "¡Mejora tu web gratis en Github Pages con Jekyll!"
 summary: Cómo mejorar tu pagina web gratis en Github Pages.
 author: raquel
-date: '2020-09-29 14:35:23 +0530'
+date: '2020-09-29'
 category: 
         - jekyll
         - github pages
         - github
-thumbnail: /assets/img/posts/ghpages_jekyll.png
 image: /assets/img/posts/ghpages_jekyll.png
 ---
 <blockquote>

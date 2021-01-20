@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Update free website with Jekyll and Github Pages!"
-author: Raquel Peces
-date: '2020-06-08 14:35:23 +0530'
+author: raquel
+date: '2020-09-29'
 category: 
         - jekyll
         - github pages
-thumbnail: /assets/img/posts/ghpages_jekyll.png
-hidden: true
+        - github
+image: /assets/img/posts/ghpages_jekyll.png
 ---
 <blockquote>
 <p>Jekyll does what you tell it to do — no more, no less. It doesn't try to outsmart users by making bold assumptions, nor does it burden them with needless complexity and configuration. Put simply, Jekyll gets out of your way and allows you to concentrate on what truly matters: your content.</p>
