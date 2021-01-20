@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Configuración de un repositorio"
+title:  "Todos los secretos para configurar Git"
 author: raquel
 date: '2020-09-01'
 category: 
@@ -10,9 +10,11 @@ image: assets/img/posts/git_config.jpg
 ---
 
 <blockquote>
+El ordenador (a lo que añadiría los repositorios) nacieron para resolver problemas que antes no existían.
+Bill Gates
 </blockquote>
 
-¿Cuántas veces has subido algo a un repositorio con el usuario que no deberías? ¿Quieres cambiar tu configuración de Git? ¿No sabes dónde se guarda la configuración o cómo consultarla? Este pequeño artículo pertenece a la ampliación de conocimientos sobre repositorios Git.
+¿Cuántas veces has subido algo a un repositorio con el usuario que no deberías? ¿Quieres cambiar tu configuración de Git? ¿No sabes dónde se guarda la configuración o cómo consultarla? Si es así este artículo es para tí, así podrás amplicar los conocimientos para trabajar con repositorios Git.
 
 Así que, ¡allá vamos!
 
@@ -35,24 +37,35 @@ La lista ordenada de la configuración más general a la más específica es la 
 
 Donde normalmente los paths serán:
 
-|       | Windows     | Linux     |
-| :------------- | :----------: | -----------: |
-|  *\[directorio_instalación_git\]* | C:/Program Files/Git   | ~etc/    |
-| *\[HOME\]*   | C:\Users/\[username\] | ~home/\[username\] o ~root/ |
+* *\[directorio_instalación_git\]*
+    * Windows: *C:/Program Files/Git/*
+    * Linux: *~etc/*
+* *\[HOME\]*
+    * Windows: *C:/Users/\[username\]*
+    * Linux: *~home/\[username\]* o *~root/*
 
+No te preocupes si no encuentras alguno de los ficheros **Git no los genera hasta que no son referenciados por primera vez**
 
-Si quieres ver de qué fichero está cogiendo qué configuración en cada momento puedes usar el siguiente comando el cual muestra el fichero y qué configuración aplica con algunos ejemplos de lo que puede salir:
+Si quieres ver de qué fichero está cogiendo qué configuración en cada momento puedes usar el siguiente comando el cual muestra el fichero y qué configuración aplica con algunos ejemplos de lo que puede salir. Como puedes ver en el ejemplo el editor aprece en la configuracion del sistema y global, y el usuario en la global y local.
 
 ```console
 $ git config --list --show-origin
-file:C:/Program Files/Git/etc/gitconfig core.symlinks=false
-file:C:/Program Files/Git/etc/gitconfig pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig core.editor="C:\\Program Files\\Sublime Text 3\\sublime_text.exe"
 ...
 file:C:/Users/Fishes/.gitconfig user.name=Raquel
 file:C:/Users/Fishes/.gitconfig core.editor=vim
 ...
-file:.git/config        remote.origin.url=https://github.com/raquelfishes/raquelfishes.github.io.git
+file:.git/config        user.name=Rachel
 ...
+```
+
+Y por último si quieres ver o modificar uno de esos ficheros directamente tienes el comando `edit`, para cada uno de los entornos.
+
+```console
+$ git config --system --edit
+$ git config --global --edit
+$ git config --local --edit
+$ git config --worktree --edit
 ```
 
 Recuerda, que las **configuraciones más específicas van a sobreescribir las más genéricas**.
@@ -62,7 +75,7 @@ Recuerda, que las **configuraciones más específicas van a sobreescribir las m�
 Si ves muchas cosas que no entiendes, y te lias con tanta configuración, no te preocupes. La mayoría lo usarás por defecto. Lo primero es lo primero, a configurar tu usuario, si no tienes usuario no vas a poder hacer ni un commit.
 Así que vamos a configurar el nombre de usuario y correo electrónico a nivel global y no te preocupes esta información no va a parar a ninguna lista de correo ni nada, se tratará como metadatos para identificar tus cambios en el repositorio Git.
 
-Puedes modificarlo la configuración tanto modificando los ficheros o por consola de comandos, yo prefiero la segunda opción.
+Puedes modificar la configuración tanto por ficheros o por consola de comandos, yo prefiero la segunda opción.
 
 ```console
 $ git config --global user.name raquel
@@ -76,18 +89,48 @@ $ git config --local user.name Raquel
 $ git config --local user.email company@company.com
 ```
 
+Si tienes dudas, siempre puedes comprobar el valor de un clave específica de la configuración ejecutando `git config <clave>`
+
+
+```console
+$ git config user.name
+Raquel
+$ git config user.email
+example@example.com
+```
 
 Y adiós a subir cambios con usuarios equivocados.
 
 
 ## ¿Qué más puedo configurar? El editor
 
+Ahora que ya tenemos configurada la identidad del usuario, también puedes elegir el editor de texto por defecto que se utilizará cuando Git necesite que introduzcas un mensaje. Ten en cuenta que si no indicas nada, Git usará el editor por defecto del sistema, que generalmente es Vim.
 
+Puedes seleccionar tanto los que vienen preinstalados en el sistema como el que tú suelas utilizar, por ejemplo Sublime o NotePad++, y al igual que antes puedes cambiarlo para los diferentes niveles, aunque yo recomiendo hacerlo a nivel global.
+
+Te dejo aquí los comandos correspondientes
+
+|  Atom         | `git config –global core.editor "atom wait"`                                              |
+|  emacs        | `git config –global core.editor "emacs"`                                                   |
+|  Textmate     | `git config –global core.editor "mate –w"`                                                |
+|  Vim          | `git config –global core.editor "vim"`                                                     |
+|  Sublime      | `git config –global core.editor "'C:\\Program Files\\Sublime Text 3\\sublime_text.exe' -w"` |
+|  NotePad++    | `git config –global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`   |
 
 
 ## Quiero eliminar mi configuración
 
+Para borrar una configuración de git, hay que usar el comando `unset`.
 
+```console
+$ git config --global --unset core.editor
+```
+
+Es probable, que por error tengamos puesta una configuración dos veces y que el comando anterior de error. Para esos casos tenemos otro comando más potente `unset-all`, con él se eliminarán todas las líneas que coincidan con la clave indicada
+
+```console
+$ git config --global --unset-all core.editor
+```
 
 ## ¿Y ahora qué?
 
