@@ -2,7 +2,7 @@
 layout: post
 title:  "Como crear links internos en Jekyll"
 author: raquel
-date: '2021-01-21'
+date: '2021-02-04'
 category: 
         - jekyll
 image: assets/img/posts/jekyll_internal_links.jpg
@@ -69,7 +69,7 @@ Ambas etiquetas `link` y `post_url` tienen una comprobación a la hora de constr
 
 ## ¿Y ahora qué?
 
-Esta funcionalidad de Jekyll es muy cómoda para tener un blog y web consistente. 
+Esta funcionalidad de Jekyll es muy cómoda para tener un blog y web consistente. Si quieres conocer más trucos sobre como crear u optimizar tu web con Jekyll, pronto nuevos posts.
 Mientras espero que este artículo os haya resultado útil.
 
 Ahora, ¡a divertirse!
