@@ -4,8 +4,8 @@ title:  "Todos los secretos para configurar Git"
 author: raquel
 date: '2021-01-21'
 category: 
-        - git
-        - github
+        - Git
+        - Github
 image: assets/img/posts/git_config.jpg
 ---
 

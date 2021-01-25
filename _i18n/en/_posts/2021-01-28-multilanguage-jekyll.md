@@ -4,8 +4,9 @@ title:  "Multiple languages for Jekyll and Github Pages!"
 author: raquel
 date: '2021-01-28'
 category: 
-        - jekyll
-        - github pages
+        - Jekyll
+        - Github Pages
+        - Static Site Generators
 image: assets/img/posts/jekyll_multilingual.jpg
 featured: true
 ---

@@ -5,9 +5,10 @@ summary: Cómo mejorar tu pagina web gratis en Github Pages.
 author: raquel
 date: '2021-01-14'
 category: 
-        - jekyll
-        - github pages
-        - github
+        - Jekyll
+        - Github Pages
+        - Github
+        - Static Site Generators
 image: /assets/img/posts/ghpages_jekyll.png
 ---
 <blockquote>

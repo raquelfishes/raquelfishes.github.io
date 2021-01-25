@@ -5,8 +5,9 @@ summary: How to create a website with Github Pages, the unbelievably quick and e
 author: raquel
 date: '2021-01-07'
 category: 
-        - jekyll
-        - github pages
+        - Github Pages
+        - Github
+        - Static Site Generator
 image: assets/img/posts/ghpages.jpg
 featured: true
 ---

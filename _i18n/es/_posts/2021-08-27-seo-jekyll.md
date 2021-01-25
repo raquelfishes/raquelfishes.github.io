@@ -2,11 +2,11 @@
 layout: post
 title:  "Posicionar tu página de Jekyll"
 author: raquel
-date: '2020-09-01'
+date: '2021-09-01'
 category: 
-        - jekyll
-        - github
-        - seo
+        - Jekyll
+        - Static Site Generators
+        - SEO
 image: assets/img/posts/jekyll_seo.jpg
 hidden: true
 ---

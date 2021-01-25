@@ -3,7 +3,7 @@ layout: post
 title:  "Getting started with Git and Github: complete beginners guide"
 summary: 
 author: Raquel
-date: '2020-09-01 14:35:23 +0530'
+date: '2022-09-01 14:35:23 +0530'
 category: 
         - git
         - github

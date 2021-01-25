@@ -5,8 +5,9 @@ summary: Cómo crear tu pagina web gratis con Github Pages, la forma más rápid
 author: raquel
 date: '2021-01-07'
 category: 
-        - jekyll
-        - github pages
+        - Github Pages
+        - Github
+        - Static Site Generator
 image: assets/img/posts/ghpages.jpg
 featured: true
 ---
