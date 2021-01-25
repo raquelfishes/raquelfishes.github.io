@@ -64,6 +64,11 @@ Como sabeis en Jekyll se usan los ficheros Markdown para escribir los posts y p�
 
 Simplemente en `Titulo del enlace` escribe lo que quieras que aparezca en el texto que enlaca con la dirección.
 
+
+Extra tip: ...
+
+
+
 ## ¿Y si me he equivocado?
 
 Ambas etiquetas `link` y `post_url` tienen una comprobación a la hora de construir nuestra web. Por lo que si el archivo especificado en el path no lo encuentra o no existe, Jekyll devolverá un error y no terminará de construir nuestra web. 

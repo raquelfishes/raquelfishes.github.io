@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Como crear links internos en Jekyll"
+title:  "Entender como funcionan las URL en Jekyll"
 author: raquel
-date: '2021-02-11'
+date: '2021-02-04'
 category: 
         - Jekyll
         - Liquid
@@ -10,3 +10,9 @@ category:
         - Github Pages
 image: assets/img/posts/jekyll_urls.jpg
 ---
+
+<blockquote>
+
+</blockquote>
+
+
