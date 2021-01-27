@@ -73,9 +73,5 @@ blog_explore: Explorar
 
 # Blog authors description
 authors:
-  sal:
-    description: "Autor de Mediumish, una plantilla de Medium en Bootstrap disponible para Wordpress, HTML, Ghost y Jekyll. Estás visualizando la demo de Medumish."
-  john:
-    description: "Esta es la caja del autor. Escribe una descripcion breve del autor. Estás visualizando la demo de Medumish, una plantilla de Jekyll compatible con Github pages."
   raquel:
-    description: "Creadora de esta pagina web."
+    description: "Creadora de esta pagina web y sus posts. Si te preguntas porque siempre uso fotos de naturaleza y animales en ellos, es porque creo que aun siendo ingeniera y no debemos olvidarnos de lo que tenemos alrededor. La tecnología también tiene que ayudarnos a cuidar de nuestro planeta. Mantente verde."

@@ -71,10 +71,6 @@ blog_explore: Explore
 
 # Blog authors description
 authors:
-  sal:
-    description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
-  john:
-    description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
   raquel:
-    description: "Author of this site."
+    description: "Author of this site and posts. If you are asking why do I always use nature photos, is because I believe as engineer we can not forgive about all our environment, even speaking about technology. Tech can help take care of the planet. Be green."
 
