@@ -15,7 +15,7 @@ featured: true
 <p>Github Pages allows to turn any repository on Github into a website with a couple of clicks.</p>
 </blockquote>
 
-If you need an online portfolio of your personal and work projects. If you want to create your blog or business site and don't know how to start. If you don't wnat to deal o pay for website hosting, domain names and all everything else to launch or website
+If you need an online portfolio of your personal and work projects. If you want to create your blog or business site and don't know how to start. If you don't want to deal or pay for website hosting, domain names and all everything else to launch or website
 
 This one's for you!
 

@@ -143,10 +143,19 @@ show_author_project_details: false
 #  nodes_to_index: 'article'
 #  search_only_api_key: 58ffdd7cd6c45ec1577a7fcd789b1b9a
 
+###
+# Posts
+###
+# Posts permalink
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title
 # pagination of posts
 paginate: 6
 per_page: 6
 paginate_path: "/blog/page/:num/"
+
 
 # minify
 # compress_html:
@@ -165,8 +174,8 @@ jekyll-archives:
     category: '/category/:name/'
 
 # Shop
-collections:
- - products
+##collections:
+##  - products
 
 # Gallery
 defaults:

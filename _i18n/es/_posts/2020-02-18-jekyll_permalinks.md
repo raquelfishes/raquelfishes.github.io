@@ -23,26 +23,33 @@ Así que, ¡allá vamos!
 
 ## Usando permalinks en Jekyll
 
-
+Los `permalinks` o enlaces permanentes son las direcciones que se generan desde Jekyll como salida de las páginas o posts, es decir, son todas las URLs de nuestro sitio web.
+Con Jekyll podemos configurar como se generan esos paths usando la fecha del post, categorias, sistema de archivos... Además esta configuración la podemos hacer a nivel global en el fichero de configuración en nuestro directorio raíz, o por cada página. 
+En este artículo te voy a explicar a configurar los que más uso yo, pero si quieres profundizar en este tema, [aquí tienes la docmumentación oficial](jekyll_permalink).
 
 ## Configurar los links de las páginas
 
-Para conseguir que nuestra URL 
+Para conseguir que la URL de nuestra página sea con un nombre en concreto tenemos que añadir el campo `permalink` en el YAML Front Matter del archivo. Ahí entre el titulo de la página podemos añadir varios campos que usaremos para construir la web, y entre ellos está el permalink.
 
 ```markdown
 ---
-permalink: /about
+title: Contact
+layout: contact
+permalink: /contact
 ---
 ```
 
+Este formato también lo podemos usar para los posts añadiendo el campo de permalink en todos ellos. Pero prefiero explicaros como configurar los permalink para toda la colección de posts.
+
 ## Configurar los links de los posts
 
-Al igual que en la sección anterior voy a utilizar el ejemplo de los enlaces antes y después de los cambios en esta web. El siguiente enlace sería la dirección web que veríamos por defecto en nuestro navegador de este post.
+En este caso voy a utilizar el ejemplo de los enlaces antes y después de los cambios en esta web. El siguiente enlace sería la dirección web que veríamos por defecto en nuestro navegador de este post.
 
 ```
 https://raquelfishes.github.io/jekyll/static%20site%20generators/github%20pages/2021/02/18/jekyll_permalinks/
 ```
 
+Este enlace tiene el formato de añadir las categorias y fecha, por último estaría el titulo que hemos decidido para ese post.
 Seamos realistas, es un enlace muy feo, que a nadie le gusta ver y menos compartir con los demás. ¿No te parece algo mucho más elegante el siguiente enlace?
 
 ```
@@ -51,7 +58,7 @@ https://raquelfishes.github.io/blog/jekyll_permalinks
 
 Para conseguir que nuestras URLs a los posts tengan el formato anterior, hay que hacer un pequeño cambio en el fichero de configuración de nuestra web, `_config.yml` que encontrarás en el directorio raíz de nuestro proyecto.
 
-```markdown 
+```yaml 
 collections:
     posts:
         output: true
