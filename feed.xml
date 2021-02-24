@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es"><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="https://raquelfishes.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://raquelfishes.github.io/" rel="alternate" type="text/html" hreflang="es" /><updated>2021-02-24T18:54:59+01:00</updated><id>https://raquelfishes.github.io/feed.xml</id><title type="html">raquelFishes</title><subtitle>Personal site of Raquel Peces (a.k.a. raquelFishes)</subtitle><author><name>Raquel Peces</name></author><entry><title type="html">Todos los secretos para configurar Git</title><link href="https://raquelfishes.github.io/blog/git_config" rel="alternate" type="text/html" title="Todos los secretos para configurar Git" /><published>2021-01-21T00:00:00+01:00</published><updated>2021-01-21T00:00:00+01:00</updated><id>https://raquelfishes.github.io/blog/git_config</id><content type="html" xml:base="https://raquelfishes.github.io/blog/git_config">&lt;blockquote&gt;
+El ordenador (a lo que añadiría los repositorios) nacieron para resolver problemas que antes no existían.
+Bill Gates
+&lt;/blockquote&gt;
+
+&lt;p&gt;¿Cuántas veces has subido algo a un repositorio con el usuario que no deberías? ¿Quieres cambiar tu configuración de Git? ¿No sabes dónde se guarda la configuración o cómo consultarla? Si es así este artículo es para tí, así podrás amplicar los conocimientos para trabajar con repositorios Git.&lt;/p&gt;
+
+&lt;p&gt;Así que, ¡allá vamos!&lt;/p&gt;
+
+&lt;h2 id=&quot;configuración-de-git&quot;&gt;Configuración de git&lt;/h2&gt;
+
+&lt;p&gt;Son muchas las opciones que tenemos para configurar nuestra consola de Git desde el usuario hasta el editor que queremos usar por defecto, y eso mismo lo podemos configurar para un repositorio concreto o entorno local, y para configurarlo a nivel genérico o global.&lt;/p&gt;
+
+&lt;p&gt;Toda nuestra configuración de Git se puede modificar y consultar a través de la herramienta &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git config&lt;/code&gt; y añadir los flags que queramos en concreto para obtener y establer las variables de configuración que controlan el aspecto y funcionamiento de Git. Toda la documentación oficial sobre la configuración de Git puedes encontrarla en su &lt;a href=&quot;git_config_web&quot;&gt;página oficial&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;dónde-se-guarda-esa-configuración-y-cómo-la-consulto&quot;&gt;Dónde se guarda esa configuración y cómo la consulto&lt;/h2&gt;
+
+&lt;p&gt;Hay varios niveles de configuración en Git: sistema, global, local y worktree, los cuales se corresponden con cada uno de los entornos en los que podemos configurar nuestra relación con Git. Cada una de estas configuraciones se guarda en un fichero diferente y vamos “pisando” la configuración de los entornos más genéricos a los más específicos.&lt;/p&gt;
+
+&lt;p&gt;La lista ordenada de la configuración más general a la más específica es la siguiente con el path correspondiente a su archivo de configuración y el comando de git para consultar la configuración de ese fichero:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;System: &lt;em&gt;[directorio_instalacion_git]/etc/gitconfig&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ git config --system --list&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Global: &lt;em&gt;[HOME]/.gitconfig&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ git config --global --list&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Local: &lt;em&gt;[repositorio_git]/.git/config&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ git config --local --list&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Worktree: &lt;em&gt;[repositorio_git]/.git/config.worktree&lt;/em&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ git config --worktree --list&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Donde normalmente los paths serán:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;[directorio_instalación_git]&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Windows: &lt;em&gt;C:/Program Files/Git/&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Linux: &lt;em&gt;~etc/&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;[HOME]&lt;/em&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Windows: &lt;em&gt;C:/Users/[username]&lt;/em&gt;&lt;/li&gt;
+      &lt;li&gt;Linux: &lt;em&gt;~home/[username]&lt;/em&gt; o &lt;em&gt;~root/&lt;/em&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;No te preocupes si no encuentras alguno de los ficheros &lt;strong&gt;Git no los genera hasta que no son referenciados por primera vez&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Si quieres ver de qué fichero está cogiendo qué configuración en cada momento puedes usar el siguiente comando el cual muestra el fichero y qué configuración aplica con algunos ejemplos de lo que puede salir. Como puedes ver en el ejemplo el editor aprece en la configuracion del sistema y global, y el usuario en la global y local.&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--list&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--show-origin&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;file:C:/Program Files/Git/etc/gitconfig core.editor=&quot;C:\\Program Files\\Sublime Text 3\\sublime_text.exe&quot;
+&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...
+&lt;/span&gt;&lt;span class=&quot;go&quot;&gt;file:C:/Users/Fishes/.gitconfig user.name=Raquel
+file:C:/Users/Fishes/.gitconfig core.editor=vim
+&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...
+&lt;/span&gt;&lt;span class=&quot;go&quot;&gt;file:.git/config        user.name=Rachel
+&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;...
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Y por último si quieres ver o modificar uno de esos ficheros directamente tienes el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;edit&lt;/code&gt;, para cada uno de los entornos.&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--system&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--edit&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--edit&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--local&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--edit&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--worktree&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--edit&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Recuerda, que las &lt;strong&gt;configuraciones más específicas van a sobreescribir las más genéricas&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;qué-configuro-primero-el-usuario&quot;&gt;¿Qué configuro primero? El usuario&lt;/h2&gt;
+
+&lt;p&gt;Si ves muchas cosas que no entiendes, y te lias con tanta configuración, no te preocupes. La mayoría lo usarás por defecto. Lo primero es lo primero, a configurar tu usuario, si no tienes usuario no vas a poder hacer ni un commit.
+Así que vamos a configurar el nombre de usuario y correo electrónico a nivel global y no te preocupes esta información no va a parar a ninguna lista de correo ni nada, se tratará como metadatos para identificar tus cambios en el repositorio Git.&lt;/p&gt;
+
+&lt;p&gt;Puedes modificar la configuración tanto por ficheros o por consola de comandos, yo prefiero la segunda opción.&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.name raquel
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; user.email example@example.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Pero a mi también me resulta muy útil configurar el usuario a nivel local, por ejemplo para repositorios de trabajo en los que ya tengo una configuración diferente a nivel global y no quiero tocarla, sólo tendría que cambiar el flag de global a local.&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--local&lt;/span&gt; user.name Raquel
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--local&lt;/span&gt; user.email company@company.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Si tienes dudas, siempre puedes comprobar el valor de un clave específica de la configuración ejecutando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git config &amp;lt;clave&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git config user.name
+&lt;span class=&quot;go&quot;&gt;Raquel
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git config user.email
+&lt;span class=&quot;go&quot;&gt;example@example.com
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Y adiós a subir cambios con usuarios equivocados.&lt;/p&gt;
+
+&lt;h2 id=&quot;qué-más-puedo-configurar-el-editor&quot;&gt;¿Qué más puedo configurar? El editor&lt;/h2&gt;
+
+&lt;p&gt;Ahora que ya tenemos configurada la identidad del usuario, también puedes elegir el editor de texto por defecto que se utilizará cuando Git necesite que introduzcas un mensaje. Ten en cuenta que si no indicas nada, Git usará el editor por defecto del sistema, que generalmente es Vim.&lt;/p&gt;
+
+&lt;p&gt;Puedes seleccionar tanto los que vienen preinstalados en el sistema como el que tú suelas utilizar, por ejemplo Sublime o NotePad++, y al igual que antes puedes cambiarlo para los diferentes niveles, aunque yo recomiendo hacerlo a nivel global.&lt;/p&gt;
+
+&lt;p&gt;Te dejo aquí los comandos correspondientes&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Atom&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git config –global core.editor &quot;atom wait&quot;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;emacs&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git config –global core.editor &quot;emacs&quot;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Textmate&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git config –global core.editor &quot;mate –w&quot;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Vim&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git config –global core.editor &quot;vim&quot;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Sublime&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git config –global core.editor &quot;'C:\\Program Files\\Sublime Text 3\\sublime_text.exe' -w&quot;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;NotePad++&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git config –global core.editor &quot;'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin&quot;&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;quiero-eliminar-mi-configuración&quot;&gt;Quiero eliminar mi configuración&lt;/h2&gt;
+
+&lt;p&gt;Para borrar una configuración de git, hay que usar el comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unset&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--unset&lt;/span&gt; core.editor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Es probable, que por error tengamos puesta una configuración dos veces y que el comando anterior de error. Para esos casos tenemos otro comando más potente &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unset-all&lt;/code&gt;, con él se eliminarán todas las líneas que coincidan con la clave indicada&lt;/p&gt;
+
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--unset-all&lt;/span&gt; core.editor
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;y-ahora-qué&quot;&gt;¿Y ahora qué?&lt;/h2&gt;
+
+&lt;p&gt;Aún hay muchos más comandos y trucos, por lo que intentaré compartir algunos de los comandos que más útiles me resultan a mi en mi día a día.
+Mientras espero que este artículo os haya resultado útil.&lt;/p&gt;
+
+&lt;p&gt;Ahora, ¡a divertirse!&lt;/p&gt;
+
+&lt;p&gt;¡Gracias por leer!
+=)&lt;/p&gt;</content><author><name>raquel</name></author><category term="[&quot;Git&quot;, &quot;Github&quot;]" /><summary type="html">El ordenador (a lo que añadiría los repositorios) nacieron para resolver problemas que antes no existían. Bill Gates</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://raquelfishes.github.io/assets/img/posts/git_config.jpg" /><media:content medium="image" url="https://raquelfishes.github.io/assets/img/posts/git_config.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">¡Mejora tu web gratis en Github Pages con Jekyll!</title><link href="https://raquelfishes.github.io/blog/github_pages-jekyll" rel="alternate" type="text/html" title="¡Mejora tu web gratis en Github Pages con Jekyll!" /><published>2021-01-14T00:00:00+01:00</published><updated>2021-01-14T00:00:00+01:00</updated><id>https://raquelfishes.github.io/blog/github_pages-jekyll</id><content type="html" xml:base="https://raquelfishes.github.io/blog/github_pages-jekyll">&lt;blockquote&gt;
+&lt;p&gt;Jekyll hace lo que se le dice que haga, ni más, ni menos. No intenta suplantar a los usuarios con suposiciones atrevidas, ni les agobia con complejidad y configuración innecesaria. Dicho de forma simple, se aparta de tu camino y te permite concentrarte en aquello que realmente importa: su contenido.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si ya tienes creada tu web en Github Pages pero no quieres o no sabes mucho de CSS, pero quieres mejorar la apariencia visual de tu web, ¡puedes probar un tema de Jekyll! 
+Este artículo es una continuación de otro anterior para &lt;a href=&quot;https://raquelfishes.github.io/blog/github_pages&quot;&gt;crear tu web gratis con Github Pages&lt;/a&gt;. Dónde explico como crear tu página personal, usando un repositorio.&lt;/p&gt;
+
+&lt;p&gt;Así que, ¡allá vamos!&lt;/p&gt;
+
+&lt;h3 id=&quot;ya-tengo-mi-web-pero-como-hacerla-más-interesante&quot;&gt;Ya tengo mi web, pero como hacerla más interesante&lt;/h3&gt;
+
+&lt;p&gt;Existen temas creados que puedes usar para hacer que tu página tenga una mejor apariencia con muy poco esfuerzo. ¡Jekyll y Github harán todo el trabajo por ti! Tú simplemente tendrás que pulsar un par de botones.&lt;/p&gt;
+
+&lt;p&gt;Pero primero…&lt;/p&gt;
+
+&lt;h3 id=&quot;qué-es-jekyll&quot;&gt;¿Qué es Jekyll?&lt;/h3&gt;
+
+&lt;p&gt;Jekyll es un generador para sitios web estáticos, es decir, el sitio se sube al repositorio tal cual es y se muestra igual a todos los usuarios. Es muy simple de utilizar y tiene capacidades para crear un blog. Muy adecuado para sitios web personales, proyectos u organizaciones. 
+Jekyll fue escrito en lenguaje Ruby por Tom Preston-Werner en 2008, el cofundador de Github y es por esto por lo que la integración con la plataforma es muy buena. Además se trata de un proyecto de software libre, puesto que se distribuye bajo la licencia &lt;a href=&quot;mit_license&quot;&gt;MIT&lt;/a&gt;.
+En lugar de usar bases de datos, Jekyll coge el texto escrito en los formatos Markdown o Liquid y usa el layout para generar el sitio web. Aunque te parezca que la palabra estático te va a suponer un problema para escalar tu web, en el fondo Jekyll es muy flexible y admite contextos frontend como Bootstrap, semantic y mucho más.
+Si quieres saber un poco más, te recomiendo que le eches un vistazo a su &lt;a href=&quot;jekyll_site&quot;&gt;web oficial&lt;/a&gt; o a la documentacion de &lt;a href=&quot;github_pages_jekyll&quot;&gt;Github Pages y Jekyll&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ya-sé-lo-que-és-vamos-a-continuar&quot;&gt;Ya sé lo que és, vamos a continuar&lt;/h3&gt;
+
+&lt;p&gt;Si ya has realizado la primera parte del tutorial y has seguido los pasos sobre cómo &lt;a href=&quot;https://raquelfishes.github.io/blog/github_pages&quot;&gt;Crear tu web gratis con Github Pages&lt;/a&gt; o ya tienes tu web creada.&lt;/p&gt;
+
+&lt;p&gt;Ve a “GitHub Pages”, sección “Settings” y haz click en “Choose a theme.”
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_choose_theme.jpg&quot; alt=&quot;github choose theme&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahí podrás ver una selección de temas, puedes escoger el que más te guste:
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_themes.jpg&quot; alt=&quot;github themes&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Veamos como queda nuestra antigua web, seleccionando una de las plantillas, para ello, elige la que más te guste y haz click en “Select theme”:
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_select_theme.jpg&quot; alt=&quot;github select theme&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Y con solo unos clicks de esfuerzo, y un tiempo para que se actualice, ¡ya tenemos algo mucho mejor!
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_web_jekyll.jpg&quot; alt=&quot;github new web&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Con esto puedes crear tu propia web para tu negocio, blog o portfolio, el cual estaría alojado en un repositorio de Github, y estaría online totalmente gratis. ¡Ya tienes tu ventana al mundo!&lt;/p&gt;
+
+&lt;h3 id=&quot;y-ahora-qué&quot;&gt;¿Y ahora qué?&lt;/h3&gt;
+
+&lt;p&gt;Si te fijas en los ficheros de tu repositorio, podrás ver que ha aparecido uno de ellos llamado &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;. Aquí tienes toda la información del tema y su configuración. Si quieres puedes echarle un ojo y ver todas las opciones que puedes añadir ahí.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_config_yml.jpg&quot; alt=&quot;github config&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hay muchos temas que puedes probar, uno de ellos para empezar, y de los más simples es &lt;a href=&quot;jekyll_now&quot;&gt;Jekyll Now&lt;/a&gt; con un blog ya pre-configurado.
+Si te arrepientes de haber añadido un tema y quieres dejar tu web tal y como estaba, siempre puedes eliminar el fichero de configuración.
+Puedes probar los temas que hay en github o descargar y comprar de otros sitios, como de la propia página de &lt;a href=&quot;jekyll_github_themes&quot;&gt;temas de Jekyll para Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;esto-es-sólo-el-principio&quot;&gt;Esto es sólo el principio&lt;/h3&gt;
+
+&lt;p&gt;Jekyll no sólo te sirve para ponerle un tema y ya está, al igual que WordPress tiene multitud de temas y plugins para ampliar su funcionalidad con los que podras añadir y hacer una web tan completa como en la que estas leyendo esto. Como en todo, el límite eres tú y tu tiempo.&lt;/p&gt;
+
+&lt;p&gt;Ahora, ¡a divertirse!&lt;/p&gt;
+
+&lt;p&gt;¡Gracias por leer!
+=)&lt;/p&gt;</content><author><name>raquel</name></author><category term="[&quot;Jekyll&quot;, &quot;Github Pages&quot;, &quot;Github&quot;, &quot;Static Site Generators&quot;]" /><summary type="html">Jekyll hace lo que se le dice que haga, ni más, ni menos. No intenta suplantar a los usuarios con suposiciones atrevidas, ni les agobia con complejidad y configuración innecesaria. Dicho de forma simple, se aparta de tu camino y te permite concentrarte en aquello que realmente importa: su contenido.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://raquelfishes.github.io/assets/img/posts/ghpages_jekyll.png" /><media:content medium="image" url="https://raquelfishes.github.io/assets/img/posts/ghpages_jekyll.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">¡Crea tu web gratis con Github Pages!</title><link href="https://raquelfishes.github.io/blog/github_pages" rel="alternate" type="text/html" title="¡Crea tu web gratis con Github Pages!" /><published>2021-01-07T00:00:00+01:00</published><updated>2021-01-07T00:00:00+01:00</updated><id>https://raquelfishes.github.io/blog/github_pages</id><content type="html" xml:base="https://raquelfishes.github.io/blog/github_pages">&lt;blockquote&gt;
+&lt;p&gt;Github Pages permite convertir cualquier repositorio en una página web con solo un par de clicks.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Si estás buscando un lugar en el que crear tu portfolio con proyectos personales o de trabajo, o si quieres crear tu blog o web de empresa y no sabes por donde empezar, quizá este sea tu sitio. Es probable que no quieras pagar por un servicio de hosting, dominio y todo lo que implica tener tu web “en el aire”.&lt;/p&gt;
+
+&lt;p&gt;Entonces este post es para ti.&lt;/p&gt;
+
+&lt;h3 id=&quot;por-qué-debería-tener-una-web&quot;&gt;¿Por qué debería tener una web?&lt;/h3&gt;
+
+&lt;p&gt;La verdad es que en el mundo en el que vivimos, es difícil imaginar que podría no beneficiarte de tener tu propia web. Puedes querer mostrar tu portfolio a futuras empresas o como freelance. Mostrar tus proyectos de estudiante y compartirlos con la comunidad universitaria. Puedes querer tener tu propio blog donde contar los lugares que te gustan o qué estás haciendo. También puedes querer hacer publicidad o compartir tu negocio y abrirte a la venta online…&lt;/p&gt;
+
+&lt;p&gt;Una página web es el modo de conectarte con el mundo y una gran herramienta de comunicación. Es el modo de crear, construir y controlar tu imagen online. Además cuanto menos tiempo gastes en consstruir esa web, más tiempo tendrás para construir tu imagen y llegar a la gente que te interesa. Una web, puede ayudarte a alcanzar y superar a tus competidores.&lt;/p&gt;
+
+&lt;p&gt;Y, todos sabemos que no es lo más sencillo de crear si no sabes lo que estás haciendo.&lt;/p&gt;
+
+&lt;p&gt;Si estás empezando a informarte sobre como crear tu propia web, seguro que has oído hablar de algunas de las opciones mas sencillas, por un lado está Wordpress, pero yo quiero presentarte a Github.&lt;/p&gt;
+
+&lt;p&gt;Wordpress es la herramienta para principiantes por excelencia, para los que sólo quieren configurar algunos parámetros y escribir. Es una gran herramienta para las personas que quieren una web rápida sin tener ningún conocimiento técnico. El problema con Wordpress es que su plan gratuito no te deja configurar prácticamente nada. Es demasiado obvio que estamos usando Wordpress en nuestra página, tienes el logo de wordpress en todas las páginas, la direccion acaba con wordpress.com y las plantillas y personalización es mínima.&lt;/p&gt;
+
+&lt;p&gt;Si eres una persona un poco técnica seguro que conocerás Github como gestor de repositorio de código. Si eres una persona técnica que le gusta programar y tener sus proyectos en un mismo sitio seguro que tienes una cuenta de Github, con al menos un proyecto.
+Lo que puede que no conozcas es la funcionalidad de Github Pages, por qué no crear tu web en Github y alojarla directamente ahí, en tu repositorio, sin necesitar nada más.&lt;/p&gt;
+
+&lt;p&gt;Si quieres mantener el código de tu web en secreto, quizá este artículo debería acabar aquí para ti. Si por el contrario te gusta colaborar con la filosofía de Código Libre y ayudar e inspirar a todos los que vengan detrás de ti. Esa es la gran idea de Github, compartir tu conocimiento y trabajo. Cuando tu compartes tus proyectos en Github, la gente puede ver tu código, ver qué haces y cómo lo haces, e incluso sugerirte mejoras. Sería la gran biblioteca del código hoy en día. 
+La mayoría de las personas técnicas ya usan Git y/o Github de algún modo. Tener tu web en el mismo sitio es un plus, y además ayudará a subir las contribuciones en tu perfil =)&lt;/p&gt;
+
+&lt;p&gt;Si eres totalmente nuevo a todo lo que estoy contando, quizá deberías echar un vistazo a “Comenzar con Git y Github: Guía completa para novatos” En ese artículo puedes aprender lo básico de Git y Github, conceptos como “repositorio” o “rama”. De aquí en adelante asumiré que conoces lo básico.&lt;/p&gt;
+
+&lt;h3 id=&quot;empecemos-con-nuestra-web&quot;&gt;Empecemos con nuestra web&lt;/h3&gt;
+
+&lt;p&gt;Hay dos modos de empezar tu página web. Puede que comiences totalmente desde cero, no tienes nada, ni index.hmtl. O puedes tener una web o plantilla html ya creada, pero no sabes como subirla a Github y así poder tenerla online de forma gratuita.&lt;/p&gt;
+
+&lt;h3 id=&quot;ya-tengo-los-ficheros-de-mi-web-pero-no-sé-qué-hacer-con-ellos&quot;&gt;Ya tengo los ficheros de mi web, pero no sé qué hacer con ellos&lt;/h3&gt;
+
+&lt;p&gt;Este es el caso más sencillo. Github hace todo el trabajo por ti. Asumiendo que ya tienes una cuenta de Github y que sabes lo que es un repositorio, sino, deberías echar un vistazo a mi anterior artículo sobre como empezar con Git y Github.&lt;/p&gt;
+
+&lt;p&gt;Digamos que nuestro repositorio será como el cascarón de un huevo, es donde nuestro proyecto vivie. Ahí puedes organizarlo por carpetas, añadir imagenes, videos, cualquier cosa que tu proyecto necesite puede estar en el repositorio.&lt;/p&gt;
+
+&lt;p&gt;Si todavía no lo has hecho, inicializa tu proyecto con un repositorio, o puedes crear un repositorio y añadir tus ficheros. Si en el directorio raíz ya tienes un fichero llamado &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; Github sabrá perfectamente qué hacer.&lt;/p&gt;
+
+&lt;p&gt;Ahora vas a aprender a aprovecharte de Github Pages. Tienes que ir a tu repositorio de Github y hacer click en &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt;
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings.png&quot; alt=&quot;github settings&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez que estamos en la página de configuración hay que hacer scroll en la página hacia abajo hasta llegar a la seccion de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Github Pages&lt;/code&gt;
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_pages.png&quot; alt=&quot;github pages&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora desplega el menú de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Source&lt;/code&gt; y selecciona la opción de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Master branch&lt;/code&gt;. Esto hará que nuestra página tome como rama para mostrar nuestra página principal la rama master del repositorio, que sería como la rama principal por defecto del repositorio.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_pages_source.png&quot; alt=&quot;github pages source&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En este caso verás una notificacion como que tu sitio está listo para ser publicado.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_publishing.png&quot; alt=&quot;github publishing&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sé paciente, puede tomar un par de minutos, entonces refresca la página y verás que la notificación ha cambiado y te dice que tu página ya ha sido publicada con la direccion web en la que podrás ver tu página.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_published.png&quot; alt=&quot;github published&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Prueba a hacer click en el link y ¡MAGIA!&lt;/p&gt;
+
+&lt;p&gt;¡¡Ya tienes tu web gratis publicada!!&lt;/p&gt;
+
+&lt;h3 id=&quot;no-sé-ni-por-donde-empezar&quot;&gt;No sé ni por donde empezar&lt;/h3&gt;
+
+&lt;p&gt;No voy a explicar como hacer una web, ni las diferentes librerias de diseño que puedes usar, sino que me voy a enfocar en lo básico.
+Prefiero que conozcas como crear algo de cero usando la herramienta que estoy presentando aquí y que con todo el tiempo que dispongas y las ganas que le pongas explores todo este mundo de diseño y programación web. Lo que voy a explicar aquí es como si eres totalmente nuevo crear una web en Github Pages.
+Lo primero vamos a crear un repositorio
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_new_repo.png&quot; alt=&quot;github repository&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Rellena los datos de tu repositorio, nombre, descripcion y selecciona la opción de inicializiar el repositorio con un README &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Initialize this repository with a README&lt;/code&gt; y entonces dile que lo cree &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Create repository&lt;/code&gt;
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_create_repo.png&quot; alt=&quot;github create&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora al igual que en la sección anterior tienes que ir a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt;, cerca de la parte alta de la página al lado derecho de la pantalla
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings.png&quot; alt=&quot;github settings&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez que estés aquí, haz scroll en la página hacia abajo hasta llegar a la sección de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Github Pages&lt;/code&gt;
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_pages.png&quot; alt=&quot;github pages&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora desplega el menú de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Source&lt;/code&gt; y selecciona la opción de &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Master branch&lt;/code&gt;. Esto hará que nuestra página tome como rama para mostrar nuestra página principal la rama master del repositorio, que sería como la rama principal por defecto del repositorio.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_pages_source.png&quot; alt=&quot;github pages source&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;En este caso verás una notificacion como que tu sitio está listo para ser publicado.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_publishing.png&quot; alt=&quot;github publishing&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sé paciente, puede tomar un par de minutos, entonces refresca la página y verás que la notificación ha cambiado y te dice que tu página ya ha sido publicada con la direccion web en la que podrás ver tu página.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_published.png&quot; alt=&quot;github published&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ahora haz click en el link y podrás ver tu página.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_basic_web.png&quot; alt=&quot;github web&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;¡Enhorabuena! ¡Ya estás online!&lt;/p&gt;
+
+&lt;h3 id=&quot;pero-esto-no-es-un-poco-feo&quot;&gt;¿Pero esto no es un poco feo?&lt;/h3&gt;
+
+&lt;p&gt;Te doy la razón, esta web es un poco bastante fea, si vuelves a tu repositorio podrás ver que lo que se está mostrando es lo que hay en tu fichero &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;README.md&lt;/code&gt;.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_readme.png&quot; alt=&quot;github readme&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Si quieres hacer algunos cambios, puedes ir a la parte de arriba y editar tu fichero, para editar lo que quieres que la gente vea. Para hacer esto, vuelve al repositorio, haz click en el icono del lapiz que puedes encontrar en el fichero README y modíficalo a tu antojo.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_edit_readme.png&quot; alt=&quot;github edit readme&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Una vez que hayas acabado de modificar el fichero README, no te olvides de hacer commit del archivo. Si no lo haces perderás todo el trabajo. Aquí también puedes añadir un pequeño mensaje de commit para explicar los cambios que has hecho.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_commit_readme.png&quot; alt=&quot;github commit readme&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ten en cuenta que estás modificando un fichero de tipo Markdown. Si no sabes mucho sobre este formato, puedes dirigirte a este &lt;a href=&quot;https://www.markdownguide.org/getting-started/&quot;&gt;enlace&lt;/a&gt; para ver la de opciones que te ofrece.&lt;/p&gt;
+
+&lt;p&gt;Este tipo de ficheros es en realidad un lenguaje de programación, este post está escrito en formato Markdown, donde puedes añadir el formato de los elementos mientras escribes en texto plano. Incluye funcionalidades para añadir texto, links, imágenes, colores e incluso formato de código. Aquí puedes encontrar la &lt;a href=&quot;https://www.markdownguide.org/basic-syntax/&quot;&gt;Guía Gásica de la sintaxis de Markdown&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;¡Ahora vuelve a tu web, y comprueba como queda con los últimos cambios!
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_basic_web2.png&quot; alt=&quot;github web2&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ten en cuenta que a veces puede tomar varios minutos hasta que los cambios aparecen en la web publicada. También puedes tener algunos problemas con la cache de tu navegador, borrar la cache del navegador o abrir el enlace en un navegador con sesión oculta puede ayudar a ver los cambios antes.&lt;/p&gt;
+
+&lt;h3 id=&quot;no-se-puede-hacer-nada-mejor&quot;&gt;¿No se puede hacer nada mejor?&lt;/h3&gt;
+
+&lt;p&gt;Pues sí, sí se puede hacer mejor, a partir de aquí se pone interesante. Pero eso lo explicaré en otro post en el que os presentare Jekyll, framework con el que he creado yo esta página.
+Mientras espero que este tutorial os haya servido para abrir el apetito.&lt;/p&gt;
+
+&lt;p&gt;Ahora, ¡a divertirse!&lt;/p&gt;
+
+&lt;p&gt;¡Gracias por leer!
+=)&lt;/p&gt;</content><author><name>raquel</name></author><category term="[&quot;Github Pages&quot;, &quot;Github&quot;, &quot;Static Site Generator&quot;]" /><summary type="html">Github Pages permite convertir cualquier repositorio en una página web con solo un par de clicks.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://raquelfishes.github.io/assets/img/posts/ghpages.jpg" /><media:content medium="image" url="https://raquelfishes.github.io/assets/img/posts/ghpages.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

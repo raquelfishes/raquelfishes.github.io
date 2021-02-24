@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/en/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/en/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-11-30T19:11:07+01:00</updated><id>http://localhost:4000/en/feed.xml</id><title type="html">raquelFishes</title><subtitle>Personal site of Raquel Peces (a.k.a. raquelFishes)</subtitle><author><name>Raquel Peces</name></author><entry><title type="html">Create your website for free with Github Pages!</title><link href="http://localhost:4000/en/jekyll/github%20pages/2020/09/15/github_pages/" rel="alternate" type="text/html" title="Create your website for free with Github Pages!" /><published>2020-09-15T11:05:23+02:00</published><updated>2020-09-15T11:05:23+02:00</updated><id>http://localhost:4000/en/jekyll/github%20pages/2020/09/15/github_pages</id><content type="html" xml:base="http://localhost:4000/en/jekyll/github%20pages/2020/09/15/github_pages/">&lt;blockquote&gt;
+&lt;p&gt;Github Pages allows to turn any repository on Github into a website with a couple of clicks.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you need an online portfolio of your personal and work projects. If you want to create your blog or business site and don’t know how to start. If you don’t wnat to deal o pay for website hosting, domain names and all everything else to launch or website&lt;/p&gt;
+
+&lt;p&gt;This one’s for you!&lt;/p&gt;
+
+&lt;h3 id=&quot;why-should-i-have-a-website&quot;&gt;Why should I have a website?&lt;/h3&gt;
+
+&lt;p&gt;Nowadays, it’s really hard to imagine anyone who wouldn’t benefit from having his own website. You might need to display your portfolio for potential employers or as a freelance. You might need to display your student proyects and share it with all the University Community. You might create your own blog about places you’ve been or what you’re doing. You might need to advertise yourself or your business and open your own shop online…&lt;/p&gt;
+
+&lt;p&gt;A website is the play to connect yourself with the world and the best communication tool. It’s how you can create, build and control your online image. Plus, the sooner you build your place, the more time you’ll have to build your online presence and reach the people you want to reach. It can help you stand out in of competitors.&lt;/p&gt;
+
+&lt;p&gt;And, we all know that it’s also not the easiest thing if you don’t know what you’re doing!&lt;/p&gt;
+
+&lt;p&gt;If you are a beginner, surely you have heard about some simplest options. The main one is Wordpress, but I want to introduce to Github.&lt;/p&gt;
+
+&lt;p&gt;Wordpress is the excelence beginners tool! You only have to configure some parameters and start writing. It’s great for those who want to create a site fast and without any technical knowledge. The main problem with Wordpress is that you can’t configure almost nothing with the free plan. It’s too obvius that you are using Wordpress, you have to use Wordpress logo, your domain has wordpress.com and customization and templates are minimal.&lt;/p&gt;
+
+&lt;p&gt;If you are a begginer tech person, you will know Github like a code repository for sure. If you are in tech world and love to program, for sure you will have a Github account with at least one project. But maybe you don’t know about Github Pages functionality. You can create your web in Github and host it directly there, in your code repository, and needing no more.&lt;/p&gt;
+
+&lt;p&gt;If you are really jealous of your code, or want to keep your site code in secret, this article might end it here for you. Putting your code on Github shows that you like contributing to open source philosophy. You can help and inspire everyone who cames after with your ideas. That’s the big Githup idea, share knowledge and work. When you share your proects on Github, people can see your code, what you’re doing, how you’re doing, they can suggest some improvements or features. It’s like the Alexandria library of code nowadays.
+retty much everyone in tech right now is using Git and Github in some way. Having your website right there is a plus, and it will sind up with a repository and some commints on your profile page =)&lt;/p&gt;
+
+&lt;p&gt;If you’re a total brand new to everything Git and Github, you might want to check my previous post “Getting Started with Git and GitHub: the total beginner’s guide”. That article will show you the basics of Git and Github, concepts like “repository” or “branch”.&lt;/p&gt;
+
+&lt;p&gt;From now on I’m assuming that you know the basics.&lt;/p&gt;
+
+&lt;p&gt;So, there we go!&lt;/p&gt;
+
+&lt;h3 id=&quot;lets-start-with-my-web&quot;&gt;Let’s start with my web!&lt;/h3&gt;
+
+&lt;p&gt;There are two ways of getting started with your website. You might be starting completely from scratch! You don’t have anything, neither index.html file. On the other hand you might have a website that you’ve already design and put together, but you don’t know how to use Github to launch it as a free website.&lt;/p&gt;
+
+&lt;h3 id=&quot;i-have-my-website-files-but-i-dont-know-what-to-do-with-them&quot;&gt;I have my website files, but I don’t know what to do with them!&lt;/h3&gt;
+
+&lt;p&gt;This is the simplest case. Github will make all the work for you. Asumming that you already have a Github account and you know what a respository is, if not, you should check my previous article about how to start with Git and Github.&lt;/p&gt;
+
+&lt;p&gt;A repository is like a eggshell, where your project will live. That is the place where you’ll keep your folders, add images, videos and anything else your project needs in your repository.&lt;/p&gt;
+
+&lt;p&gt;If you haven’t already, go ahead and initialize your project with a repository, or create a new repository and upload all your files. If you have a file called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;index.html&lt;/code&gt; Github will understand what you wnat to do.&lt;/p&gt;
+
+&lt;p&gt;Now you’re going to learn about taking advange of Github Pages. Go to your Github repository and click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt;
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings.png&quot; alt=&quot;github settings&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once we are at settings page, you have to make scroll down until the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Github Pages&lt;/code&gt; section.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_pages.png&quot; alt=&quot;github pages&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now drop the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Source&lt;/code&gt; dropdown menu and select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Master branch&lt;/code&gt; option. This will make that our website take the home page the master branch of our reository, it’s pretty much publish your repositori as-is.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_pages_source.png&quot; alt=&quot;github pages source&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You are going to see a notification that your site is ready to be published.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_publishing.png&quot; alt=&quot;github publishing&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Be patient, wait a minute or two, and then refresh the page or try the link if you wante. Once your site has been published, the notification has changed, your site has been published, you’ll see this:
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_published.png&quot; alt=&quot;github published&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Try clicking on that link and MAGIC!&lt;/p&gt;
+
+&lt;p&gt;You have a published free website!&lt;/p&gt;
+
+&lt;h3 id=&quot;i-dont-know-how-to-get-started&quot;&gt;I don’t know how to get started!&lt;/h3&gt;
+
+&lt;p&gt;I’m not gonna explain how to create a website, neither all design librarys you can use, this is the basics.
+I prefer that you know how to create something from zero with the tool that I’m introducing here and then, with all your time and motivation available explore all this new world. This option is for total beginners, I’m going to show how to do everything on the Github to create a website.&lt;/p&gt;
+
+&lt;p&gt;Well, go ahead and first thing, create a new repository.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_new_repo.png&quot; alt=&quot;github repository&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Fill in with all your repository data: name, descripcion and select the option to initialize the repository with a README &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Initialize this repository with a README&lt;/code&gt; and then click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Create repository&lt;/code&gt;
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_create_repo.png&quot; alt=&quot;github create&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, the same as previous section, you have to go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Settings&lt;/code&gt; section, near the top right-hand side of the screen.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings.png&quot; alt=&quot;github settings&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once you are here, scroll down to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Github Pages&lt;/code&gt; section.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_pages.png&quot; alt=&quot;github pages&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Drop the dropdown &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Source&lt;/code&gt; menu and select &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Master branch&lt;/code&gt; option.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_pages_source.png&quot; alt=&quot;github pages source&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;First, you will see a notification like your site is ready to be published.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_publishing.png&quot; alt=&quot;github publishing&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Please, be patient, this might take some minutes, then refresh the page and you will see like notification has changed and show that your site has been published with the web domain where you could visit your web.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_settings_published.png&quot; alt=&quot;github published&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now click in the link:
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_basic_web.png&quot; alt=&quot;github web&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Congratulations! You are online!&lt;/p&gt;
+
+&lt;h3 id=&quot;but-this-is-really-ugly&quot;&gt;But, this is really ugly.&lt;/h3&gt;
+
+&lt;p&gt;Oks, you are right, this website is really ugly and boring. If you come back to your repository, you can see that what is showing is your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;README.md&lt;/code&gt; file.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_readme.png&quot; alt=&quot;github readme&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to make some quick changes, you can go ahead and edit your file to display what you want people to see. To do that, go back into your repository, click the little pencil icon in your README file and make it better!
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_edit_readme.png&quot; alt=&quot;github edit readme&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Don’t forget to commit your README file changes! If you don’t do that, you will loose all the work. You can also add a short commit message explaining all the changes.
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_commit_readme.png&quot; alt=&quot;github commit readme&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Keep in mind that you are editing a Markdown file. If you don’t know about this format, visit the &lt;a href=&quot;https://www.markdownguide.org/getting-started/&quot;&gt;Markdown Getting Started Official Site&lt;/a&gt; for anyone who hasn’t worked with it before.&lt;/p&gt;
+
+&lt;p&gt;This kind of files are a programming languate, this post is written in Markdown format, where you can add element formats writting plain text. There are a lot of things that you can add to with this files, like adding images, colors, links or even programming code.
+If you are curious about this format, explore the &lt;a href=&quot;https://www.markdownguide.org/basic-syntax/&quot;&gt;Basic Syntax Markdown Guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now go back to your web domain, and see how it looks the last changes!
+&lt;img src=&quot;/assets/img/posts/ghpages/gh_basic_web2.png&quot; alt=&quot;github web2&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Be aware that sometimes takes a few minutes for the changes to go through your published web. Try waiting a couple of minutes and refreshing. You can also have to delete your browser cache or open the link in a privacy browser sesion to see before all the changes.&lt;/p&gt;
+
+&lt;h3 id=&quot;that-is-an-improvement-can-it-get-better&quot;&gt;That is an improvement, can it get better?&lt;/h3&gt;
+
+&lt;p&gt;Yes, it can get really better, this is the point where everything start to get interesting. But, I’m going to explain it in a new post where I will introduce Jekyll, the framework wich I used to create this website.
+I hope this tutorial has helping to whet your appetite.&lt;/p&gt;
+
+&lt;p&gt;Thanks for reading!
+=)&lt;/p&gt;</content><author><name>raquel</name></author><category term="[&quot;jekyll&quot;, &quot;github pages&quot;]" /><summary type="html">Github Pages allows to turn any repository on Github into a website with a couple of clicks.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/en/assets/img/posts/ghpages.jpg" /><media:content medium="image" url="http://localhost:4000/en/assets/img/posts/ghpages.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Half a year of working from home: Is it the future?</title><link href="http://localhost:4000/en/opinion/2020/09/01/telework/" rel="alternate" type="text/html" title="Half a year of working from home: Is it the future?" /><published>2020-09-01T11:05:23+02:00</published><updated>2020-09-01T11:05:23+02:00</updated><id>http://localhost:4000/en/opinion/2020/09/01/telework</id><content type="html" xml:base="http://localhost:4000/en/opinion/2020/09/01/telework/">&lt;blockquote&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Raquel</name></author><category term="[&quot;opinion&quot;]" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/en/assets/img/posts/telework_6months.jpg" /><media:content medium="image" url="http://localhost:4000/en/assets/img/posts/telework_6months.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Getting started with Git and Github: complete beginners guide</title><link href="http://localhost:4000/en/git/github/2020/09/01/git-and-github/" rel="alternate" type="text/html" title="Getting started with Git and Github: complete beginners guide" /><published>2020-09-01T11:05:23+02:00</published><updated>2020-09-01T11:05:23+02:00</updated><id>http://localhost:4000/en/git/github/2020/09/01/git-and-github</id><content type="html" xml:base="http://localhost:4000/en/git/github/2020/09/01/git-and-github/">&lt;blockquote&gt;
+&lt;p&gt;It's totally easy to get started with Git. If you are a fast reader you can have your profile created in less than 15 minutes from now.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you have listened talking about Git and Github, but you don’t know what it is. If you are starting collaborating in a team or you are developing your own project. If you have just discovered that all techology gurus make reference to their Github profile and think that you need your own to make them take you serious.&lt;/p&gt;
+
+&lt;p&gt;… Or, if you want to collaborate in your first open source project!&lt;/p&gt;
+
+&lt;p&gt;Then, this post is for you! =)&lt;/p&gt;
+
+&lt;p&gt;If you finish this article, you would have make the complete Git and Github tour. Cloning a project, create a branch, make changes, create a pull request or push to you own repository. In the way you will know a little bit more about terminal commands, how to use it and edit a markdown file (.md).&lt;/p&gt;
+
+&lt;p&gt;This article is about all the basics. There are so much work to make yourself a Git and Github pro, but there is always a beginning. With all the tips introduced in this article you will have enough tools to start in the world of code. I will left all the advanced commands to further posts.&lt;/p&gt;
+
+&lt;p&gt;So, there we go!&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-git-what-is-github&quot;&gt;What is Git? What is Github?&lt;/h3&gt;</content><author><name>Raquel</name></author><category term="[&quot;git&quot;, &quot;github&quot;]" /><summary type="html">It's totally easy to get started with Git. If you are a fast reader you can have your profile created in less than 15 minutes from now.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/en/assets/img/posts/git_github.png" /><media:content medium="image" url="http://localhost:4000/en/assets/img/posts/git_github.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Posicionar tu página de Jekyll.</title><link href="http://localhost:4000/en/jekyll/github/seo/2020/09/01/seo-jekyll/" rel="alternate" type="text/html" title="Posicionar tu página de Jekyll." /><published>2020-09-01T11:05:23+02:00</published><updated>2020-09-01T11:05:23+02:00</updated><id>http://localhost:4000/en/jekyll/github/seo/2020/09/01/seo-jekyll</id><content type="html" xml:base="http://localhost:4000/en/jekyll/github/seo/2020/09/01/seo-jekyll/"></content><author><name>raquel</name></author><category term="[&quot;jekyll&quot;, &quot;github&quot;, &quot;seo&quot;]" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/en/assets/img/posts/jekyll_seo.jpg" /><media:content medium="image" url="http://localhost:4000/en/assets/img/posts/jekyll_seo.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Multiple languages for Jekyll and Github Pages!</title><link href="http://localhost:4000/en/jekyll/github%20pages/2020/06/15/multilanguage-jekyll/" rel="alternate" type="text/html" title="Multiple languages for Jekyll and Github Pages!" /><published>2020-06-15T11:05:23+02:00</published><updated>2020-06-15T11:05:23+02:00</updated><id>http://localhost:4000/en/jekyll/github%20pages/2020/06/15/multilanguage-jekyll</id><content type="html" xml:base="http://localhost:4000/en/jekyll/github%20pages/2020/06/15/multilanguage-jekyll/">&lt;p&gt;In this post, I will explain how to add multi-languages to your Jekyll template in &lt;a href=&quot;https://pages.github.com/&quot; target=&quot;_blank&quot;&gt;Github Pages&lt;/a&gt;.
+To apply the multilingual feature, It is better to use some plugin, but Github does not support any other plugins with itself other than a few basic plugins for security reasons, you can find the supported plugins &lt;a href=&quot;https://pages.github.com/versions/&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;. So we can have our page working locally, but throwing errors in the Github build process.
+It might help us skip the build process of Github to push pages that have been generated on your local environment to the repository &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master&lt;/code&gt; branch, we can still control the versions of your Jekyll project by creating a new branch for you projects to be pushed.&lt;/p&gt;
+
+&lt;h2 id=&quot;installing-jekyll-multiple-laguages-plug-in&quot;&gt;Installing jekyll-multiple-laguages plug-in&lt;/h2&gt;
+
+&lt;p&gt;There are several ways to install &lt;a href=&quot;https://github.com/kurtsson/jekyll-multiple-languages-plugin&quot; target=&quot;_blank&quot;&gt;jekyll-multiple-languages&lt;/a&gt;. If you need more info, you will find the full documentation in their project repository. They are looking for more maintainers!!!&lt;/p&gt;
+
+&lt;h3 id=&quot;using-ruby-gem&quot;&gt;Using Ruby gem&lt;/h3&gt;
+
+&lt;p&gt;What I have chosen is to use Ruby gem.
+What you have to do is to add the following line to your Gemfile&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jekyll-multiple-languages-plugin'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then go to root directory of your Jekyll project and execute the following command&lt;/p&gt;
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Or install the gem by yourself as:&lt;/p&gt;
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll-multiple-languages-plugin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To activate the plugin add it to Jekyll _config.yml file, under the plugins option:&lt;/p&gt;
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-multiple-languages-plugin&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;as-a-git-submodule&quot;&gt;As a Git Submodule&lt;/h3&gt;
+
+&lt;p&gt;In some cases, depending on the theme that I use, there may be issues related to the dependencies of gems. To avoid these issues you can add the plugin as a git submodule.
+To install this plugin as a git submodule, go to root directory and execute:&lt;/p&gt;
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git submodule add git://github.com/screeninteraction/jekyll-multiple-languages-plugin.git _plugins/multiple-languages
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To update:&lt;/p&gt;
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;_plugins/multiple-languages
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git pull origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;setting-_configyml-file&quot;&gt;Setting _config.yml file&lt;/h2&gt;
+
+&lt;p&gt;Add the languages available in your website into your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Multi-Language config&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;languages&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;es&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;en&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;default_lang&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;es&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;exclude_from_localizations&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;assets&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;gallery&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;_sass&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If not default language, the first element of the language list will be used as the default one.
+To avoid redundancy, it is possible to exclude files and folders from being copied to the localization folders. The usual folders to exclude will be the images or other common resources folder&lt;/p&gt;
+
+&lt;h2 id=&quot;folder-structure&quot;&gt;Folder Structure&lt;/h2&gt;
+
+&lt;p&gt;Ya está todo configurado, es la hora de añadir la estructura de ficheros para construir nuestra página con los diferentes idiomas. 
+In the Jekyll project without multiple-languages-plugin, Jekyll builds the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.md&lt;/code&gt; files under the folder structure, in posts cases, it will by in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; folder. However, if you install jekyll-multiple-languages-plugin, jekyll serve command will build the _posts folder under the _i18n directory.&lt;/p&gt;
+
+&lt;p&gt;Create a folder called _i18n and add sub-folders for each language, using the same names used on the languages setting on the configuration file:
+It should look similar to this folder structure:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;_i18n
+│   en.yml
+│   es.yml    
+│
+└───es
+│   └───pagename
+│       │   file111.txt
+└───en
+│   └───pagename
+│   │   file111.txt
+│   ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;setting-languageyml&quot;&gt;Setting language.yml&lt;/h2&gt;
+
+&lt;p&gt;The language.yml files are written in YAML syntax which caters to a simple grouping of strings.
+Those files have the sentences that we want to be translated, and configuration for each language. For example the navbar titles.
+For example, we have Spanish and English YAML file:&lt;/p&gt;
+
+&lt;h6 id=&quot;esyml&quot;&gt;es.yml&lt;/h6&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;site_title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Raquel Fishes web&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;site_description&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Sitio Web de Raquel Fishes&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;langs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;english&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Ingles&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;spanish&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Español&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;en&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;EN&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;es&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ES&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;navbar&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;about&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Sobre mí&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;contact&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Contacto&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;blog&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Blog&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h6 id=&quot;enyml&quot;&gt;en.yml&lt;/h6&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;site_title&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Raquel Fishes website&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;site_description&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Raquel Fishes personal page&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;langs&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;english&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;English&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;spanish&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Spanish&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;en&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;EN&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;es&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ES&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;navbar&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;about&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;About me&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;contact&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Contact&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;blog&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Blog&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;visiting-multiligual-pages&quot;&gt;Visiting multiligual pages&lt;/h2&gt;
+
+&lt;p&gt;La navegación por nuestra página multi-idioma va a añadir automáticamente a nuestra web la subextensión correspondiente al idioma en el que estemos navegando cuando no se trate del idioma por defecto.
+The explorer links will look similar to:&lt;/p&gt;
+
+&lt;h6 id=&quot;default-language-spanish&quot;&gt;Default language (Spanish)&lt;/h6&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;raquelfishes.githug.io/about
+localhost:4000/about
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h6 id=&quot;other-language-english&quot;&gt;Other language (English)&lt;/h6&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;raquelfishes.githug.io/en/about
+localhost:4000/en/about
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;switching-languages&quot;&gt;Switching languages&lt;/h2&gt;
+
+&lt;p&gt;Now that you got a multilingual feature, you might need a language switcher.
+In my case, I have added flag icons at the navigation bar for switching between both languages.
+This snippet will create a link that will toggle between Spanish and English.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;nav-item&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  {% if site.lang == &quot;es&quot; %}
+    {% capture link1 %}{{ site.baseurl_root }}/en{{ page.url }}{% endcapture %}
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ link1 }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;lang-switcher spanish&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Website en español&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;en.webp&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;{% t global.en %}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+  {% elsif site.lang == &quot;en&quot; %}
+    {% capture link2 %}{{ site.baseurl_root }}{{ page.url }}{% endcapture %}
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ link2 }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;lang-switcher english&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;English Website&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;es.webp&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;{% t global.es %}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+  {% endif %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;auto-publish&quot;&gt;Auto publish&lt;/h2&gt;
+
+&lt;p&gt;This is the hardest point of this project. At this point, your web is working locally, but you cant publish it to Github Pages. Then, I will explain it step by step.&lt;/p&gt;
+
+&lt;h4 id=&quot;create-a-branch-and-set-to-default&quot;&gt;Create a branch and set to default&lt;/h4&gt;
+
+&lt;p&gt;We are changing our default branch, just to store all our commits history in a different branch fro master. If you already work with a develop branch and other for production, you don’t have to do extra work. If not, this is the moment for creating it.
+Run these commands below in your local repository, in my project the history branch is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git checkout -b source master
+$ git push -u origin source
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And then, go to your Github repository, and configure this branch as the default project branch &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Github web &amp;gt; your repository &amp;gt; Settings &amp;gt; Branches &amp;gt; Default branch&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;rakefile&quot;&gt;Rakefile&lt;/h4&gt;
+
+&lt;p&gt;If you had a previous Rake build file in your site, it probably looks similar to:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:assets&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:precompile&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`bundle exec jekyll build`&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;That build script, built the Jekyll project, but it won’t wokr anymore, because Github does not support the multilanguage plugin. 
+We need that the new script builds ourt site, copy the built page to our master branch and push it, avoiding Github to build it. 
+Our new Rakefile will be as follow:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;tmpdir&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;rubygems&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Auto publish&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Change your GitHub reponame&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;GITHUB_REPONAME&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;username/username.github.io&quot;&lt;/span&gt;
+
+
+&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Generate blog files&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:generate&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Jekyll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Jekyll&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;configuration&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;source&quot;&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;destination&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;_site&quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;process&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;desc&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Generate and publish blog to gh-pages&quot;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;task&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:publish&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:generate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;mktmpdir&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;cp_r&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;_site/.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;pwd&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;pwd&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;chdir&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;
+
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git init&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git config --local user.name username&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git config --local user.email usermail&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git add .&quot;&lt;/span&gt;
+	  &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Site updated at &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;utc&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+	  &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git commit -m &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;inspect&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git remote add origin https://github.com/&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;GITHUB_REPONAME&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.git&quot;&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;system&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;git push origin master --force&quot;&lt;/span&gt;
+
+    &lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;chdir&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pwd&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;I have added the user and email local config. Just copy and paste the code in your file and it replace with your personal info and repository.
+If there is no &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rakefile&lt;/code&gt;, you can just create a new one and copy the code.&lt;/p&gt;
+
+&lt;h4 id=&quot;run-rake-publish&quot;&gt;Run rake publish&lt;/h4&gt;
+
+&lt;p&gt;The last step to publish our website in our repository &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;master&lt;/code&gt; branch, and then can visit this page at the public site.
+Now can easily execute the following command:&lt;/p&gt;
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;rake publish
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;or:&lt;/p&gt;
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake publish
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;git push
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;And push your full local repository, so it will synchronize local commits at development state.&lt;/p&gt;
+
+&lt;h2 id=&quot;finishing-this-topic&quot;&gt;Finishing this topic…&lt;/h2&gt;
+
+&lt;p&gt;I always wanted to have this website project with two languages. Spanish is my native language, and from my point of view like a computer engineer, we use to read all the technical documentation in English, I appreciate and want to contribute to find technical info in Spanish.
+I have spent A LOT OF TIME to have this Jekyll project in Github to have both languages, searching in several places, and the problem was integrate with Github because of failed builds.
+I hope this article and Spanish one help others to not lose so many time with this functionality…&lt;/p&gt;
+
+&lt;p&gt;=)&lt;/p&gt;</content><author><name>raquel</name></author><category term="[&quot;jekyll&quot;, &quot;github pages&quot;]" /><summary type="html">In this post, I will explain how to add multi-languages to your Jekyll template in Github Pages. To apply the multilingual feature, It is better to use some plugin, but Github does not support any other plugins with itself other than a few basic plugins for security reasons, you can find the supported plugins here. So we can have our page working locally, but throwing errors in the Github build process. It might help us skip the build process of Github to push pages that have been generated on your local environment to the repository master branch, we can still control the versions of your Jekyll project by creating a new branch for you projects to be pushed.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/en/assets/img/posts/jekyll_multilingual.jpg" /><media:content medium="image" url="http://localhost:4000/en/assets/img/posts/jekyll_multilingual.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Create your free website with Jekyll and Github Pages!</title><link href="http://localhost:4000/en/jekyll/github%20pages/2020/06/08/github_pages-jekyll/" rel="alternate" type="text/html" title="Create your free website with Jekyll and Github Pages!" /><published>2020-06-08T11:05:23+02:00</published><updated>2020-06-08T11:05:23+02:00</updated><id>http://localhost:4000/en/jekyll/github%20pages/2020/06/08/github_pages-jekyll</id><content type="html" xml:base="http://localhost:4000/en/jekyll/github%20pages/2020/06/08/github_pages-jekyll/"></content><author><name>Raquel Peces</name></author><category term="[&quot;jekyll&quot;, &quot;github pages&quot;]" /><summary type="html"></summary></entry></feed>
