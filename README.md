@@ -1,206 +1,91 @@
-Sync at 09/06/2020
+# Brutal - The neobrutalist Astro theme
 
-### devlopr-jekyll - A Beautiful Jekyll Theme Built for Developers
+Brutal is a minimal neobrutalist theme for [Astro](https://astro.build/). It's based on Neobrutalist Web Design, a movement that aims to create websites with a minimalistic and functional design. It has some integrations like Image Optimization, RSS, Sitemap, ready to get your SEO done right.
 
-[![Gem Version](https://badge.fury.io/rb/devlopr.svg)](https://badge.fury.io/rb/devlopr)![workflow-badge](https://github.com/sujaykundu777/devlopr-jekyll/workflows/deploy/badge.svg)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4232ac2b-63e0-4c78-92e0-e95aad5ab8c3/deploy-status)](https://app.netlify.com/sites/devlopr/deploys)
-![](https://ruby-gem-downloads-badge.herokuapp.com/devlopr?type=total&color=brightgreen&style=plastic)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+The theme has no JavaScript integration out of the box, but can always be added of course.
 
-Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup.
-The Theme supports both Light and Dark Style. Highly Customizable and No Hosting or Maintainence Cost is required !
+This template is based on [my own personal website](<https://www.elian.codes/>), with some more generic things added.
 
-### [Installation Guide](https://devlopr.netlify.app/get-started)
+## Usage
 
-![devlopr jekyll](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/assets/img/screenshot.PNG?raw=true)
+You can bootstrap a new Astro project using Brutal with the following command:
 
-devlopr uses Markdown Files to create data like Blog Posts, Gallery, Shop Products etc. No external database is required.
+```bash
+# npm
+npm create astro@latest -- --template eliancodes/brutal
 
-You can easily manage the site using the admin : [http://localhost:4000/admin](http://localhost:4000/admin)
+# pnpm
+pnpm create astro@latest --template eliancodes/brutal
 
-![jekyll admin](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/assets/img/jekyll-admin.PNG?raw=true)
+# yarn
+yarn create astro --template eliancodes/brutal
+```
 
-### Deploy your devlopr-jekyll blog - One Click Deploy
+### Commands
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/sujaykundu777/devlopr-jekyll)
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/sujaykundu777/devlopr-jekyll)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sujaykundu777/devlopr-jekyll)
+All commands are run from the root of the project, from a terminal:
 
-### Demo (Hosted Apps)
+(Here I use PNPM, no problem if you use NPM or Yarn)
 
-- Github Pages Demo - [here](https://sujaykundu.com)
-- Netlify Demo - [here](https://devlopr.netlify.com)
-- Zeit Now Demo - [here](https://devlopr-jekyll.now.sh)
-- Heroku Demo - [here](https://devlopr-jekyll.herokuapp.com)
-- AWS Amplify Demo - [here](https://master.d3t30wwddt6jju.amplifyapp.com/)
+| Command             | Action                                             |
+| :------------------ | :------------------------------------------------- |
+| `pnpm install`      | Installs dependencies                              |
+| `pnpm dev`          | Starts local dev server at `localhost:4321`        |
+| `pnpm build`        | Build your production site to `./dist/`            |
+| `pnpm preview`      | Preview your build locally, before deploying       |
+| `pnpm astro ...`    | Run CLI commands like `astro add`, `astro preview` |
+| `pnpm astro --help` | Get help using the Astro CLI                       |
 
-#### Features :
+## Integrations
 
-- CMS Admin Support using [Jekyll Admin](https://jekyll.github.io/jekyll-admin/)
-- Supports Latest [Jekyll 4.x](https://jekyllrb.com) and [Bundler](https://bundler.io)
-- Stylesheet built using Sass
-- Comments using [Hyvor](https://talk.hyvor.com/) and [Disqus](https://disqus.com/)
-- Google SEO and Analytics Optimized
-- Real Time Search using [Algolia](https://algolia.com/)
-- Sell Stuff (Ecommerce) in your Blog using [Snipcart](https://snipcart.com/)
-- Send Newsletters using [Mailchimp](https://mailchimp.com/)
-- Contact Forms using [Formspree](https://formspree.io/)
-- Coding Activity using [Wakatime](https://wakatime.com/)
-- Hosting Support for [Github Pages](https://pages.github.com), [Netlify](https://netlify.com), [Zeit](https://zeit.co), [Heroku](https://heroku.com), [AWS Amplify](aws.amplify.com)
+### UnoCSS
 
-## Release Changes :
+In this theme, I'm using [UnoCSS](https://uno.antfu.me/) to generate the CSS. It's a utility-first CSS framework that uses a single class to style elements. It's very easy to use and has a lot of features. It's setup to be completely compatible with TailwindCSS, with the advantage of being able to use PureCSS icons. You can always switch out UnoCSS for TailwindCSS if you want to, without breaking the general styles.
 
-You can check out the latest changes [here](https://www.buymeacoffee.com/p/57109)
+### Sitemap
 
-## Using Docker :
+To generate the sitemap, you don't need to do anything. It's automatically generated when you build your site. You'll just need to switch out the `site` on `astro.config.ts` to your own.
 
-Building the Image :
+```js title="astro.config.mjs"
+import { defineConfig } from 'astro/config';
 
-`docker build -t my-devlopr-jekyll-blog .`
+export default defineConfig({
+  site: 'https://example.com',
+});
+```
 
-Running the container :
+### RSS
 
-`docker run -d -p 4000:4000 -it --volume="$PWD:/srv/jekyll" --name "my_blog" my-devlopr-jekyll-blog:latest jekyll serve --watch`
+The RSS feed is automatically generated from the Markdown files in the `src/content/blog` folder. You can ofcourse completely change this to your own needs.
 
-## Using Docker Compose :
+The RSS will output to `https://example.com/feed.xml` by default. You can change this, by renaming `src/pages/feed.xml.js`.
 
-### Development :
+### Image
 
-You can run the app in development mode : (your changes will be reflected --watch moded)
+## Components
 
-Serve the site at http://localhost:4000 :
+### `components/blog/`
 
-`docker-compose -f docker-compose-dev.yml up --build --remove-orphans`
+This directory contains all components for the blog.
 
-### Production :
+### `components/errors/`
 
-You can run the app in production mode : (your changes will be reflected --watch moded)
+This directory contains all error components.
 
-Serve the site at http://localhost:4000 :
+#### `components/errors/404.astro`
 
-`docker-compose -f docker-compose-prod.yml up --build --remove-orphans`
+This component is used when a page is not found.
 
-Stop the app :
-`docker-compose -f docker-compose-prod.yml down`
-Once everything is good and ready to go live -
+### `components/generic/`
 
-`docker-compose -f docker-compose-prod.yml up --build --detach`
+This directory contains all generic components, reused over multiple pages.
 
-## Contributors:
+### `components/home/`
 
-This project exists thanks to all the people who contribute.
+This directory contains all components for the home page.
 
-Contributions are more than just welcome. Fork this repo and create a new branch, then submit a pull request
+### `components/layout/`
 
-- 1.Fork it [http://github.com/sujaykundu777/devlopr-jekyll/fork](http://github.com/sujaykundu777/devlopr-jekyll/fork )
+This directory contains all layout components. For instance, the header and footer and `<head>` section.
 
-- 2.Create your feature branch
-`git checkout -b my-new-feature`
-
-- 3.Commit your changes
-`git commit -am 'Add some feature'`
-
-- 4.Push to the branch
-`git push origin my-new-feature`
-
-- 5.Create new Pull Request
-
-### Backers
-
-Thanks to all our Backers ! 🙏 [Become a Backer](https://opencollective.com/devlopr-jekyll#backer)
-
-<a href="https://opencollective.com/devlopr-jekyll#backers" target="_blank"><img src="https://opencollective.com/devlopr-jekyll/backers.svg?width=890" /></a>
-
-### For Help :
-
-You can contact me, if you need any help via [Email](mailto:sujaykundu777@gmail.com). If you like the project. Don't forget to :star: !
-
-## Licence
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT). You can do anything you want, including projects for your clients, as long as you mention an attribution back (credit links in footer). See the [Licence](https://github.com/sujaykundu777/devlopr-jekyll/blob/master/LICENSE) file
-
-I understand that sometimes footer links or any links to external websites are not convenient, so you have the option to remove credits/footer links by becoming a [Backer](https://opencollective.com/devlopr-jekyll#backer).
-
-
-
-### programhes-jekyll - A Cool Jekyll Theme
-
-
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-
-The Theme supports Light and Dark style with a custom switch. Highly Customizable and No Hosting or Maintainence Cost is required!
-The Theme also support multiple languages for texts and blog posts. This is a key feature!
-
-
-
-### Demo (Hosted Apps)
-
-- Github Pages Demo - [here](https://raquelfishes.github.io)
-
-
-#### Features :
-
-- CMS Admin Support using [Jekyll Admin](https://jekyll.github.io/jekyll-admin/)
-- Supports Latest [Jekyll 4.x](https://jekyllrb.com) and [Bundler](https://bundler.io)
-- Stylesheet built using Sass
-- Comments using [Hyvor](https://talk.hyvor.com/) and [Disqus](https://disqus.com/)
-- Google SEO and Analytics Optimized
-- Send Newsletters using [Mailchimp](https://mailchimp.com/)
-- Contact Forms using [Formspree](https://formspree.io/)
-- Coding Activity using [Wakatime](https://wakatime.com/)
-- Hosting Support for [Github Pages](https://pages.github.com)
-- Multiple Languages thanks to [jekyll-multiple-languages-plugin](https://github.com/kurtsson/jekyll-multiple-languages-plugin)
-
-
-##### Style Palette
-
-###### Dark Style
-
-| Scope                     | Color                                              | HEX     | RGB                |
-| ------------------------- | -------------------------------------------------- | ------- | ------------------ |
-| Main Background           | ![#131421](https://placehold.it/35/131421/?text=+) | #131421 | rgb(19, 20, 33)    |
-| Head & Footer Background  | ![#191A2A](https://placehold.it/35/191A2A/?text=+) | #191A2A | rgb(25, 26, 42)    |
-| Card Background           | ![#1E2030](https://placehold.it/35/1E2030/?text=+) | #1E2030 | rgb(30, 32, 48)    |
-| Title Color               | ![#BFC0C2](https://placehold.it/35/BFC0C2/?text=+) | #BFC0C2 | rgb(191, 192, 194) |
-| Text Color                | ![#A3A3A1](https://placehold.it/35/A3A3A1/?text=+) | #A3A3A1 | rgb(163, 163, 161) |
-
-
-###### Light Style
-
-
-
-## Release Changes :
-
-You can check out the latest changes [here](https://www.buymeacoffee.com/raquelfishes)
-
-
-
-## Contributors:
-
-I created this project for my personal site.
-
-Contributions are more than just welcome. Fork this repo and create a new branch, then submit a pull request
-
-- 1.Fork it [http://github.com/raquelfishes/programhes-jekyll/fork](http://github.com/raquelfishes/programhes-jekyll/fork )
-
-- 2.Create your feature branch
-`git checkout -b my-new-feature`
-
-- 3.Commit your changes
-`git commit -am 'Add some feature'`
-
-- 4.Push to the branch
-`git push origin my-new-feature`
-
-- 5.Create new Pull Request
-
-
-### For Help :
-
-You can contact me, if you need any help via [Email](mailto:raquelpm23@gmail.com). If you like the project. Don't forget to :star: !
-
-## Licence
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT). You can do anything you want, including projects for your clients, as long as you mention an attribution back (credit links in footer). See the [Licence](https://github.com/raquelfishes/programhes-jekyll/blob/master/LICENSE) file
-
-I understand that sometimes footer links or any links to external websites are not convenient, so you have the option to remove credits/footer links by buying me a coffee to help me at [Backer](https://www.buymeacoffee.com/raquelfishes).
+If you need more from this theme, don't hesitate to open an issue or reach out to me!
