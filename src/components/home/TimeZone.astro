@@ -1,0 +1,43 @@
+---
+import { Card } from '@eliancodes/brutal-ui';
+import { getCurrentTimeInMadrid, formatTimeForMadrid } from "../../lib/helpers";
+---
+<script>
+    import { onCleanup, onMount } from "solid-js";
+    import { formatTimeForMadrid } from "../../lib/helpers";
+  
+    let interval: ReturnType<typeof setInterval>;
+  
+    function updateClock() {
+      const timeDisplay = document.getElementById("timeDisplay");
+      const now = new Date();
+  
+      if (timeDisplay) {
+        timeDisplay.textContent = formatTimeForMadrid(now);
+        timeDisplay.setAttribute("datetime", now.toISOString());
+      }
+    }
+  
+    onMount(() => {
+      interval = setInterval(updateClock, 1000);
+    });
+  
+    onCleanup(() => {
+      clearInterval(interval);
+    });
+  </script>
+  
+<div class='col-span-2'>
+    <Card>
+        <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif'>
+            Zona horaria:
+        </h2>
+        <time
+            datetime=""
+            id="timeDisplay"
+            class="poppins text-2xl xl:text-5xl xl:whitespace-nowrap w-50 xl:w-100 h-[calc(100%-28px)] flex justify-center items-center"
+        >
+            {formatTimeForMadrid(getCurrentTimeInMadrid())}
+        </time>
+    </Card>
+</div>
