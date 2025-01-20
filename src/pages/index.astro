@@ -27,6 +27,22 @@ const builtWith = [
   { name: 'Vercel', url: 'https://vercel.com' },
   { name: 'TypeScript', url: 'https://www.typescriptlang.org/' },
 ];
+
+const interest = [
+  { name: 'C++', url: 'https://astro.build/' },
+  { name: 'C#', url: 'https://www.typescriptlang.org/' },
+  { name: 'Python', url: 'https://www.typescriptlang.org/' },
+  { name: 'Unity', url: 'https://uno.antfu.me/' },
+  { name: 'Orquesta Iuventas', url: 'https://docs.astro.build/en/guides/rss/' },
+  { name: 'Violín', url: 'https://vercel.com' },
+  { name: 'Running', url: 'https://www.typescriptlang.org/' },
+  { name: 'Gym', url: 'https://www.typescriptlang.org/' },
+  { name: 'Computer Graphics', url: 'https://www.typescriptlang.org/' },
+  { name: 'Vulkan', url: 'https://www.typescriptlang.org/' },
+  { name: 'Viajar', url: 'https://www.typescriptlang.org/' },
+  { name: 'Finanzas Personales', url: 'https://www.typescriptlang.org/' },
+  { name: 'Inversión', url: 'https://www.typescriptlang.org/' },
+];
 ---
 
 <Layout
@@ -48,11 +64,14 @@ const builtWith = [
       <div class='col-span-2'>
         <Card>
           <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-            Brutal is built with
+            ¿Qué ocupa mi tiempo?
           </h2>
+          <p class='poppins'>
+            Todo lo que ocupa mi tiempo tanto en el trabajo como en mi vida.
+          </p>
           <ul class='flex gap-4 flex-wrap'>
             {
-              builtWith.map((item) => (
+              interest.map((item) => (
                 <li>
                   <Pill>
                     <a
@@ -174,3 +193,5 @@ const builtWith = [
     <RecentBlogPosts />
   </main>
 </Layout>
+
+
