@@ -1,5 +1,5 @@
 ---
-import { Card } from '@eliancodes/brutal-ui';
+import RaquelCard from '../generic/RaquelCard.astro';
 import { Button } from '@eliancodes/brutal-ui';
 import { Image } from "astro:assets";
 import headshot from "../../assets/headshot.jpg";
@@ -7,7 +7,7 @@ import headshot from "../../assets/headshot.jpg";
 <section id='about' class='grid md:grid-cols-8 gap-8 mt-4'>
     <h2 class='hidden'>About RaquelFishes</h2>
     <div class='flex flex-col md:col-span-6'>
-      <Card color="yellow">
+      <RaquelCard color="yellow">
           <p class='mt-4 outfit text-2xl md:text-5xl lg:text-7xl'>
             Hola!
           </p>
@@ -20,7 +20,7 @@ import headshot from "../../assets/headshot.jpg";
           <Button target={'_self'} href='/blog/'>
             ¿Quieres saber más? &rarr;
           </Button>
-      </Card>
+      </RaquelCard>
     </div>
     <Image
       class="object-cover h-full w-full rounded-lg md:col-span-2 border-3 border-black card-shadow"
