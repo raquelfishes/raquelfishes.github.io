@@ -1,0 +1,62 @@
+---
+interface Props {
+  color?: string | undefined;
+}
+import colors from './style/canon_colors.json';
+import {Icon} from 'astro-icon/components'
+import RaquelCard from './RaquelCard.astro'
+import { Button } from '@eliancodes/brutal-ui';
+
+interface Props {
+  type?: string;
+  title?: string;
+  icon?: string;
+  body?: string;
+  colSpan?: string;
+  rowSpan?: string;
+  href?: string;
+  colorText?: string;
+  height?: string;
+  width?: string;
+}
+
+
+const { color, type, icon, title, href, body } = Astro.props;
+---
+
+<style define:vars={{ color: color }}>
+
+</style>
+
+<RaquelCard color={color}>
+  <header>
+    <h3><Icon name={icon}></Icon>blablalba</h3>
+  </header>
+  <div class="canon-card">
+      <h3 class="item-title book-highlight">{title}</h3>
+      <p>{body}</p>
+</div>
+{
+href ? (
+<footer>
+  <Button target={'_self'} href={href}>
+    Link &rarr;
+  </Button>
+</footer>
+) : (
+  <slot/>
+  )
+}
+
+</RaquelCard>
+<!--
+<div class="canon-card">
+    <a href="https://www.goodreads.com/book/show/153747.Moby_Dick_or_The_Whale">
+        <div class="i-uil-twitter">
+            <!--<img src="img/icon-book.png" />
+        </div>
+        <h3 class="item-title book-highlight">Moby-Dick; or, The Whale</h3>
+        <p>An obvious classic I read only recently — it blew me away with its majestic language and vortex of ideas.</p>
+    </a>
+</div>
+-->

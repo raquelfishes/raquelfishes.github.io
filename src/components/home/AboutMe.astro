@@ -1,5 +1,5 @@
 ---
-import RaquelCard from '../generic/RaquelCard.astro';
+import RaquelCard from '../card/RaquelCard.astro';
 import { Button } from '@eliancodes/brutal-ui';
 import { Image } from "astro:assets";
 import headshot from "../../assets/headshot.jpg";
@@ -15,10 +15,10 @@ import headshot from "../../assets/headshot.jpg";
             Soy Raquel Peces, Ingeniera de Software especializada en Computer Graphics. Con experiencia en la producción audiovisual y en motores de simulación y render. 
           </p>
           <p class="sanchez mt-4 mb-8 text-lg md:text-xl lg:text-3xl">
-            Located in Madrid, 🇪🇸
+            Located in Madrid, <icon class="i-circle-flags-es w-6 h-6"></icon>
             </p>
-          <Button target={'_self'} href='/blog/'>
-            ¿Quieres saber más? &rarr;
+          <Button target={'_self'} href='/'>
+            <del>¿Quieres saber más? &rarr; </del>
           </Button>
       </RaquelCard>
     </div>

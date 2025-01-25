@@ -12,39 +12,24 @@ import { Card } from '@eliancodes/brutal-ui';
 import { Image } from "astro:assets";
 import EmptyComponent from '@components/home/EmptyComponent.astro';
 
-const builtWith = [
-  { name: 'Astro', url: 'https://astro.build/' },
-  { name: 'UnoCSS', url: 'https://uno.antfu.me/' },
-  {
-    name: 'Content Collections',
-    url: 'https://docs.astro.build/en/guides/content-collections/',
-  },
-  { name: 'RSS', url: 'https://docs.astro.build/en/guides/rss/' },
-  {
-    name: 'Sitemap',
-    url: 'https://docs.astro.build/en/guides/integrations-guide/sitemap/',
-  },
-  { name: 'Vercel', url: 'https://vercel.com' },
-  { name: 'TypeScript', url: 'https://www.typescriptlang.org/' },
-];
 
 const interest = [
-  { name: 'C++', url: 'https://astro.build/' },
-  { name: 'C#', url: 'https://www.typescriptlang.org/' },
-  { name: 'Python', url: 'https://www.typescriptlang.org/' },
-  { name: 'Unity', url: 'https://uno.antfu.me/' },
-  { name: 'Orquesta Iuventas', url: 'https://docs.astro.build/en/guides/rss/' },
-  { name: 'Violín', url: 'https://vercel.com' },
-  { name: 'Running', url: 'https://www.typescriptlang.org/' },
-  { name: 'Gym', url: 'https://www.typescriptlang.org/' },
-  { name: 'Computer Graphics', url: 'https://www.typescriptlang.org/' },
-  { name: 'Vulkan', url: 'https://www.typescriptlang.org/' },
-  { name: 'Viajar', url: 'https://www.typescriptlang.org/' },
-  { name: 'Finanzas Personales', url: 'https://www.typescriptlang.org/' },
-  { name: 'Inversión', url: 'https://www.typescriptlang.org/' },
-  { name: 'Impresión 3D', url: 'https://www.typescriptlang.org/' },
-  { name: 'Volar Drones', url: 'https://www.typescriptlang.org/' },
-  { name: 'Inversión', url: 'https://www.typescriptlang.org/' },
+  { name: 'C++' },
+  { name: 'C#' },
+  { name: 'Python' },
+  { name: 'Unity' },
+  { name: 'Orquesta Iuventas' },
+  { name: 'Violín' },
+  { name: 'Running' },
+  { name: 'Gym' },
+  { name: 'Computer Graphics' },
+  { name: 'Vulkan' },
+  { name: 'Viajar' },
+  { name: 'Finanzas Personales' },
+  { name: 'Inversión' },
+  { name: 'Impresión 3D' },
+  { name: 'Volar Drones' },
+  { name: 'Inversión' },
 ];
 ---
 
@@ -64,7 +49,7 @@ const interest = [
         <!--<Countries /> -->
             
           
-      <div class='col-span-2'>
+      <div class='col-span-4'>
         <Card>
           <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
             ¿Qué ocupa mi tiempo?
@@ -92,6 +77,7 @@ const interest = [
           </ul>
         </Card>
       </div>
+      <!--
       <div class='col-span-2'>
         <Card>
           <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif'>
@@ -130,70 +116,9 @@ const interest = [
           </ul>
         </Card>
       </div>
+    -->
     </section>
-
-    <section id='built-with' class='grid md:grid-cols-8 gap-8 mt-4'>
-        <div class='col-span-4'>
-            <Card>
-              <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif'>
-                What is Brutal?
-              </h2>
-              <p class='poppins'>
-                Brutal is a theme built with Astro, UnoCSS by <a
-                  href='https://www.elian.codes/'>Elian</a
-                >. It's a simple, fast, and modern theme that is easy to use and
-                customize. Mainly meant to power blogs and personal websites.
-              </p>
-            </Card>
-          </div>
-      <div class='col-span-4'>
-        <Card>
-          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif'>
-            What is Brutal?
-          </h2>
-          <p class='poppins'>
-            Brutal is a theme built with Astro, UnoCSS by <a
-              href='https://www.elian.codes/'>Elian</a
-            >. It's a simple, fast, and modern theme that is easy to use and
-            customize. Mainly meant to power blogs and personal websites.
-            It's a simple, fast, and modern theme that is easy to use and
-            customize. Mainly meant to power blogs and personal websites.
-            It's a simple, fast, and modern theme that is easy to use and
-            customize. Mainly meant to power blogs and personal websites.
-            It's a simple, fast, and modern theme that is easy to use and
-            customize. Mainly meant to power blogs and personal websites.
-            It's a simple, fast, and modern theme that is easy to use and
-            customize. Mainly meant to power blogs and personal websites.
-          </p>
-        </Card>
-      </div>
-      <div class='col-span-4'>
-        <Card>
-          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-            Brutal is built with
-          </h2>
-          <ul class='flex gap-4 flex-wrap'>
-            {
-              builtWith.map((item) => (
-                <li>
-                  <Pill>
-                    <a
-                      class='sanchez'
-                      href={item.url}
-                      target='_blank'
-                      title={`Go to ${item.name}`}
-                    >
-                      {item.name}
-                    </a>
-                  </Pill>
-                </li>
-              ))
-            }
-          </ul>
-        </Card>
-      </div>
-    </section>
-    <RecentBlogPosts />
+<!--   <RecentBlogPosts /> -->
   </main>
 </Layout>
 

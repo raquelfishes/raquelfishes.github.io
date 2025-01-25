@@ -1,0 +1,54 @@
+---
+import Layout from '@layouts/Default.astro';
+import CanonCard from '@components/card/CanonCard.astro';
+
+interface Props {
+    author: string;
+    pubDate: Date;
+    title: string;
+}
+
+const canonInfo = 
+[
+    {
+        title: "Raquel",
+        icon: 'uil:twitter',
+        url: 'https://raquelfishes.github.io',
+        text: 'Lorem Ipsum bla blaslalsfdjañosifjañlskñaso ñlsakdjfowañeijf'
+    },
+    {
+        title: "Raquel",
+        icon: 'uil:github',
+        url: 'https://raquelfishes.github.io',
+        text: 'Lorem Ipsum bla blaslalsfdjañosifjañlskñaso ñlsakdjfowañeijf'
+    },
+    {
+        title: "Raquel",
+        icon: 'uil:twitter',
+        url: 'https://raquelfishes.github.io',
+        text: 'Lorem Ipsum bla blaslalsfdjañosifjañlskñaso ñlsakdjfowañeijf'
+    },
+    {
+        title: "Raquel",
+        icon: 'uil:github',
+        url: 'https://raquelfishes.github.io',
+        text: 'Lorem Ipsum bla blaslalsfdjañosifjañlskñaso ñlsakdjfowañeijf'
+    }
+]
+
+const { author, pubDate, title } = Astro.props;
+---
+
+<Layout
+  title='Canon'
+  pageTitle='Raquel Fishes | Canon'
+  description='Canon Page.'
+>
+
+{
+    canonInfo.map((item) =>(
+        <CanonCard icon={item.icon} href={item.url} title={item.title} body={item.text}></CanonCard>
+    ))
+}
+
+</Layout>
