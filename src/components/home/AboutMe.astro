@@ -3,7 +3,15 @@ import RaquelCard from '../card/RaquelCard.astro';
 import { Button } from '@eliancodes/brutal-ui';
 import { Image } from "astro:assets";
 import headshot from "../../assets/headshot.jpg";
+import {Icon} from "astro-icon/components"
 ---
+<style>
+  [data-icon="circle-flags:es"] 
+  {
+    display: inline-block;
+  }
+</style>
+
 <section id='about' class='grid md:grid-cols-8 gap-8 mt-4'>
     <h2 class='hidden'>About RaquelFishes</h2>
     <div class='flex flex-col md:col-span-6'>
@@ -15,8 +23,8 @@ import headshot from "../../assets/headshot.jpg";
             Soy Raquel Peces, Ingeniera de Software especializada en Computer Graphics. Con experiencia en la producción audiovisual y en motores de simulación y render. 
           </p>
           <p class="sanchez mt-4 mb-8 text-lg md:text-xl lg:text-3xl">
-            Located in Madrid, <icon class="i-circle-flags-es w-6 h-6"></icon>
-            </p>
+            Located in Madrid, <Icon name="circle-flags:es" />
+          </p>
           <Button target={'_self'} href='/'>
             <del>¿Quieres saber más? &rarr; </del>
           </Button>
