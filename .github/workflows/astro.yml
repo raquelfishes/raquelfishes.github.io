@@ -36,7 +36,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
-        id: withastro/action@v3
+        uses: withastro/action@v3
 
   deploy:
     environment:
