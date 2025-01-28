@@ -89,3 +89,9 @@ This directory contains all components for the home page.
 This directory contains all layout components. For instance, the header and footer and `<head>` section.
 
 If you need more from this theme, don't hesitate to open an issue or reach out to me!
+
+
+
+
+### Raquel updates
+https://github.com/denv17/free-astro-components?tab=readme-ov-file astro free components
