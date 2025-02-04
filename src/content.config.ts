@@ -15,6 +15,18 @@ const blogCollection = defineCollection({
     }),
 });
 
+const nowCollection = defineCollection({
+    loader: glob({ pattern: '**/[^_]*.md', base: "./src/data/now" }),
+    schema: ({ image }) =>
+      z.object({
+        title: z.string(),
+        author: z.string(),
+        pubDate: z.string().transform((str) => new Date(str)),
+        draft: z.boolean().optional().default(false),
+      }),
+  });
+
 export const collections = {
   blog: blogCollection,
+  now: nowCollection,
 };

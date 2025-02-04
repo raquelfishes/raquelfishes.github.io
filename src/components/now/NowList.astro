@@ -1,0 +1,26 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { Card, Button } from '@eliancodes/brutal-ui';
+
+
+
+interface Props {
+  posts: CollectionEntry<'now'>[];
+}
+
+const { posts } = Astro.props;
+---
+
+<ul class='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+  {
+    posts.map((post) => {
+      return (
+        <li>
+          <Card>{post.data.title}
+            <Button href={`/now/${post.id}/`}>Read post &rarr;</Button>
+            </Card>
+        </li>
+      );
+    })
+  }
+</ul>

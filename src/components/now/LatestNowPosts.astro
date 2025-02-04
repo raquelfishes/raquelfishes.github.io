@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import NowList from '@components/now/NowList.astro';
+import { Card } from '@eliancodes/brutal-ui';
+
+interface Props {
+  count?: number;
+}
+
+const { count } = Astro.props;
+
+const nows = await getCollection('now');
+
+const posts = nows.sort((a, b) => {
+  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+}).slice(0, count ?? 3);
+
+---
+
+{posts.length > 1 ? (
+  <section class='mt-8'>
+    <Card>
+      <div class='flex justify-between items-start'>
+        <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
+          El archivo
+        </h2>
+      </div>
+      <NowList posts={posts} />
+    </Card>
+</section>
+) : null}

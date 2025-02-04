@@ -95,3 +95,6 @@ If you need more from this theme, don't hesitate to open an issue or reach out t
 
 ### Raquel updates
 https://github.com/denv17/free-astro-components?tab=readme-ov-file astro free components
+
+Added moment js:
+https://momentjs.com/

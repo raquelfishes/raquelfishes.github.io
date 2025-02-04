@@ -1,0 +1,28 @@
+---
+import Layout from './Default.astro';
+import NowSideBar from '@components/now/NowSideBar.astro';
+import NowContent from '@components/now/NowContent.astro';
+import LatestNowPosts from '@components/now/LatestNowPosts.astro';
+
+interface Props {
+  author: string;
+  pubDate: Date;
+  headings: unknown;
+  title: string;
+}
+
+const { author, pubDate, headings, title } = Astro.props;
+---
+
+<Layout title={title} description="blalbla">
+  <main class='p-6 lg:grid lg:grid-cols-3 flex justify-center'>
+    <NowSideBar headings={headings as any[]} />
+    <NowContent {pubDate} {author}>
+      <slot />
+    </NowContent>
+  </main>
+  <!-- LatestNowPosts component will display the latest 6 posts -->
+  <section class='p-6'>
+    <LatestNowPosts count={6} />
+  </section>
+</Layout>

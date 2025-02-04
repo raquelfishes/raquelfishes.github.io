@@ -1,0 +1,23 @@
+---
+import Layout from '@layouts/NowPage.astro';
+import { render, getCollection } from 'astro:content';
+
+
+const nows = await getCollection('now');
+
+const latestNow = nows.filter((post) => post.data.pubDate).sort((a, b) => {
+  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
+})[0];
+
+
+const { Content } = await render(latestNow);
+
+---
+
+<Layout title={latestNow.data.title} 
+    author="RaquelFishes" 
+    pubDate={latestNow.data.pubDate} 
+    headings={latestNow.rendered?.metadata?.headings}
+    >
+    <Content/>
+</Layout>

@@ -1,0 +1,22 @@
+---
+import moment from 'moment';
+
+interface Props {
+  pubDate: Date;
+  author: string;
+}
+
+const { pubDate, author } = Astro.props;
+
+// Set the locale to Spanish, TODO: make this dynamic with i18n
+moment.locale("es"); 
+
+---
+
+<article class='prose-slate w-sm md:w-prose md:prose poppins'>
+  <p class='text-slate text-sm md:text-base'>
+    Publicado el {moment(pubDate).format("dddd[, ] DD [de] MMMM [de] YYYY")} por {author}
+  </p>
+  <slot />
+  <p class='text-slate'>Escrito por {author}</p>
+</article>
