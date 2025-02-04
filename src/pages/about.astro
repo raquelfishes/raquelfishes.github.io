@@ -1,0 +1,30 @@
+---
+import Layout from '@layouts/Default.astro';
+import Card from '@components/card/RaquelCard.astro'
+import { Button } from '@eliancodes/brutal-ui'
+
+
+---
+
+<Layout
+  title='About'
+  pageTitle='Raquel Fishes | Home'
+  description='Brutal is a minimalistic, neobrutalism theme for Astro.'
+>
+<main class='flex-grow bg-yellow p-6'>
+    <section id='about' class='grid md:grid-cols-2 gap-8 mt-4'>
+            <Card color='white'>
+                Raquel Peces 
+            </Card>
+            <Card color='white'></Card>
+    </section>
+    <section id='about-links' class='grid md:grid-cols-2 gap-8 mt-4'>
+        <Card>
+            <Button target={'_self'} href='/now'></Button>
+        </Card>
+        <Card>
+            <Button target={'_self'} href='/canon'></Button>
+        </Card>
+    </section>
+</main>
+</Layout>
