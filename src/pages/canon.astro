@@ -1,42 +1,10 @@
 ---
 import Layout from '@layouts/Default.astro';
 import CanonCard from '@components/card/CanonCard.astro';
+import { getCollection, getEntries } from 'astro:content';
 
-interface Props {
-    author: string;
-    pubDate: Date;
-    title: string;
-}
+const canonInfo = await getCollection('canon');
 
-const canonInfo = 
-[
-    {
-        title: "Raquel",
-        icon: 'uil:twitter',
-        url: 'https://raquelfishes.github.io',
-        text: 'Lorem Ipsum bla blaslalsfdjañosifjañlskñaso ñlsakdjfowañeijf'
-    },
-    {
-        title: "Raquel",
-        icon: 'uil:github',
-        url: 'https://raquelfishes.github.io',
-        text: 'Lorem Ipsum bla blaslalsfdjañosifjañlskñaso ñlsakdjfowañeijf'
-    },
-    {
-        title: "Raquel",
-        icon: 'uil:twitter',
-        url: 'https://raquelfishes.github.io',
-        text: 'Lorem Ipsum bla blaslalsfdjañosifjañlskñaso ñlsakdjfowañeijf'
-    },
-    {
-        title: "Raquel",
-        icon: 'uil:github',
-        url: 'https://raquelfishes.github.io',
-        text: 'Lorem Ipsum bla blaslalsfdjañosifjañlskñaso ñlsakdjfowañeijf'
-    }
-]
-
-const { author, pubDate, title } = Astro.props;
 ---
 
 <Layout
@@ -44,11 +12,22 @@ const { author, pubDate, title } = Astro.props;
   pageTitle='Raquel Fishes | Canon'
   description='Canon Page.'
 >
+<main class='flex-grow bg-pink p-6'>
+    <h1 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
+        Canon
+    </h1>
+    <p class='poppins'>
+        Una colección de conceptos, citas, artículos, obras, etc. que han influido en mi forma de pensar, mi trabajo y mi arte.
+    </p>
+    {canonInfo.map((info) => (
+        <section>
+          <h1>{info.data.title}</h1>
+          {info.data.items.map((item) => (
+            <p>{item.title}</p>
+          ))}
+        </section>
+      ))}
 
-{
-    canonInfo.map((item) =>(
-        <CanonCard icon={item.icon} href={item.url} title={item.title} body={item.text}></CanonCard>
-    ))
-}
+</main>
 
 </Layout>

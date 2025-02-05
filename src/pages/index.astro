@@ -11,7 +11,6 @@ import { Button } from '@eliancodes/brutal-ui';
 import { Card } from '@eliancodes/brutal-ui';
 import { Image } from "astro:assets";
 import EmptyComponent from '@components/home/EmptyComponent.astro';
-import BuyMeACoffee from '@components/generic/BuyMeACoffee.astro';
 
 
 const interest = [
@@ -65,7 +64,7 @@ const interest = [
                   <Pill>
                     <a
                       class='sanchez'
-                      href={item.url}
+                      href="#"
                       target='_blank'
                       title={`Go to ${item.name}`}
                     >
@@ -120,7 +119,6 @@ const interest = [
     -->
     </section>
 <!--   <RecentBlogPosts /> -->
-   <BuyMeACoffee/>
   </main>
 </Layout>
 
