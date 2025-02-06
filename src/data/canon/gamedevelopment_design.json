@@ -1,0 +1,19 @@
+{
+    "title": "Game Development + Design",
+    "items":
+    [
+        {
+            "title": "How Not to Write Your First Novel",
+            "type": "article",
+            "text": "Lev Grossman explains how damaging the \"starving artist\" myth is, and that it's OK to work a day job to pay the bills. You cannot make good art if you are struggling to survive.",
+            "link": "https://raquelfishes.github.io"
+        },
+        {
+            "title": "Resistance often begins in art",
+            "type": "quote",
+            "quote": "We live in capitalism. Its power seems inescapable. So did the divine right of kings. Any human power can be resisted and changed by human beings. Resistance and change often begin in art, and very often in our art, the art of words.",
+            "text": "—Ursula K. LeGuin",
+            "link": "https://raquelfishes.github.io"
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "title": "Development + Engineering",
+    "items":
+    [
+        {
+            "title": "The Ethics of Unpaid Labor and the OSS Community",
+            "type": "article",
+            "text": "An article by Ashe Dryden about how to be able to do unpaid labor for an open source project is a privilege.",
+            "link": "https://raquelfishes.github.io"
+        },
+        {
+            "title": "High cohesion, low coupling",
+            "type": "concept",
+            "text": "A foundational principle of software development. A lot of other techniques (like SOLID) are just practical applications of this."
+        },
+        {
+            "title": "Katas",
+            "type": "concept",
+            "text": "A code kata is a programming exercise meant to be repeated over an over in time. Useful as deliberate practice."
+        },
+        {
+            "title": "Open Source",
+            "type": "concept",
+            "text": "Software that has its source code available, which can in turn be modified and redistributed.",
+            "link": "https://raquelfishes.github.io"
+        },
+        {
+            "title": "Survival Tips for Women in Tech",
+            "type": "article",
+            "text": "Distilled wisdom from Patricia Aas, a veteran software developer. A must read if you are a woman working in technology.",
+            "link": "https://raquelfishes.github.io"
+        }
+    ]
+}
