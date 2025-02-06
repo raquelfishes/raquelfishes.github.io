@@ -1,0 +1,8 @@
+---
+import CanonList from './CanonList.astro'; // Import the CanonList component
+const { info } = Astro.props; // Destructure the `info` passed from the parent
+---
+<section>
+  <h1>{info.data.title}</h1>
+  <CanonList items={info.data.items} />
+</section>

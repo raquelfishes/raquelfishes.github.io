@@ -1,6 +1,6 @@
 ---
 import Layout from '@layouts/Default.astro';
-import CanonCard from '@components/card/CanonCard.astro';
+import CanonSection from '@components/canon/CanonSection.astro';
 import { getCollection, getEntries } from 'astro:content';
 
 const canonInfo = await getCollection('canon');
@@ -12,7 +12,7 @@ const canonInfo = await getCollection('canon');
   pageTitle='Raquel Fishes | Canon'
   description='Canon Page.'
 >
-<main class='flex-grow bg-pink p-6'>
+<main class='flex-grow bg-white p-6'>
     <h1 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
         Canon
     </h1>
@@ -20,12 +20,7 @@ const canonInfo = await getCollection('canon');
         Una colección de conceptos, citas, artículos, obras, etc. que han influido en mi forma de pensar, mi trabajo y mi arte.
     </p>
     {canonInfo.map((info) => (
-        <section>
-          <h1>{info.data.title}</h1>
-          {info.data.items.map((item) => (
-            <p>{item.title}</p>
-          ))}
-        </section>
+        <CanonSection info={info}></CanonSection>
       ))}
 
 </main>
