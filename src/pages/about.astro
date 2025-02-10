@@ -12,19 +12,53 @@ import { Button } from '@eliancodes/brutal-ui'
   description='Brutal is a minimalistic, neobrutalism theme for Astro.'
 >
 <main class='flex-grow bg-yellow p-6'>
-    <section id='about' class='grid md:grid-cols-2 gap-8 mt-4'>
+    <section id='about' class='grid gap-8 mt-4'>
             <Card color='white'>
-                Raquel Peces 
+                <p class='outfit text-2xl md:text-5xl lg:text-7xl text-center'>
+                    ¡Hola!
+                </p>
             </Card>
-            <Card color='white'></Card>
+            <Card color='white'>
+                <p class='outfit text-xl md:text-2xl lg:text-4xl text-center'>
+                    Fusionando creatividad y tecnología para explorar la Informática Gráfica desde diferentes perspectivas.
+                </p>
+            </Card>
     </section>
-    <section id='about-links' class='grid md:grid-cols-2 gap-8 mt-4'>
+    <section id='about-links' class='mt-8 grid md:grid-cols-2 gap-8'>
         <Card>
-            <Button target={'_self'} href='/now'></Button>
+            <p>Si quieres saber en qué ando focalizada ahora te recomiendo ir a mi página Now.</p>
+            <Button target={'_self'} href='/now'>[[Now]] ↗</Button>
         </Card>
         <Card>
-            <Button target={'_self'} href='/canon'></Button>
+            <p>Si quieres conocer cuales son mis referencias y fuentes de inspiración, visita mi página Canon.</p>
+            <Button target={'_self'} href='/canon'>[[Canon]]</Button>
         </Card>
     </section>
+    <section id='about' class='grid md:grid-cols-3 gap-8 mt-4'>
+        <Card color='white'>
+            <p>
+                Soy Raquel Peces, Ingeniera Informática apasionada por los gráficos por ordenador. Siendo muy pequeña vi por primera vez `Toy Story` y desde entonces supe que quería trabajar en la creación de mundos digitales.
+                Si hay algo que me motiva, es crear realidades visuales impactantes. Me encanta conectar la lógica de la programación con el arte digital, y en eso he basado mi carrera: crear experiencias gráficas que no solo sean funcionales, sino que también dejen huella.
+            </p>
+        </Card>
+        <Card color='white'>
+            <p>
+                Desde siempre me han intrigado las formas en que las imágenes y la tecnología pueden contar historias y transmitir ideas de formas únicas. Mi camino profesional empezó con una curiosidad insaciable por cómo funcionan las cosas "detrás del telón": cómo se renderizan imágenes, cómo se anima un objeto en 3D o cómo se simulan efectos visuales que parecen sacados de otro mundo.
+                Con el tiempo, esa curiosidad se transformó en mi profesión. He tenido la suerte de trabajar en proyectos desafiantes que me han permitido unir mi lado técnico y creativo: desde modelado 3D y simulaciones visuales hasta desarrollar gráficos interactivos que sorprenden y capturan la atención.
+            </p>
+        </Card>
+        <Card>
+            <p>
+                Soy de esas personas a las que les gusta resolver problemas (de los complejos, de esos que hacen pensar "¿cómo rayos hacemos esto funcionar?"). Mis áreas favoritas incluyen renderizado avanzado, simulaciones en tiempo real y exploración de algoritmos gráficos para crear resultados visuales que emocionen.
+                ¿Dónde encajo? En equipos que valoren la innovación, el trabajo en equipo y las ganas de experimentar con ideas frescas. Me gusta pensar que aporto un equilibrio entre el detalle técnico y la capacidad de crear algo hermoso y útil.
+            </p>
+        </Card>
+        <Card>
+            <p>
+                Cuando no estoy creando gráficos o explorando nuevas tecnologías, seguro me encuentras aprendiendo cosas nuevas (tengo debilidad por los temas de inteligencia artificial y diseño creativo), revisando el detrás de cámaras de películas de animación o jugando videojuegos que me inspiren. Ah, y si hablamos de colaboración, me encanta conectar con personas que también estén enamoradas de lo que hacen.
+            </p>
+        </Card>
+
+</section>
 </main>
 </Layout>
