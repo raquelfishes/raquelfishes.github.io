@@ -2,7 +2,7 @@
 import CanonCard from './CanonCard.astro'; // Import the CanonCard component
 const { items } = Astro.props; // Destructure the `items` array passed from `CanonSection`
 ---
-<section class='grid md:grid-cols-4 gap-12 mt-10 mr-8 ml-8'>
+<section class='grid md:grid-cols-3 gap-12 mt-10 mr-8 ml-8'>
   {items.map((item) => (
     <CanonCard canonItem={item} />
   ))}

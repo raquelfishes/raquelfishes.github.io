@@ -2,7 +2,7 @@
 import CanonList from './CanonList.astro'; // Import the CanonList component
 const { info } = Astro.props; // Destructure the `info` passed from the parent
 ---
-<section>
-  <h1>{info.data.title}</h1>
+<section class="mr-20 mt-20">
+    <h1 class="text-xl md:text-2xl lg:text-4xl mb-8 dm-serif" id={info.data.title}>{info.data.title}</h1>
   <CanonList items={info.data.items} />
 </section>

@@ -1,9 +1,17 @@
 ---
 import Layout from '@layouts/Default.astro';
 import CanonSection from '@components/canon/CanonSection.astro';
+import SideBar from '@components/generic/SideBar.astro';
 import { getCollection, getEntries } from 'astro:content';
 
 const canonInfo = await getCollection('canon');
+
+// Extract titles into an array
+const titles = canonInfo.map((entry) => ({
+    text: entry.data.title,
+    slug: entry.data.title,
+    depth: 1
+}));
 
 ---
 
@@ -12,7 +20,27 @@ const canonInfo = await getCollection('canon');
   pageTitle='Raquel Fishes | Canon'
   description='Canon Page.'
 >
+<main class="p-6 lg:grid lg:grid-cols-8 gap-6">
+    <!-- Sidebar stays in the first column -->
+    <SideBar headings={titles as any[]} />
+  
+    <!-- Main content (div) takes the remaining 2 columns -->
+    <div class="prose-slate lg:col-span-6 w-full poppins">
+      <h1 class="text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif">
+        Canon
+      </h1>
+      <p class="poppins">
+        Una colección de conceptos, citas, artículos, obras, etc. que han influido en mi forma de pensar, mi trabajo y mi arte.
+      </p>
+      <!-- Example content -->
+      {canonInfo.map((info) => (
+        <CanonSection info={info}></CanonSection>
+      ))}
+    </div>
+  </main>
+<!--
 <main class='flex-grow bg-white p-6'>
+    <SideBar headings={titles as any[]}/>
     <h1 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
         Canon
     </h1>
@@ -21,8 +49,7 @@ const canonInfo = await getCollection('canon');
     </p>
     {canonInfo.map((info) => (
         <CanonSection info={info}></CanonSection>
-      ))}
-
+      ))}   
 </main>
-
+ -->
 </Layout>
