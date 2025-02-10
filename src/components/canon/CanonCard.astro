@@ -87,7 +87,16 @@ p.blockquote {
     flex-grow: 1;
 }
 
+.flex-container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    height: 100%; /* Ensure the card takes full height */
+  }
+
 .canon-card-footer {
+    background: grey;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1); /* Adds a soft shadow above */
+    border-radius: 8px 8px 8px 8px; /* Rounded corners for the footer */
     text-align: center;
     margin-top:auto;
     padding: 1rem 0;
@@ -96,13 +105,13 @@ p.blockquote {
 
 
 <RaquelCard color="white">
-
+<div class="flex-container">
     <div class="canon-card-header" style={`--heading-color: ${getColor(canonItem.type)}`}>
         <h2 class="sanchez mt-2 mb-2 text-lg md:text-xl lg:text-3xl">
             <Icon name={getIcon(canonItem.type)} class="icon-inline"/>{canonItem.type}
         </h2>
     </div>
-    <div class="canon-card">
+    <div class="flex-grow canon-card">
         <p class='mt-4 outfit text-2xl md:text-4xl lg:text-4xl'>
             {canonItem.title}
         </p>
@@ -126,5 +135,5 @@ p.blockquote {
         <slot/>
         )
     }
-
+</div>
 </RaquelCard>
