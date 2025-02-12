@@ -15,7 +15,7 @@ const { author, pubDate, headings, title } = Astro.props;
 ---
 
 <Layout title={title} description="blalbla">
-  <main class='p-6 lg:grid lg:grid-cols-3 flex justify-center'>
+  <main class='p-6 grid lg:grid-cols-3 flex justify-center'>
     <NowSideBar headings={headings as any[]} />
     <NowContent {pubDate} {author}>
       <slot />

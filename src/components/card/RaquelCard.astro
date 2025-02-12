@@ -1,15 +1,39 @@
 ---
+import colors from './style/colors.json'
+
+
 interface Props {
   color?: string | undefined;
+  href?: string | undefined;
+  hrefText?: string | undefined;
 }
-import colors from './style/colors.json'
 
 if (Astro.props.color === undefined) {
   Astro.props.color =
     colors[Math.floor(Math.random() * colors.length)];
 }
 
-const { color } = Astro.props;
+// Check if the link is external
+const isExternal = Astro.props.href?.startsWith('http://') || Astro.props.href?.startsWith('https://');
+if (Astro.props.hrefText === undefined) 
+{
+    if (isExternal) {
+        Astro.props.hrefText = 'Link↗';
+    } else {
+        Astro.props.hrefText = '[[Link]]';
+    }
+} 
+else
+{
+    if (isExternal) {
+        Astro.props.hrefText = Astro.props.hrefText + '↗';
+    } else {
+        Astro.props.hrefText = '[['+Astro.props.hrefText+']]';
+    }
+}
+
+const { color, href, hrefText } = Astro.props;
+
 ---
 
 <style define:vars={{ color: color }}>
@@ -26,8 +50,31 @@ const { color } = Astro.props;
   div.brutal-card:hover {
     filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 1));
   }
+
+  /* Ribbon styles */
+  .ribbon {
+    position: absolute; /* Position relative to the card */
+    top: 0.5rem; /* Slight padding from the top */
+    right: 0.5rem; /* Slight padding from the right */
+    background: black; /* Background color for the ribbon */
+    color: white; /* Text color for the ribbon */
+    padding: 0.2rem 0.5rem; /* Padding for the ribbon */
+    border-radius: 0.3rem; /* Slight rounding for the corners */
+    font-size: 0.8rem; /* Smaller font for the ribbon */
+    z-index: 10; /* Ensures it's above other elements */
+  }
+  .ribbon:hover{
+    background:blue;
+  }
+  
 </style>
 
-<div class='brutal-card'>
+<div class='brutal-card group'>
+    {href ? (
+        <a class="ribbon group-hover:translate-x-1" href={href} target={isExternal ? '_blank' : '_self'} rel={isExternal ? 'noopener noreferrer' : undefined}>
+            {hrefText}
+            
+        </a>
+      ) : null}
   <slot />
 </div>
