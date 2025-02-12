@@ -1,37 +1,59 @@
 ---
-import RaquelCard from '../card/RaquelCard.astro';
+import Card from '../card/RaquelCard.astro';
 import { Button } from '@eliancodes/brutal-ui';
 import { Image } from "astro:assets";
 import headshot from "../../assets/headshot.jpg";
 import {Icon} from "astro-icon/components"
 ---
 <style>
-  [data-icon="circle-flags:es"] 
+  [data-icon="circle-flags:es"],
+  [data-icon="logos:unity"]
   {
     display: inline-block;
   }
 </style>
 
-<section id='about' class='grid md:grid-cols-4 gap-8 mt-4'>
+<section id='about' class='grid md:grid-cols-4 xl:grid-flow-col md:grid-rows-2 gap-8 mt-4'>
     <h2 class='hidden'>About RaquelFishes</h2>
     <div class='md:col-span-3'>
-      <RaquelCard color="yellow">
+      <Card color="yellow">
           <p class='mt-4 outfit text-2xl md:text-5xl lg:text-7xl'>
             ¡Hola!
           </p>
           <p class='mt-2 outfit text-xl md:text-3xl lg:text-5xl'>
-            Soy Raquel Peces, Ingeniera de Software especializada en Computer Graphics. Con experiencia en la producción audiovisual y en motores de simulación y render. 
+            Soy Raquel Peces, Ingeniera de Software especializada en Computer Graphics actualmente trabajando en 
+            <a class="underline underline-blue" target="_blank" href="https://unity.com/" rel="noreferrer noopener">@Unity</a>.<Icon name="logos:unity"/> 
+          </p>
+          <p class='mt-2 outfit text-l md:text-2xl lg:text-4xl'>
+            Psst... ¿Sabes que también soy violinista? 🎻 
           </p>
           <p class="sanchez mt-4 mb-8 text-lg md:text-xl lg:text-3xl">
-            Located in Madrid, <Icon name="circle-flags:es" />
+            Actualmente en Madrid, <Icon name="circle-flags:es" />
           </p>
-          <Button target={'_self'} href='/about'>
-            ¿Quieres saber más? &rarr;
-          </Button>
-      </RaquelCard>
+        </Card>
     </div>
+    <div class='md:col-span-3'>
+        <Card color="orange">
+            <p class='mt-4 outfit text-xl md:text-2xl lg:text-4xl'>
+                Pero... ¿quién soy yo?
+            </p>
+            <p class='mt-4 poppins text-s md:text-m lg:text-l'>
+                Siendo muy pequeña vi por primera vez Toy Story y desde entonces supe que quería comprender como esos mundos digitales podrían crearse.
+                También soy de esas personas a las que les gusta resolver problemas complejos por mi mísma.<br>
+                Eso me llevó a estudiar Ingeniería Informática y despues especializarme con un máster en Informática Gráfica.<br>
+                Tuve la suerte de que mi primer trabajo en 2015 fuese en la producción de la película 
+                <a class="underline underline-blue" target="_blank" href="https://unity.com/" rel="noreferrer noopener">"Wonder Park"</a> como TD dentro de varios departamentos como CharacterFX, Crowds y VFX y ¡ya no había vuelta atrás en este mundo!.<br>
+                Desde ahí explore la simulación de físicas, especialmente del agua en los mundos digitales trabajando en 
+                <a class="underline underline-blue" target="_blank" href="https://www.imdb.com/title/tt6428676/" rel="noreferrer noopener">"Realflow"</a>. 
+                Más tarde pasé a la creación de universos y escenarios digitales para el entrenamiento autónomo en 
+                <a class="underline underline-blue" target="_blank" href="https://www.imdb.com/title/tt6428676/" rel="noreferrer noopener">"Anyverse"</a>, focalizada en la simulación y animación de personajes en escenarios tanto exteriores como interiores dentro de vehículos.<br>
+                Actualmente trabajo en Unity como Senior Graphics Engineer.<br><br>
+                Si no me encuentras programando, o tocando el violín, probablemente me encuentres en la naturaleza, con un buen libro, o tomándome algo con amigos.
+            </p>
+        </Card>
+      </div>
     <Image
-      class="object-cover h-auto max-w-full rounded-lg border-3 border-black card-shadow"
+      class="object-cover h-auto max-w-full rounded-lg border-3 border-black card-shadow md:row-span-3"
       src={headshot}
       alt="Raquel Peces aka RaquelFishes"
       decoding="async"
