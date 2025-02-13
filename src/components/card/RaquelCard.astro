@@ -63,18 +63,19 @@ const { color, href, hrefText } = Astro.props;
     font-size: 0.8rem; /* Smaller font for the ribbon */
     z-index: 10; /* Ensures it's above other elements */
   }
-  .ribbon:hover{
-    background:blue;
+  div.brutal-card:hover .ribbon {
+    translate: 0.5s;
+    translate: 1px 1px;
   }
   
 </style>
 
 <div class='brutal-card group'>
     {href ? (
-        <a class="ribbon group-hover:translate-x-1" href={href} target={isExternal ? '_blank' : '_self'} rel={isExternal ? 'noopener noreferrer' : undefined}>
-            {hrefText}
-            
-        </a>
-      ) : null}
-  <slot />
+        <a href={href} target={isExternal ? '_blank' : '_self'} rel={isExternal ? 'noopener noreferrer' : undefined}>
+        <p class="ribbon">{hrefText}</p>
+        <slot />
+    </a>
+      ) : <slot />}
+      
 </div>
