@@ -6,19 +6,34 @@ interface Props {
 }
 
 const isExternal = Astro.props.href?.startsWith('http://') || Astro.props.href?.startsWith('https://');
+const isMail = Astro.props.href?.startsWith('mailto:');
 if (Astro.props.hrefText === undefined) 
 {
-    if (isExternal) {
+    if (isExternal) 
+    {
         Astro.props.hrefText = 'Link↗';
-    } else {
+    } 
+    else if (isMail) 
+    {
+        Astro.props.hrefText = 'Email✉';
+    }
+    else 
+    {
         Astro.props.hrefText = '[[Link]]';
     }
 } 
 else
 {
-    if (isExternal) {
+    if (isExternal) 
+    {
         Astro.props.hrefText = Astro.props.hrefText + '↗';
-    } else {
+    } 
+    else if (isMail) 
+    {
+        Astro.props.hrefText = Astro.props.hrefText + '✉';
+    }
+    else 
+    {
         Astro.props.hrefText = '[['+Astro.props.hrefText+']]';
     }
 }

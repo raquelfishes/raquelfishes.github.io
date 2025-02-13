@@ -6,13 +6,6 @@ import headshot from "../../assets/headshot.jpg";
 import {Icon} from "astro-icon/components"
 import ALink from '@components/generic/ALink.astro';
 ---
-<style>
-  [data-icon="circle-flags:es"],
-  [data-icon="logos:unity"]
-  {
-    display: inline-block;
-  }
-</style>
 
 <section id='about' class=' grid gap-8 mt-4 
                             md:grid-cols-4 lg:grid-rows-2'>
@@ -24,13 +17,13 @@ import ALink from '@components/generic/ALink.astro';
           </p>
           <p class='mt-2 outfit text-xl md:text-3xl lg:text-5xl'>
             Soy Raquel Peces, Ingeniera de Software especializada en Computer Graphics actualmente trabajando en 
-            <ALink classList="underline underline-blue" href="https://unity.com/" hrefText="@Unity"/><Icon name="logos:unity"/> 
+            <ALink classList="underline underline-blue" href="https://unity.com/" hrefText="@Unity"/><Icon name="logos:unity" class='inline-block'/> 
           </p>
           <p class='mt-2 outfit text-l md:text-2xl lg:text-4xl'>
             Psst... ¿Sabes que también soy violinista? 🎻 
           </p>
           <p class="sanchez mt-4 mb-8 text-lg md:text-xl lg:text-3xl">
-            Actualmente en Madrid, <Icon name="circle-flags:es" />
+            Actualmente en Madrid, <Icon name='circle-flags:es' class='inline-block' />
           </p>
         </Card>
     </div>

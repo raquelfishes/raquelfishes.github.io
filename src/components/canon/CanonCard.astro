@@ -1,6 +1,6 @@
 ---
 import {Icon} from 'astro-icon/components'
-import RaquelCard from '@components/card/RaquelCard.astro'
+import Card from '@components/card/RaquelCard.astro'
 import { Button } from '@eliancodes/brutal-ui';
 
 // Define icons per type.
@@ -109,7 +109,7 @@ p.blockquote {
 </style>
 
 
-<RaquelCard color="white">
+<Card color="white">
 <div class="flex-container">
     <div class="canon-card-header" style={`--heading-color: ${getColor(canonItem.type)}`}>
         <h2 class="sanchez mt-2 mb-2 text-lg md:text-xl lg:text-3xl">
@@ -141,4 +141,4 @@ p.blockquote {
         )
     }
 </div>
-</RaquelCard>
+</Card>

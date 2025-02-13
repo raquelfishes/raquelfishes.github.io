@@ -1,11 +1,12 @@
 ---
 import Layout from '@layouts/Default.astro';
+import { Pill } from '@eliancodes/brutal-ui';
 import MobileSocials from '@components/home/MobileSocials.astro';
 import AboutMe from '@components/home/AboutMe.astro';
 import NowCard from '@components/home/NowCard.astro';
 import CanonCard from '@components/home/CanonCard.astro';
+import Contact from '@components/home/Contact.astro';
 import TimeZone from '@components/home/TimeZone.astro';
-import { Pill } from '@eliancodes/brutal-ui';
 import Card from '@components/card/RaquelCard.astro';
 
 
@@ -38,14 +39,19 @@ const interest = [
     <MobileSocials />
     <AboutMe />
       
-      <section id='built-with' class='grid md:grid-cols-8 gap-8 mt-4'>
-        <NowCard />
-        <CanonCard />
-        <TimeZone />
-        <!--<Countries /> -->
+      <section id='built-with' class='grid 
+                                    md:grid-cols-2 md:grid-rows-2
+                                    lg:grid-cols-3 gap-8 mt-4 flex-container
+                                    xl:grid-cols-4'>
+        <div><NowCard /></div>
+        <div><CanonCard /></div>
+        <div class='md:row-start-1 md:col-start-1 md:row-span-2'><Contact /></div>
+        <div class='sm:hidden md:hidden lg:block'><TimeZone /></div>
+    
+        <!--<Countries />
             
           
-      <div class='md:col-span-4'>
+      <div class='md:col-span-3'>
         <Card>
           <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
             ¿Qué ocupa mi tiempo?
@@ -73,6 +79,7 @@ const interest = [
           </ul>
         </Card>
       </div>
+       -->
     </section>
 <!--   <RecentBlogPosts /> -->
   </main>
