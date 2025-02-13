@@ -30,6 +30,8 @@ const canonCollection = defineCollection({
     loader: glob({ pattern: '**/[^_]*.json', base: "./src/data/canon" }),
     schema: z.object({
         title: z.string(),
+        order: z.number(),
+        enable: z.boolean(),
         items: z.array(
             z.object({
                 title: z.string(),

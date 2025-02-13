@@ -1,5 +1,7 @@
 {
     "title": "Knowledge + Learning",
+    "enable": false,
+    "order": 6,
     "items":
     [
         {

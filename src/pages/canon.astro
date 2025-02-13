@@ -6,8 +6,16 @@ import { getCollection, getEntries } from 'astro:content';
 
 const canonInfo = await getCollection('canon');
 
+// Sort canon entries by order field
+const canonSorted = canonInfo
+    .filter((entry) => entry.data.enable)
+    .sort((a, b) => {
+    return a.data.order - b.data.order;
+});
+console.log(canonSorted);
+
 // Extract titles into an array
-const titles = canonInfo.map((entry) => ({
+const titles = canonSorted.map((entry) => ({
     text: entry.data.title,
     slug: entry.data.title,
     depth: 1
@@ -33,8 +41,8 @@ const titles = canonInfo.map((entry) => ({
         Una colección de conceptos, citas, artículos, obras, etc. que han influido en mi forma de pensar, mi trabajo y mi arte.
       </p>
       <!-- Example content -->
-      {canonInfo.map((info) => (
-        <CanonSection info={info}></CanonSection>
+      {canonSorted.map((info) => (
+        info.data.enable ? <CanonSection info={info}></CanonSection> : null
       ))}
     </div>
   </main>
