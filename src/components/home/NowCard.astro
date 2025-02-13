@@ -1,6 +1,7 @@
 ---
 import Card from '@components/card/RaquelCard.astro';
 import { Button } from '@eliancodes/brutal-ui';
+import ALink from '@components/generic/ALink.astro';
 ---
 <div class='col-span-2'>
     <Card href='/now' hrefText='Now'>
@@ -11,9 +12,7 @@ import { Button } from '@eliancodes/brutal-ui';
                 </h2>
             </div>
         </div>
-        <span class='poppins underline underline-yellow'>
-            <a href='https://sive.rs/nowff' target="_blank" class="underline underline-blue" rel="noreferrer noopener">¿Qué es esto?&#8599;</a>
-        </span>
+            <ALink classList='poppins underline underline-blue' href='https://sive.rs/nowff' hrefText='¿Qué es esto?'/>
         <p class='poppins'>
             Una página donde defino mis focos actuales y lo que estoy haciendo ahora.
         </p>

@@ -1,0 +1,32 @@
+---
+interface Props {
+  classList?: string;
+  href?: string | undefined;
+  hrefText?: string | undefined;
+}
+
+const isExternal = Astro.props.href?.startsWith('http://') || Astro.props.href?.startsWith('https://');
+if (Astro.props.hrefText === undefined) 
+{
+    if (isExternal) {
+        Astro.props.hrefText = 'Link↗';
+    } else {
+        Astro.props.hrefText = '[[Link]]';
+    }
+} 
+else
+{
+    if (isExternal) {
+        Astro.props.hrefText = Astro.props.hrefText + '↗';
+    } else {
+        Astro.props.hrefText = '[['+Astro.props.hrefText+']]';
+    }
+}
+
+const { classList, href, hrefText } = Astro.props;
+
+---
+
+<a class:list={[classList]} href={href} target={isExternal ? '_blank' : '_self'} rel={isExternal ? 'noopener noreferrer' : undefined}>
+    {hrefText}
+</a>
