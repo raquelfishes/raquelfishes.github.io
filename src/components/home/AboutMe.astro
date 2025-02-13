@@ -13,7 +13,8 @@ import {Icon} from "astro-icon/components"
   }
 </style>
 
-<section id='about' class='grid md:grid-cols-4 xl:grid-flow-col md:grid-rows-2 gap-8 mt-4'>
+<section id='about' class=' grid gap-8 mt-4 
+                            md:grid-cols-4 lg:grid-rows-2'>
     <h2 class='hidden'>About RaquelFishes</h2>
     <div class='md:col-span-3'>
       <Card color="yellow">
@@ -32,14 +33,14 @@ import {Icon} from "astro-icon/components"
           </p>
         </Card>
     </div>
-    <div class='md:col-span-3'>
+    <div class='md:col-span-4 lg:row-start-2 xl:col-span-3'>
         <Card color="orange">
             <p class='mt-4 outfit text-xl md:text-2xl lg:text-4xl'>
                 Pero... ¿quién soy yo?
             </p>
             <p class='mt-4 poppins text-s md:text-m lg:text-l'>
-                Siendo muy pequeña vi por primera vez Toy Story y desde entonces supe que quería comprender como esos mundos digitales podrían crearse.
-                También soy de esas personas a las que les gusta resolver problemas complejos por mi mísma.<br>
+                <p class="sanchez text-m md:text-l lg:text-xl">Soy de esas personas a las que les gusta resolver problemas complejos por mi mísma, eso sumado a que empece a tocar el violín con 5 años parecía inevitable que acabase fusionando ambos mundos el técnico y el artístico en mi vida profesional.</p>
+                Pertenezco a la generación que crecimos con Toy Story y desde no sabía cómo pero que quería comprender como esos mundos digitales podrían crearse.<br>
                 Eso me llevó a estudiar Ingeniería Informática y despues especializarme con un máster en Informática Gráfica.<br>
                 Tuve la suerte de que mi primer trabajo en 2015 fuese en la producción de la película 
                 <a class="underline underline-blue" target="_blank" href="https://unity.com/" rel="noreferrer noopener">"Wonder Park"</a> como TD dentro de varios departamentos como CharacterFX, Crowds y VFX y ¡ya no había vuelta atrás en este mundo!.<br>
@@ -53,7 +54,7 @@ import {Icon} from "astro-icon/components"
         </Card>
       </div>
     <Image
-      class="object-cover h-auto max-w-full rounded-lg border-3 border-black card-shadow md:row-span-3"
+      class="object-cover h-auto max-w-full rounded-lg border-3 border-black card-shadow xl:row-span-2 md:row-start-1 md:col-start-4"
       src={headshot}
       alt="Raquel Peces aka RaquelFishes"
       decoding="async"
