@@ -1,0 +1,28 @@
+---
+const { as = 'div', ui = {}, children } = Astro.props;
+
+// Extract relevant classes from the `ui` prop
+const baseClass = ui.base || ''; // Root element classes
+const bodyClass = ui.body?.base || ''; // Body element classes
+const paddingClass = ui.body?.padding || ''; // Additional padding styles
+
+---
+{as === 'article' ? (
+  <article class={`block ${baseClass}`}>
+    <div class={`${bodyClass} ${paddingClass}`}>
+      <slot/>
+    </div>
+  </article>
+) : as === 'section' ? (
+  <section class={`block ${baseClass}`}>
+    <div class={`${bodyClass} ${paddingClass}`}>
+        <slot/>
+    </div>
+  </section>
+) : (
+  <div class={`block ${baseClass}`}>
+    <div class={`${bodyClass} ${paddingClass}`}>
+        <slot/>
+    </div>
+  </div>
+)}

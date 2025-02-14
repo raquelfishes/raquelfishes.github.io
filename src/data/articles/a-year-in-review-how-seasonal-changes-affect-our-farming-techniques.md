@@ -4,14 +4,14 @@ description: An overview of the adaptations and changes made on the farm through
 image:
   src: https://images.unsplash.com/photo-1574514366389-3c4fef242ca9?q=80&w=993&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
   alt: Image of a road in a forest with green and orange trees on either side.
-categories:
+tags:
 - seasonal-guides
 - behind-the-scenes
 authors:
   - name: Estéban Soubiran
     avatar: https://esteban-soubiran.site/esteban.webp
     social: https://x.com/soubiran_
-publishedAt: 2024-01-30
+pubDate: 2024-01-30
 ---
 
 Farming is not a static occupation; it requires adaptation and responsiveness to the changing seasons. This article reviews a year on the farm, showcasing how we adjust our techniques to meet the demands of each season. From spring planting to autumn harvesting, we reveal how seasonal shifts guide our decisions and actions on the farm, ensuring sustainability and success throughout the year.

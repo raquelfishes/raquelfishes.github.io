@@ -4,14 +4,14 @@ description: An enticing look at what fruits and vegetables are at their peak in
 image:
   src: https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
   alt: Image of fruits.
-categories:
+tags:
 - seasonal-guides
 - customer-stories
 authors:
   - name: Estéban Soubiran
     avatar: https://esteban-soubiran.site/esteban.webp
     social: https://x.com/soubiran_
-publishedAt: 2023-12-19
+pubDate: 2023-12-19
 ---
 
 The fall harvest is a cornucopia of vibrant produce that encapsulates the essence of the season. We take you through our farm's bountiful fall offerings, from the crisp apples to the hearty squashes, and share tips on how to select and store these seasonal treasures. Our customers' stories interweave with our harvest, showcasing the journey of each fruit and vegetable from our fields to their tables.

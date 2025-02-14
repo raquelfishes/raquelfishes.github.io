@@ -1,0 +1,14 @@
+---
+const { title, subtitle, children, className = "" } = Astro.props;
+---
+<section class="py-24 sm:py-32">
+  {title && (
+    <header class="mb-6 text-center">
+      <h2 class="text-2xl font-bold text-gray-800">{title}</h2>
+      {subtitle && <p class="text-lg text-gray-500 mt-2">{subtitle}</p>}
+    </header>
+  )}
+  <div class={`mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl gap-16 sm:gap-y-24 flex flex-col ${className}`}>
+    <slot/>
+  </div>
+</section>

@@ -43,8 +43,33 @@ const canonCollection = defineCollection({
     }),
 });
 
+const articleCollection = defineCollection({
+    loader: glob({ pattern: '**/[^_]*.md', base: "./src/data/articles" }),
+    schema: z.object({
+        title: z.string(), // Title of the article (required)
+        description: z.string(), // Description of the article (required)
+        image: z.object({
+          src: z.string().url(), // Image source URL (required)
+          alt: z.string(), // Alternate text for the image (required)
+        }),
+        tags: z.array(z.string()), // Array of tags (required)
+        authors: z.array(
+          z.object({
+            name: z.string(), // Author's name (required)
+            avatar: z.string().url(), // Avatar URL (required)
+            social: z.string().url(), // Author's social profile URL (required)
+          })
+        ),
+        pubDate: z.date(), // Publication date (required)
+        top: z.boolean().optional(), // Optional top-level key, e.g., featured article marker (if used)
+    }),
+});
+
+
+
 export const collections = {
   blog: blogCollection,
   now: nowCollection,
   canon: canonCollection,
+  articles: articleCollection,
 };

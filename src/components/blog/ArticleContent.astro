@@ -1,0 +1,78 @@
+---
+import UCard from '@components/blog/UCard.astro';
+import SideBar from '@components/generic/SideBar.astro';
+
+const ogImage = new URL(`/v1/generate/og/${Astro.params.slug}.png`, Astro.url);
+
+
+// Get the dynamic slug from the URL
+const { slug } = Astro.params;
+
+const { title, description, tags, authors, pubDate, image, headings, _path } = Astro.props;
+
+---
+<UCard>
+    <header class="max-w-5xl mx-auto">
+  
+      <!-- Categories -->
+      <div class="mb-3 text-sm/6 font-semibold text-primary flex items-center gap-1.5">
+        {tags?.map((category, index) => (
+          <>
+            <a href={`/blog/tags/${category}`} class="text-blue-500 hover:underline">
+              {category}
+            </a>
+            {index < tags.length - 1 && <span> - </span>}
+          </>
+        ))}
+      </div>
+      
+      
+      <h1 class="text-4xl font-bold">{title}</h1>
+      <p class="mt-4 text-lg text-stone-500">{description}</p>
+
+      <!-- Image -->
+      {image && (
+        <img
+          src={image.src}
+          alt={image.alt}
+          class="mt-8 w-full object-cover rounded-lg aspect-[16/9]"
+        />
+      )}
+  
+      <!-- Authors and PubDate -->
+      <div class="mt-8 flex justify-between text-stone-700 text-sm">
+        <time datetime={pubDate}>{new Date(pubDate).toLocaleDateString()}</time>
+      </div>
+    </header>
+  </UCard>
+<!-- Social Sharing -->
+ <div class='mt-8 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[96px_768px_1fr]'>
+<div class="flex gap-4 mt-8">
+<a
+  href={`https://twitter.com/share?text=${title}&url=${_path}`}
+  target="_blank"
+  rel="nofollow noopener noreferrer"
+  class="text-blue-500 hover:underline"
+>
+  Share on Twitter
+</a>
+<a
+  href={`https://www.facebook.com/sharer/sharer.php?u=${_path}`}
+  target="_blank"
+  rel="nofollow noopener noreferrer"
+  class="text-blue-500 hover:underline"
+>
+  Share on Facebook
+</a>
+<a
+  href={`https://www.linkedin.com/shareArticle?url=${_path}`}
+  target="_blank"
+  rel="nofollow noopener noreferrer"
+  class="text-blue-500 hover:underline"
+>
+  Share on LinkedIn
+</a>
+</div>
+<div><slot /></div>
+<SideBar headings={headings as any[]} />
+</div>

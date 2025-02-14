@@ -12,7 +12,6 @@ const canonSorted = canonInfo
     .sort((a, b) => {
     return a.data.order - b.data.order;
 });
-console.log(canonSorted);
 
 // Extract titles into an array
 const titles = canonSorted.map((entry) => ({

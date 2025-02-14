@@ -1,9 +1,9 @@
 ---
-title: 'From Waste to Wealth: Our Composting Success Story'
-description: The journey of how farm waste was turned into a valuable resource for enriching soil, promoting a circular economy.
+title: 'The Organic Chronicles: Transitioning to Chemical-Free Farming'
+description: The story of the farm's shift to organic practices, the challenges faced, and the positive outcomes for health and environment.
 image:
-  src: https://images.unsplash.com/photo-1587733761376-3f26fc81d17f?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-  alt: Image of a compost pile.
+  src: https://images.unsplash.com/photo-1457530378978-8bac673b8062?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  alt: Image of two baby plants.
 tags:
 - behind-the-scenes
 - sustainable-practices
@@ -11,11 +11,10 @@ authors:
   - name: Estéban Soubiran
     avatar: https://esteban-soubiran.site/esteban.webp
     social: https://x.com/soubiran_
-pubDate: 2023-12-05
-top: true
+pubDate: 2024-03-26
 ---
 
-Composting is a story of transformation, turning organic waste into gold for the soil. In this article, we narrate our journey of implementing a successful composting program, highlighting the positive impact on soil fertility and plant health. By meticulously managing our organic waste, we've created a system that not only reduces landfill contributions but also serves as a blueprint for sustainable waste management.
+The shift to organic farming is more than just a change in practices; it's a philosophical shift towards a more harmonious relationship with nature. In this chronicle, we narrate the challenges and triumphs of our journey to eliminate synthetic chemicals from our farming practices, focusing on the long-term benefits for both our soil and the consumers who trust in the purity of our produce.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 

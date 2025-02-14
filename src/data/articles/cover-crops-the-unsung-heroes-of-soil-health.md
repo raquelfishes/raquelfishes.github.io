@@ -4,14 +4,14 @@ description: Discussing the role of cover crops in soil conservation and how the
 image:
   src: https://images.unsplash.com/photo-1518994603110-1912b3272afd?q=80&w=1024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
   alt: Image of a field of green crops.
-categories:
+tags:
 - sustainable-practices
 - environmental-impacts
 authors:
   - name: Estéban Soubiran
     avatar: https://esteban-soubiran.site/esteban.webp
     social: https://x.com/soubiran_
-publishedAt: 2024-03-12
+pubDate: 2024-03-12
 ---
 
 Cover crops might be the unsung heroes of sustainable agriculture, but their benefits cannot be overstated. This article explores how integrating cover crops into our crop rotation has improved soil structure, suppressed weeds, and increased biodiversity. By sharing our experiences, we hope to shed light on these powerful plants and inspire other farmers to adopt similar practices.

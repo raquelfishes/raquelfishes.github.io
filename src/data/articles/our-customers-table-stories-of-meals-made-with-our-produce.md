@@ -1,21 +1,21 @@
 ---
-title: 'From Waste to Wealth: Our Composting Success Story'
-description: The journey of how farm waste was turned into a valuable resource for enriching soil, promoting a circular economy.
+title: "Our Customers' Table: Stories of Meals Made with Our Produce"
+description: A heartwarming collection of customer testimonials on how the farm's produce has enhanced their family meals and events.
 image:
-  src: https://images.unsplash.com/photo-1587733761376-3f26fc81d17f?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-  alt: Image of a compost pile.
+  src: https://images.unsplash.com/photo-1596199050105-6d5d32222916?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  alt: Image of a grape of tomatoes.
 tags:
-- behind-the-scenes
-- sustainable-practices
+- customer-stories
+- seasonal-guides
 authors:
   - name: Estéban Soubiran
     avatar: https://esteban-soubiran.site/esteban.webp
     social: https://x.com/soubiran_
-pubDate: 2023-12-05
+pubDate: 2024-02-13
 top: true
 ---
 
-Composting is a story of transformation, turning organic waste into gold for the soil. In this article, we narrate our journey of implementing a successful composting program, highlighting the positive impact on soil fertility and plant health. By meticulously managing our organic waste, we've created a system that not only reduces landfill contributions but also serves as a blueprint for sustainable waste management.
+There's a special kind of magic in knowing the story behind the food on your plate. We share heartfelt anecdotes from our customers, whose culinary creations with our farm's produce have led to memorable meals and traditions. These stories are a testament to the power of quality ingredients and the joy that comes from cooking with produce that's been grown with care and respect for the land.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 

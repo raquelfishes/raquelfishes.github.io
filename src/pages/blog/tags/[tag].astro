@@ -2,41 +2,52 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import Layout from '@layouts/Default.astro';
-import BlogList from '@components/blog/BlogList.astro';
-import { Button } from '@eliancodes/brutal-ui';
+import ArticleCard from '@components/blog/ArticleCard.astro';
+import ArticleCardDate from '@components/blog/ArticleCardDate.astro';
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection('blog').then((collection) =>
-    collection.reverse()
-  );
-
+  // Fetch all posts from the `articles` collection
+  const allPosts = await getCollection('articles');
+  // Use a Set to collect unique tags
   const tags: string[] = [];
 
   allPosts.forEach((post) => {
     post.data.tags.forEach((tag) => {
-      tags.push(tag.toLowerCase());
+      tags.push(tag.toLowerCase()); // Normalize tags to lowercase
     });
   });
 
-  return Array.from(new Set(tags)).map((tag) => {
+  // Generate paths for all unique tags
+  const uniqueTags = Array.from(new Set(tags));
+  
+  return uniqueTags.map((tag) => {
     return {
-      params: { tag },
+      params: { tag }, // Dynamic param `tag` for [tag].astro
       props: {
         tag,
         blogposts: allPosts.filter((post) =>
-          post.data.tags.map((tag) => tag.toLowerCase()).includes(tag)
+          post.data.tags.map((t) => t.toLowerCase()).includes(tag) // Normalize during comparison
         ),
       },
     };
   });
 }
 
+
+
 interface Props {
   tag: string;
-  blogposts: CollectionEntry<'blog'>[];
+  blogposts: CollectionEntry<'articles'>[];
 }
 
 const { tag, blogposts } = Astro.props;
+
+// Format the category name
+const formattedCategory = tag;
+const description = `All articles related to ${formattedCategory}`;
+
+const [firstArticle, ...remainingArticles] = blogposts;
+
 ---
 
 <Layout
@@ -44,10 +55,69 @@ const { tag, blogposts } = Astro.props;
   description={`Brutal Blog | All posts tagged with ${tag}`}
   pageTitle={`Brutal Blog | Blogposts tagged with ${tag}`}
 >
-  <main class='p-6 bg-purple grid gap-4'>
-    <div>
-      <Button href='/blog/'>&larr; Back to blog</Button>
+  <main class='p-6 bg-purple grid gap-4 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl'>
+
+      <!-- Page Header -->
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold">{tag}</h1>
+    <p class="text-gray-600 mt-2">{description}</p>
+  </header>
+
+<!-- First Article Section -->
+{firstArticle && (
+    <div class="group relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-center xl:items-start">
+      <div class="md:col-start-1 md:row-start-1 flex flex-col">
+        <h3 class="text-xl font-semibold">
+          <a href={firstArticle.slug}>
+            <span class="absolute inset-0 z-10"></span>
+            <span>{firstArticle.data.title}</span>
+          </a>
+        </h3>
+
+        <p class="mt-4 text-stone-500">{firstArticle.data.description}</p>
+
+        <dl
+          class="mt-6 flex justify-between items-center text-sm"
+        >
+          {firstArticle.data.pubDate && (
+            <div>
+              <dt class="sr-only">Published at</dt>
+              <dd>
+                <ArticleCardDate date={firstArticle.data.pubDate} />
+              </dd>
+            </div>
+          )}
+        </dl>
+      </div>
+
+      <div class="overflow-hidden rounded-md row-start-1 md:col-start-2 xl:col-span-2">
+        {firstArticle.data.image && (
+          <img
+            src={firstArticle.data.image.src}
+            alt={firstArticle.data.image.alt}
+            class="aspect-[16/9] object-cover transition-transform transform ease-in duration-300 group-hover:scale-[102%]"
+            aria-hidden="true"
+          />
+        )}
+      </div>
     </div>
-    <BlogList posts={blogposts} />
+  )}
+
+    <!-- Remaining Articles Section -->
+  {remainingArticles.length > 0 && (
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 mt-8">
+      {remainingArticles.map((article) => (
+        <ArticleCard
+          key={article.slug}
+          to={article.slug}
+          title={article.data.title}
+          description={article.data.description}
+          date={article.data.pubDate}
+          image={article.data.image}
+          authors={article.data.authors}
+        />
+      ))}
+    </div>
+  )}
   </main>
 </Layout>

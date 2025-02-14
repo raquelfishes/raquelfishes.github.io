@@ -1,0 +1,56 @@
+---
+import Layout from './Default.astro';
+import BlogContent from '@components/blog/BlogContent.astro';
+import RecentBlogPosts from '@components/generic/RecentBlogPosts.astro';
+import UCard from '@components/blog/UCard.astro';
+import { getCollection } from 'astro:content';
+import SideBar from '@components/generic/SideBar.astro';
+import ArticleContent from '@components/blog/ArticleContent.astro';
+import ArticleCard from '@components/blog/ArticleCard.astro';
+
+const ogImage = new URL(`/v1/generate/og/${Astro.params.slug}.png`, Astro.url);
+
+// Fetch all articles from the content collection
+const articles = await getCollection('articles');
+
+// Get the dynamic slug from the URL
+const { slug } = Astro.params;
+
+const { title, description, tags, authors, pubDate, image, headings, _path } = Astro.props;
+
+// Fetch related articles based on categories
+const relatedArticles = articles
+  .filter(
+    (article) =>
+      article.data.tags?.some((category) => tags?.includes(category)) &&
+      article.id !== slug
+  )
+  .slice(0, 3); // Limit to 3 related articles
+---
+
+<Layout title={title} description={description} ogImage={ogImage}>
+  <main class='p-6 lg:grid flex justify-center'>
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <ArticleContent headings={headings as any[]} tags={tags} title={title} description={description} pubDate={pubDate} image={image} authors={authors}>
+        <slot/>
+    </ArticleContent>
+
+    <!-- Related Articles Section -->
+<section class="mt-12">
+  <h2 class="text-2xl font-bold mb-4">Related Articles</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {relatedArticles.map((article) => (
+      <ArticleCard
+        key={article.slug}
+        to={article.slug}
+        title={article.data.title}
+        description={article.data.description}
+        image={article.data.image}
+        authors={article.data.authors}
+      />
+    ))}
+  </div>
+</section>
+</div></div>
+  </main>
+</Layout>

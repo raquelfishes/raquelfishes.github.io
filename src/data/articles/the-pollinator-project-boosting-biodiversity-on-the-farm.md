@@ -1,21 +1,20 @@
 ---
-title: 'From Waste to Wealth: Our Composting Success Story'
-description: The journey of how farm waste was turned into a valuable resource for enriching soil, promoting a circular economy.
+title: "The Pollinator Project: Boosting Biodiversity on the Farm"
+description: Exploring the farm's efforts to create habitats for bees and other pollinators, and the broader environmental benefits of these actions.
 image:
-  src: https://images.unsplash.com/photo-1587733761376-3f26fc81d17f?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-  alt: Image of a compost pile.
+  src: https://images.unsplash.com/photo-1589526261866-ab0d34f8dc19?q=80&w=989&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+  alt: Image of a bee on a flower.
 tags:
-- behind-the-scenes
+- environmental-impacts
 - sustainable-practices
 authors:
   - name: Estéban Soubiran
     avatar: https://esteban-soubiran.site/esteban.webp
     social: https://x.com/soubiran_
-pubDate: 2023-12-05
-top: true
+pubDate: 2024-02-27
 ---
 
-Composting is a story of transformation, turning organic waste into gold for the soil. In this article, we narrate our journey of implementing a successful composting program, highlighting the positive impact on soil fertility and plant health. By meticulously managing our organic waste, we've created a system that not only reduces landfill contributions but also serves as a blueprint for sustainable waste management.
+Pollinators play a vital role in the health of our ecosystems, and our farm's Pollinator Project is our commitment to supporting these crucial species. We detail our efforts in creating pollinator-friendly habitats, from planting native flowering plants to reducing pesticide usage. These initiatives not only bolster the local biodiversity but also enhance crop pollination and yield.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
