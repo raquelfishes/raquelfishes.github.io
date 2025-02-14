@@ -41,8 +41,8 @@ const relatedArticles = articles
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
     {relatedArticles.map((article) => (
       <ArticleCard
-        key={article.slug}
-        to={article.slug}
+        key={article.id}
+        to={article.id}
         title={article.data.title}
         description={article.data.description}
         image={article.data.image}

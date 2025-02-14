@@ -68,7 +68,7 @@ const [firstArticle, ...remainingArticles] = blogposts;
     <div class="group relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-center xl:items-start">
       <div class="md:col-start-1 md:row-start-1 flex flex-col">
         <h3 class="text-xl font-semibold">
-          <a href={firstArticle.slug}>
+          <a href={`/blog/${firstArticle.id}/`}>
             <span class="absolute inset-0 z-10"></span>
             <span>{firstArticle.data.title}</span>
           </a>
@@ -108,8 +108,8 @@ const [firstArticle, ...remainingArticles] = blogposts;
     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 mt-8">
       {remainingArticles.map((article) => (
         <ArticleCard
-          key={article.slug}
-          to={article.slug}
+          key={article.id}
+          to={article.id}
           title={article.data.title}
           description={article.data.description}
           date={article.data.pubDate}
