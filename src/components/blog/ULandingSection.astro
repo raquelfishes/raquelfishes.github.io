@@ -1,14 +1,24 @@
 ---
-const { title, subtitle, children, className = "" } = Astro.props;
+  const { title, description, links = [], align = 'center', children } = Astro.props;
 ---
-<section class="py-24 sm:py-32">
-  {title && (
-    <header class="mb-6 text-center">
-      <h2 class="text-2xl font-bold text-gray-800">{title}</h2>
-      {subtitle && <p class="text-lg text-gray-500 mt-2">{subtitle}</p>}
-    </header>
-  )}
-  <div class={`mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl gap-16 sm:gap-y-24 flex flex-col ${className}`}>
-    <slot/>
-  </div>
+  
+<section class={`py-12 text-${align}`}>
+<div class="container mx-auto px-8">
+    <h2 class="text-3xl font-bold">{title}</h2>
+    <p class="mt-4 text-gray-500">{description}</p>
+    {links.length > 0 && (
+    <div class="mt-6 flex gap-4">
+        {links.map((link) => (
+        <a
+            href={link.to}
+            class={`px-4 py-2 rounded bg-${link.color ? link.color : 'gray'}-100 hover:bg-${link.color ? link.color : 'gray'}-200`}
+        >
+            {link.label}
+        </a>
+        ))}
+    </div>
+    )}
+    <div class="mt-8"><slot/></div>
+</div>
 </section>
+  
