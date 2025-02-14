@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content'; // For content collection fetching in Astro
+
+// Fetch articles excluding `top: true`
+const articles = await getCollection(
+  'articles', // Replace with your Astro collection name
+  (entry) =>
+    entry.data.top !== true &&
+    !entry.data._partial && {
+      _path: entry.slug,
+      title: entry.data.title,
+      categories: entry.data.categories,
+      description: entry.data.description,
+      publishedAt: entry.data.publishedAt,
+      image: entry.data.image,
+      authors: entry.data.authors,
+    }
+)
+  .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)) // Sort by `publishedAt`
+  .slice(0, 4); // Limit to 4 articles
+---
+<!--<ULandingSection title="Latest news">-->
+  <div class="bg-yellow-800/5 p-4 xl:-m-12 lg:p-12 rounded-lg grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    {articles.map((article) => (
+      <ArticleCard
+        key={article._path}
+        to={article._path}
+        title={article.title}
+        description={article.description}
+        date={article.publishedAt}
+        image={article.image}
+        authors={article.authors}
+        class="bg-transparent"
+      />
+    ))}
+  </div>
+<!--</ULandingSection>-->

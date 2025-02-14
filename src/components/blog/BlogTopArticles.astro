@@ -1,0 +1,94 @@
+---
+// This is the TypeScript/JS logic section in Astro.
+import { useState } from 'astro/client';
+import { getCollection } from 'astro:content'; // Import for fetching data from content collections
+import ArticleCardAuthors from './ArticleCardAuthors.astro';
+import ArticleCardDate from './ArticleCardDate.astro';
+import ArticleCardWide from './ArticleCardWide.astro';
+
+// Async function to fetch articles simulating `useAsyncData`
+const articles = await getCollection(
+  'articles', // Replace with content collection key if you're using Astro collections
+  (entry) =>
+    entry.data.top === true && {
+      _path: entry.slug,
+      title: entry.data.title,
+      categories: entry.data.categories,
+      description: entry.data.description,
+      publishedAt: entry.data.publishedAt,
+      image: entry.data.image,
+      authors: entry.data.authors,
+    }
+)
+  .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)) // Sort by `publishedAt`
+  .slice(0, 4); // Limit to 4 articles
+
+// Compute the first article and the remaining articles
+const firstArticle = articles[0];
+const remainingArticles = articles.slice(1);
+---
+
+<ULandingSection>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <!-- First Article Card -->
+    {firstArticle && (
+      <UCard 
+        ui={{
+          base: 'relative group',
+          body: { base: 'space-y-4', padding: '' },
+        }}
+      >
+        <header>
+          <div class="overflow-hidden rounded-lg">
+            <img
+              src={firstArticle.image.src}
+              alt={firstArticle.image.alt}
+              class="w-full h-80 lg:h-52 object-cover transform group-hover:scale-[101%] transition-transform ease-in duration-200"
+            />
+          </div>
+          <h3 class="mt-6 text-4xl font-bold">
+            <a href={firstArticle._path}>
+              <span class="absolute inset-0 z-10"></span>
+              <span>{firstArticle.title}</span>
+            </a>
+          </h3>
+        </header>
+        <p class="text-stone-500">{firstArticle.description}</p>
+        <footer>
+          {(firstArticle.publishedAt || firstArticle.authors) && (
+            <dl class="flex justify-between items-center text-sm">
+              {firstArticle.authors && (
+                <>
+                  <dt class="sr-only">Author</dt>
+                  <dd>
+                    <ArticleCardAuthors authors={firstArticle.authors} />
+                  </dd>
+                </>
+              )}
+              {firstArticle.publishedAt && (
+                <>
+                  <dt class="sr-only">Published at</dt>
+                  <dd>
+                    <ArticleCardDate date={firstArticle.publishedAt} />
+                  </dd>
+                </>
+              )}
+            </dl>
+          )}
+        </footer>
+      </UCard>
+    )}
+    <!-- Remaining Articles -->
+    <div class="flex flex-col gap-8">
+      {remainingArticles.map((article) => (
+        <ArticleCardWide
+          key={article._path}
+          to={article._path}
+          title={article.title}
+          description={article.description}
+          image={article.image}
+        />
+      ))}
+    </div>
+  </div>
+</ULandingSection>
