@@ -44,7 +44,6 @@ const { color, href, hrefText } = Astro.props;
     border: 3px solid black;
     filter: drop-shadow(7px 7px 0 rgb(0 0 0 / 1));
     transition: all;
-    padding: 1rem;
     transition-duration: 0.5s;
     animation: ease-in-out;
   }
@@ -64,19 +63,18 @@ const { color, href, hrefText } = Astro.props;
     font-size: 0.8rem; /* Smaller font for the ribbon */
     z-index: 10; /* Ensures it's above other elements */
   }
-  div.brutal-card:hover .ribbon {
+  div.brutal-card:hover > a > .ribbon {
     translate: 0.5s;
     translate: 1px 1px;
   }
   
 </style>
 
-<div class='brutal-card group'>
-    {href ? (
-        <a href={href} target={isExternal ? '_blank' : '_self'} rel={isExternal ? 'noopener noreferrer' : undefined}>
-        <p class="ribbon">{hrefText}</p>
-        <slot />
-    </a>
-      ) : <slot />}
-      
+<div class='brutal-card group overflow-hidden'>
+  {href ? (
+      <a href={href} target={isExternal ? '_blank' : '_self'} rel={isExternal ? 'noopener noreferrer' : undefined} class="card-link">
+          <p class="ribbon">{hrefText}</p>
+      </a>
+  ) : null}
+  <slot />
 </div>

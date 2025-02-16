@@ -1,0 +1,73 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Card from '@components/card/RaquelCard.astro';
+import BlogList from '@components/blog/BlogList.astro';
+import { Image } from 'astro:assets';
+import moment from 'moment';
+import ALink from '@components/generic/ALink.astro'
+
+interface Props {
+    tag: string;
+    count?: number;
+    posts: CollectionEntry<'articles'>[];
+    hasHead?: boolean;
+}
+
+const { tag, posts, count } = Astro.props;
+
+const blogposts = posts
+    .filter((post) => post.data.tags.map((t) => t.toLowerCase()).includes(tag))
+    .slice(0, count ?? 3); // Normalize during comparison
+
+function formatTag(tag: string): string {
+    return tag
+        .split('-') // Divide el tag en partes usando el guión como separador
+        .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitaliza cada palabra
+        .join(' '); // Une las palabras con espacios
+}
+
+// Format the category name
+const formattedCategory = formatTag(tag);
+const description = `All articles related to ${formattedCategory}`;
+
+const [firstArticle, ...remainingArticles] = blogposts;
+
+// Set the locale to Spanish, TODO: make this dynamic with i18n
+moment.locale("es"); 
+
+---
+  
+
+
+<div class="section-divider relative my-4">
+    <div class="section-header flex justify-between items-center px-4 relative z-10">
+      <div class="section-title">
+        <span class="title-text relative underline underline-offset-4 decoration-2">{formattedCategory}</span>
+      </div>
+      <span class="bg-black text-white px rounded hover:text-blue hover:translate-1"><ALink href={`/blog/tags/${tag}`} hrefText={tag}/></span>
+    </div>
+    <hr class="divider-line top-1/2 left-0 w-full h-px bg-black border-none m-0" />
+  </div>
+  
+    <div class='grid md:grid-cols-3 gap-4 pointer-events-auto m-6'>
+        {blogposts.map((post) => (
+            <Card href={`/blog/${post.id}`} hrefText="Lee el post">
+            <div class="grid md:grid-cols-2 gap-8 h-full">
+                <div class='relative h-full overflow-hidden'>
+                    <Image 
+                    src={post.data.image.src}
+                        alt={post.data.image.alt}
+                        width={800}
+                        height={400}
+                    class='rounded h-full w-full object-cover'/>
+                </div>
+                
+                <div  class="flex flex-col justify-between mr-2">
+                    <h3 class='text-l font-bold mb-4 mt-8'>{post.data.title}</h3>
+                    <p>{post.data.description}</p>
+                    <p class="text-gray-800 mb-8">{moment(post.data.pubDate).format("DD [de] MMMM [de] YYYY")}</p>
+                </div>
+            </div>
+            </Card>
+        ))}
+    </div>

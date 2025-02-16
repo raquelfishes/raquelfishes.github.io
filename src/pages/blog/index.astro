@@ -4,8 +4,9 @@ import Layout from '@layouts/Default.astro';
 import BlogTopArticles from '@components/blog/BlogTopArticles.astro';
 import BlogLatestNews from '@components/blog/BlogLatestNews.astro';
 import BlogCustomerStories from '@components/blog/BlogCustomerStories.astro';
+import BlogSection from '@components/blog/BlogSection.astro';
 
-const posts = await getCollection('blog').then((collection) =>
+const posts = await getCollection('articles').then((collection) =>
   collection.reverse()
 );
 ---
@@ -15,8 +16,11 @@ const posts = await getCollection('blog').then((collection) =>
   description='Brutal Blog | On this page you can find a collection of blogposts'
   pageTitle='Brutal Blog'
 >
+<BlogSection tag='behind-the-scenes' posts={posts}/>
+
+<!--
 <BlogTopArticles/>
 <BlogLatestNews/>
 <BlogCustomerStories/>
-
+-->
 </Layout>
