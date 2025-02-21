@@ -1,0 +1,41 @@
+---
+
+import ALink from '@components/generic/ALink.astro';
+
+
+
+interface Props {
+    title?: string;
+    href?: string;
+    hrefText?: string;
+}
+
+const { title, href, hrefText } = Astro.props;
+
+function formatTitle(title?: string): string {
+    return title
+        .split('-') // Divide el tag en partes usando el guión como separador
+        .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1)) // Capitaliza cada palabra
+        .join(' '); // Une las palabras con espacios
+}
+
+// Format the category name
+const formattedTitle = formatTitle(title);
+
+---
+
+
+<div class="section-divider relative my-4">
+    <div class="section-header flex justify-between items-center px-4 relative z-10">
+        <div class="section-title">
+            <span class="title-text relative underline underline-offset-4 decoration-2 text-4xl">{formattedTitle}</span>
+        </div>
+        
+        {
+            href && hrefText ? (
+                <ALink classList="bg-black text-white px rounded hover:text-blue hover:translate-1"href={href} hrefText={hrefText}/>
+            ) : null
+        }
+    </div>
+    <hr class="divider-line top-1/2 left-0 w-full h-px bg-black border-none m-0" />
+</div>

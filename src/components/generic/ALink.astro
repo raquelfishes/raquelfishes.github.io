@@ -42,6 +42,6 @@ const { classList, href, hrefText } = Astro.props;
 
 ---
 
-<a class:list={[classList]} href={href} target={isExternal ? '_blank' : '_self'} rel={isExternal ? 'noopener noreferrer' : undefined}>
+<a class:list={[classList]+ ''} href={href} target={isExternal ? '_blank' : '_self'} rel={isExternal ? 'noopener noreferrer' : undefined}>
     {hrefText}
 </a>

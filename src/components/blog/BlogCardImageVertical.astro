@@ -1,0 +1,38 @@
+---
+import Card from '@components/card/RaquelCard.astro';
+import { Image } from 'astro:assets';
+import moment from 'moment';
+
+const { post } = Astro.props;
+
+// Set the locale to Spanish, TODO: make this dynamic with i18n
+moment.locale("es"); 
+
+---
+
+<!--
+<div class="overflow-hidden p-4 rounded-lg border-3 border-black shadow-brutal hover:shadow-brutal-hover transition-all duration-500 ease-in-out bg-red h-full">
+    <div class="grid grid-cols-2 flex h-full -m-4">
+        <div class="h-full bg-blue">aaaa</div>
+        <div class="h-full bg-green">bbb</div>
+    </div>
+</div>
+-->
+<Card href={`/blog/${post.id}`} hrefText="Lee el post">
+    <div class="grid md:grid-cols-2 gap-8 h-full">
+        <div class='relative h-full overflow-hidden'>
+            <Image 
+            src={post.data.image.src}
+                alt={post.data.image.alt}
+                width={800}
+                height={400}
+            class='rounded h-full w-full object-cover'/>
+        </div>
+        
+        <div  class="flex flex-col justify-between mr-2">
+            <h3 class='text-xl font-bold mb-4 mt-8'>{post.data.title}</h3>
+            <p class="text-l">{post.data.description}</p>
+            <p class="text-gray-800 mb-8 text-m">{moment(post.data.pubDate).format("DD [de] MMMM [de] YYYY")}</p>
+        </div>
+    </div>
+</Card>

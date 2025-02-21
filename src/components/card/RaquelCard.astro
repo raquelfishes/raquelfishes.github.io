@@ -7,6 +7,7 @@ interface Props {
   color?: string | undefined;
   href?: string | undefined;
   hrefText?: string | undefined;
+  classList?: string;
 }
 
 if (Astro.props.color === undefined) {
@@ -14,67 +15,24 @@ if (Astro.props.color === undefined) {
     colors[Math.floor(Math.random() * colors.length)];
 }
 
-// Check if the link is external
-const isExternal = Astro.props.href?.startsWith('http://') || Astro.props.href?.startsWith('https://');
-if (Astro.props.hrefText === undefined) 
-{
-    if (isExternal) {
-        Astro.props.hrefText = 'Link↗';
-    } else {
-        Astro.props.hrefText = '[[Link]]';
-    }
-} 
-else
-{
-    if (isExternal) {
-        Astro.props.hrefText = Astro.props.hrefText + '↗';
-    } else {
-        Astro.props.hrefText = '[['+Astro.props.hrefText+']]';
-    }
-}
-
-const { color, href, hrefText } = Astro.props;
+const { color, href, hrefText, classList } = Astro.props;
 
 ---
 
 <style define:vars={{ color: color }}>
   div.brutal-card {
     background-color: var(--color);
-    border-radius: 0.5rem;
-    border: 3px solid black;
     filter: drop-shadow(7px 7px 0 rgb(0 0 0 / 1));
-    transition: all;
-    transition-duration: 0.5s;
-    animation: ease-in-out;
   }
   div.brutal-card:hover {
     filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 1));
   }
-
-  /* Ribbon styles */
-  .ribbon {
-    position: absolute; /* Position relative to the card */
-    top: 0.5rem; /* Slight padding from the top */
-    right: 0.5rem; /* Slight padding from the right */
-    background: black; /* Background color for the ribbon */
-    color: white; /* Text color for the ribbon */
-    padding: 0.2rem 0.5rem; /* Padding for the ribbon */
-    border-radius: 0.3rem; /* Slight rounding for the corners */
-    font-size: 0.8rem; /* Smaller font for the ribbon */
-    z-index: 10; /* Ensures it's above other elements */
-  }
-  div.brutal-card:hover > a > .ribbon {
-    translate: 0.5s;
-    translate: 1px 1px;
-  }
   
 </style>
 
-<div class='brutal-card group overflow-hidden'>
-  {href ? (
-      <a href={href} target={isExternal ? '_blank' : '_self'} rel={isExternal ? 'noopener noreferrer' : undefined} class="card-link">
-          <p class="ribbon">{hrefText}</p>
-      </a>
-  ) : null}
+<div class:list={[classList]+' brutal-card group overflow-hidden border-3 border-black transition-all duration-500 ease-in-out rounded-lg'}>
+    { href ? (
+    <ALink classList="absolute top-2 right-2 bg-black text-white px-2 py-0.5 rounded-sm text-xs z-10 transition-transform duration-500 hover:translate-1" href={href} hrefText={hrefText}/>
+    ) : null}
   <slot />
 </div>
