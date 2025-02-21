@@ -1,0 +1,26 @@
+{
+    "title": "Finance",
+    "enable": true,
+    "order": 4,
+    "items":
+    [
+        {
+            "title": "Nudismo Financiero",
+            "type": "podcast",
+            "text": "Puede que fuese el primer podcast que escuché sobre finanzas, y me enganchó. Me introdujo conceptos, me hizo reflexionar y me enseñó que era posible.",
+            "link": "https://kite.link/Balio?open=spotify"
+        },
+        {
+            "title": "Padre rico, Padre pobre",
+            "type": "book",
+            "text": "Sí, es un clásico, todo el mundo lo recomienda, por algo será. Muy bueno para empezar, si ya estas en el mundo busca algo más avanzado.",
+            "link": "https://www.amazon.es/Padre-Rico-padre-Pobre-ense%C3%B1an/dp/846633212X"
+        },
+        {
+            "title": "El monje que vendió su Ferrari de Robin Sharma",
+            "type": "book",
+            "text": "No sólo finanzas, un poco de reflexión espiritual vital.",
+            "link": "https://www.amazon.es/monje-que-vendi%C3%B3-Ferrari-CLAVE/dp/8499087124"
+        }
+    ]
+}

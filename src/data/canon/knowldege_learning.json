@@ -1,0 +1,35 @@
+{
+    "title": "Knowledge + Learning",
+    "enable": false,
+    "order": 6,
+    "items":
+    [
+        {
+            "title": "Commonplace book",
+            "type": "concept",
+            "text": "Notebooks that compile quotes, proverbs, poems, tables, etc."
+        },
+        {
+            "title": "Deliberate practice",
+            "type": "concept",
+            "text": "Deliberate practice focuses on the hardest, most difficult parts. I find this essential when building skills."
+        },
+        {
+            "title": "Learning in public",
+            "type": "concept",
+            "text": "Learning in public is the practice of sharing what you learn, as you learn it.",
+            "link": "https://raquelfishes.github.io"
+        },
+        {
+            "title": "On the shoulders of giants",
+            "type": "quote",
+            "quote": "If I have seen further [than others], it is by standing on the shoulders of giants.",
+            "text": "—Isaac Newton"
+        },
+        {
+            "title": "Spaced repetition",
+            "type": "concept",
+            "text": "A memorization technique with flashcards in which you new and more difficult items are presented more frequently than older and easier ones."
+        }
+    ]
+}

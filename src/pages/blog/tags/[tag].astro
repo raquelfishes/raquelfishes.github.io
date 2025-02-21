@@ -2,34 +2,44 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import Layout from '@layouts/Default.astro';
-import BlogList from '@components/blog/BlogList.astro';
-import { Button } from '@eliancodes/brutal-ui';
+import BlogListArticles from '@components/blog/BlogListArticles.astro';
+import moment from 'moment';
+import BlogCardHeader from '@components/blog/BlogCardHeader.astro';
+
+
+// Set the locale to Spanish, TODO: make this dynamic with i18n
+moment.locale("es"); 
+
 
 export async function getStaticPaths() {
-  const allPosts = await getCollection('blog').then((collection) =>
-    collection.reverse()
-  );
-
+  // Fetch all posts from the `articles` collection
+  const allPosts = await getCollection('blog');
+  // Use a Set to collect unique tags
   const tags: string[] = [];
 
   allPosts.forEach((post) => {
     post.data.tags.forEach((tag) => {
-      tags.push(tag.toLowerCase());
+      tags.push(tag.toLowerCase()); // Normalize tags to lowercase
     });
   });
 
-  return Array.from(new Set(tags)).map((tag) => {
+  // Generate paths for all unique tags
+  const uniqueTags = Array.from(new Set(tags));
+  
+  return uniqueTags.map((tag) => {
     return {
-      params: { tag },
+      params: { tag }, // Dynamic param `tag` for [tag].astro
       props: {
         tag,
         blogposts: allPosts.filter((post) =>
-          post.data.tags.map((tag) => tag.toLowerCase()).includes(tag)
+          post.data.tags.map((t) => t.toLowerCase()).includes(tag) // Normalize during comparison
         ),
       },
     };
   });
 }
+
+
 
 interface Props {
   tag: string;
@@ -37,6 +47,15 @@ interface Props {
 }
 
 const { tag, blogposts } = Astro.props;
+
+// Format the category name
+const formattedCategory = tag;
+const description = `All blog posts related to ${formattedCategory}`;
+
+const [firstArticle, ...remainingArticles] = blogposts;
+console.log(formattedCategory)
+
+
 ---
 
 <Layout
@@ -44,10 +63,10 @@ const { tag, blogposts } = Astro.props;
   description={`Brutal Blog | All posts tagged with ${tag}`}
   pageTitle={`Brutal Blog | Blogposts tagged with ${tag}`}
 >
-  <main class='p-6 bg-purple grid gap-4'>
-    <div>
-      <Button href='/blog/'>&larr; Back to blog</Button>
-    </div>
-    <BlogList posts={blogposts} />
-  </main>
+
+<BlogListArticles posts={remainingArticles} title={tag}>
+    {firstArticle && (
+        <BlogCardHeader post={firstArticle} title={formattedCategory} />
+    )}
+</BlogListArticles>
 </Layout>

@@ -1,0 +1,27 @@
+---
+import ALink from '@components/generic/ALink.astro';
+import BlogPostPostCategories from '@components/blog/BlogPostCategories.astro';
+
+const { title, description, image, pubDate, tags } = Astro.props;
+
+---
+
+<header class="max-w-5xl mx-auto">
+    <ALink href='/blog/' hrefText='Back to blog'/>
+    <BlogPostPostCategories tags={tags} />
+    <h1 class="text-4xl font-bold">{title}</h1>
+    <p class="mt-4 text-lg text-stone-500">{description}</p>
+    <!-- Image -->
+    {image && (
+        <img
+          src={image.src}
+          alt={image.alt}
+          class="mt-8 w-full object-cover rounded-lg aspect-[16/9]"
+        />
+      )}
+
+    <!-- Authors and PubDate -->
+    <div class="mt-8 flex justify-between text-stone-700 text-sm">
+        <time datetime={pubDate}>{new Date(pubDate).toLocaleDateString()}</time>
+      </div>
+    </header>

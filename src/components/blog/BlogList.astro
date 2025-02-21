@@ -1,20 +1,21 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import BlogSummaryCard from './BlogSummaryCard.astro';
+import BlogCardImageHorizontal from './BlogCardImageHorizontal.astro';
 
 interface Props {
-  posts: CollectionEntry<'blog'>[];
+  posts: CollectionEntry<'articles'>[];
 }
 
 const { posts } = Astro.props;
+
 ---
 
-<ul class='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+<ul class='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-4'>
   {
     posts.map((post) => {
       return (
         <li>
-          <BlogSummaryCard post={post} />
+          <BlogCardImageHorizontal post={post} />
         </li>
       );
     })

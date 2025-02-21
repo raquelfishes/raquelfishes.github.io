@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '@layouts/Default.astro';
-import BlogList from '@components/blog/BlogList.astro';
+import BlogListArticles from '@components/blog/BlogListArticles.astro';
 
 const posts = await getCollection('blog').then((collection) =>
   collection.reverse()
@@ -13,7 +13,8 @@ const posts = await getCollection('blog').then((collection) =>
   description='Brutal Blog | On this page you can find a collection of blogposts'
   pageTitle='Brutal Blog'
 >
-  <main class='bg-green p-6'>
-    <BlogList posts={posts} />
-  </main>
+<!--<BlogSection tag='behind-the-scenes' posts={posts}/>-->
+
+<BlogListArticles posts={posts} title='Todos los posts'/>
+
 </Layout>

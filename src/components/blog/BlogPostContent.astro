@@ -1,0 +1,19 @@
+---
+import SideBar from '@components/generic/SideBar.astro';
+import BlogPostHeader from '@components/blog/BlogPostHeader.astro';
+import SharePost from '@components/blog/SharePost.astro';
+
+
+const { title, description, tags, pubDate, image, headings } = Astro.props;
+
+---
+
+<BlogPostHeader title={title} description={description} image={image} pubDate={pubDate} tags={tags} />
+
+<div class='mt-8 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[96px_768px_1fr]'>
+    <SharePost title={title} />
+    <article class='prose-slate w-sm md:w-prose md:prose poppins'>
+        <slot />
+    </article>
+    <SideBar headings={headings as any[]} />
+</div>

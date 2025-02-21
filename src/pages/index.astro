@@ -1,18 +1,12 @@
 ---
 import Layout from '@layouts/Default.astro';
-import RecentBlogPosts from '@components/generic/RecentBlogPosts.astro';
 import MobileSocials from '@components/home/MobileSocials.astro';
 import AboutMe from '@components/home/AboutMe.astro';
 import NowCard from '@components/home/NowCard.astro';
+import CanonCard from '@components/home/CanonCard.astro';
+import Contact from '@components/home/Contact.astro';
 import TimeZone from '@components/home/TimeZone.astro';
-import Countries from '@components/home/Countries.astro';
-import { Pill } from '@eliancodes/brutal-ui';
-import { Button } from '@eliancodes/brutal-ui';
-import { Card } from '@eliancodes/brutal-ui';
-import { Image } from "astro:assets";
-import EmptyComponent from '@components/home/EmptyComponent.astro';
-import BuyMeACoffee from '@components/generic/BuyMeACoffee.astro';
-
+import RecentBlogPosts from '@components/blog/RecentBlogPosts.astro';
 
 const interest = [
   { name: 'C++' },
@@ -42,86 +36,21 @@ const interest = [
   <main class='flex-grow bg-pink p-6'>
     <MobileSocials />
     <AboutMe />
-    <EmptyComponent/>
       
-      <section id='built-with' class='grid md:grid-cols-8 gap-8 mt-4'>
-        <NowCard />
-        <TimeZone />
-        <!--<Countries /> -->
-            
-          
-      <div class='col-span-4'>
-        <Card>
-          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-            ¿Qué ocupa mi tiempo?
-          </h2>
-          <p class='poppins'>
-            Todo lo que ocupa mi tiempo tanto en el trabajo como en mi vida.
-          </p>
-          <ul class='flex gap-4 flex-wrap'>
-            {
-              interest.map((item) => (
-                <li>
-                  <Pill>
-                    <a
-                      class='sanchez'
-                      href={item.url}
-                      target='_blank'
-                      title={`Go to ${item.name}`}
-                    >
-                      {item.name}
-                    </a>
-                  </Pill>
-                </li>
-              ))
-            }
-          </ul>
-        </Card>
-      </div>
-      <!--
-      <div class='col-span-2'>
-        <Card>
-          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif'>
-            What is Brutal?
-          </h2>
-          <p class='poppins'>
-            Brutal is a theme built with Astro, UnoCSS by <a
-              href='https://www.elian.codes/'>Elian</a
-            >. It's a simple, fast, and modern theme that is easy to use and
-            customize. Mainly meant to power blogs and personal websites.
-          </p>
-        </Card>
-      </div>
-      <div class='col-span-2'>
-        <Card>
-          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-            Brutal is built with
-          </h2>
-          <ul class='flex gap-4 flex-wrap'>
-            {
-              builtWith.map((item) => (
-                <li>
-                  <Pill>
-                    <a
-                      class='sanchez'
-                      href={item.url}
-                      target='_blank'
-                      title={`Go to ${item.name}`}
-                    >
-                      {item.name}
-                    </a>
-                  </Pill>
-                </li>
-              ))
-            }
-          </ul>
-        </Card>
-      </div>
-    -->
+      <section id='built-with' class='grid 
+                                    md:grid-cols-2 md:grid-rows-2
+                                    lg:grid-cols-3 gap-8 mt-4 flex-container
+                                    xl:grid-cols-4'>
+        <div><NowCard /></div>
+        <div><CanonCard /></div>
+        <div class='md:row-start-1 md:col-start-1 md:row-span-2'><Contact /></div>
+        <div class='sm:hidden md:hidden lg:block'><TimeZone /></div>
+    
+        <!--<Countries />-->
     </section>
-<!--   <RecentBlogPosts /> -->
-   <BuyMeACoffee/>
+  <RecentBlogPosts />
   </main>
 </Layout>
+
 
 

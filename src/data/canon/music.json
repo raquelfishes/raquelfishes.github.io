@@ -1,0 +1,34 @@
+{
+    "title": "Music",
+    "enable": true,
+    "order": 1,
+    "items":
+    [
+        {
+            "title": "Pasión, siempre",
+            "type": "quote",
+            "quote": "Tocar una nota equivocada es insignificante, tocar sin pasión es inexcusable…",
+            "text": "—Ludwig Van Beethoven"
+        },
+        {
+            "title": "Como ser feliz si eres músico o tienes uno cerca",
+            "type": "book",
+            "text": "Un libro para hacernos conscientes de todo lo que implica ser músico, y cómo podemos apoyar a los músicos que nos rodean.",
+            "link": "https://www.amazon.es/FELIZ-MUSICO-TIENES-CERCA-COLECCION/dp/8493663107"
+        },
+        {
+            "title": "Una orquesta es un mundo",
+            "type": "movie",
+            "quote": "¡Un mundo! Donde cada uno viene con su instrumento y su talento. Para tocar juntos, lo que dura un concierto. Con un solo ideal.",
+            "text": "El gran concierto - The Concert",
+            "link": "https://www.imdb.com/title/tt1320082/"
+        },
+        {
+            "title": "Mozart in the Jungle",
+            "type": "tv-series",
+            "quote": "¡Un mundo! Donde cada uno viene con su instrumento y su talento. Para tocar juntos, lo que dura un concierto. Con un solo ideal.",
+            "text": "El gran concierto - The Concert",
+            "link": "https://www.imdb.com/title/tt1320082/"
+        }
+    ]
+}

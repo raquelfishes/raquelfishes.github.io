@@ -98,3 +98,7 @@ https://github.com/denv17/free-astro-components?tab=readme-ov-file astro free co
 
 Added moment js:
 https://momentjs.com/
+
+Icons: Iconify
+
+SocialShare: https://github.com/silent1mezzo/astro-social-share

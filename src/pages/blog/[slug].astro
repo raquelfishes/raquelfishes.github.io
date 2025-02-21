@@ -21,8 +21,10 @@ const { Content } = await render(blogpost);
 <Layout
   title={blogpost.data.title}
   description={blogpost.data.description}
+  tags={blogpost.data.tags}
+  image={blogpost.data.image}
   pubDate={blogpost.data.pubDate}
-  author={blogpost.data.author}
+  author={blogpost.data.authors[0].name}
   headings={blogpost.rendered?.metadata?.headings}
 >
   <Content />

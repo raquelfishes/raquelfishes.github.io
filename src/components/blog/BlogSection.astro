@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+import BlogCardImageVertical from '@components/blog/BlogCardImageVertical.astro';
+import SectionTitle from '@components/blog/SectionTitle.astro';
+
+interface Props {
+    tag?: string;
+    count?: number;
+    posts: CollectionEntry<'articles'>[];
+    hasHead?: boolean;
+}
+
+const { tag, posts, count } = Astro.props;
+
+const blogposts = posts
+    .filter((post) => post.data.tags.map((t) => t.toLowerCase()).includes(tag ?? ''))
+    .slice(0, count ?? 3); // Normalize during comparison
+
+---
+  
+<div class='mx-auto px-4 sm:px-6 lg:px-8 gap-16 sm:gap-y-24 flex flex-col'>
+<SectionTitle title={tag} href={`/blog/tags/${tag}`} hrefText={tag} />
+<div class='grid md:grid-cols-2 lg:grid-cols-3 gap-4 pointer-events-auto m-6'>
+    {blogposts.map((post) => (
+        <BlogCardImageVertical post={post} />   
+    ))}
+</div>
+</div>

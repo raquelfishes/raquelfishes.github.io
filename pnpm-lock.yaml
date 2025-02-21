@@ -35,6 +35,9 @@ dependencies:
   astro-icon:
     specifier: ^1.1.5
     version: 1.1.5
+  astro-social-share:
+    specifier: ^2.1.0
+    version: 2.1.0
   d3:
     specifier: ^7.9.0
     version: 7.9.0
@@ -62,8 +65,8 @@ devDependencies:
     specifier: ^1.0.0
     version: 1.2.5
   '@iconify-json/logos':
-    specifier: ^1.1.41
-    version: 1.1.41
+    specifier: ^1.2.4
+    version: 1.2.4
   '@iconify-json/uil':
     specifier: ^1.1.8
     version: 1.1.8
@@ -1271,8 +1274,8 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
-  /@iconify-json/logos@1.1.41:
-    resolution: {integrity: sha512-nq69aemSNSxsPh6hDx6QHQBZca6vQzTg6fUXdo996IQe41TNueyJrQXjdhaZr0jaqGEforuSPGLB16SMSZ+T2A==}
+  /@iconify-json/logos@1.2.4:
+    resolution: {integrity: sha512-XC4If5D/hbaZvUkTV8iaZuGlQCyG6CNOlaAaJaGa13V5QMYwYjgtKk3vPP8wz3wtTVNVEVk3LRx1fOJz+YnSMw==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
@@ -2763,6 +2766,10 @@ packages:
     transitivePeerDependencies:
       - debug
       - supports-color
+    dev: false
+
+  /astro-social-share@2.1.0:
+    resolution: {integrity: sha512-t5DykR+T7gGNLTnrFXASCyufCpXcWhLdXFLSRYRKvMOFSUaaPIWMPu1ncIhxdFD7hm7SWHboAb33nJUUZxJH2Q==}
     dev: false
 
   /astro@5.1.5(typescript@5.3.3):

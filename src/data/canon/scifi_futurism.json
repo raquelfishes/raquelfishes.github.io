@@ -1,0 +1,24 @@
+{
+    "title": "Sci-Fi + Futurism",
+    "enable": false,
+    "order": 3,
+    "items":
+    [
+        {
+            "title": "The Matrix",
+            "type": "movie",
+            "text": "A sci-fi and action movie by the Wachowski sisters about the nature of reality.",
+            "link": "https://raquelfishes.github.io"
+        },
+        {
+            "title": "Non-human person",
+            "type": "concept",
+            "text": "Personhood granted to non-human beings (such as great apes, for instance) is an on-going debate, and a common occurence in sci-fi for alien species and robots/AIs."
+        },
+        {
+            "title": "This Is How You Lose the Time War",
+            "type": "book",
+            "text": "One of my favorite books. There's transhumanism, time travel, a sapphic romance… It has it all."
+        }
+    ]
+}
