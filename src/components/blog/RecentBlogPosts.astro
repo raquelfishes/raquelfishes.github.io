@@ -15,7 +15,7 @@ const posts = await getCollection('blog').then((posts) =>
 
 ---
 
-{ posts ?
+{ posts.length ?
   <section class='mt-8'>
     <Card href='/blog' hrefText='Blog' classList='p-4'>
       <div class='flex justify-between items-start'>
