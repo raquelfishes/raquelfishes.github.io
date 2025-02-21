@@ -7,8 +7,8 @@ const { title, description, image, pubDate, tags } = Astro.props;
 ---
 
 <header class="max-w-5xl mx-auto">
+    <ALink href='/blog/' hrefText='Back to blog'/>
     <BlogPostPostCategories tags={tags} />
-    
     <h1 class="text-4xl font-bold">{title}</h1>
     <p class="mt-4 text-lg text-stone-500">{description}</p>
     <!-- Image -->

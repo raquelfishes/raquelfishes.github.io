@@ -2,15 +2,9 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import Layout from '@layouts/Default.astro';
-import ArticleCard from '@components/blog/ArticleCard.astro';
-import ArticleCardDate from '@components/blog/ArticleCardDate.astro';
 import BlogListArticles from '@components/blog/BlogListArticles.astro';
-import SectionTitle from '@components/blog/SectionTitle.astro';
-import Card from '@components/card/RaquelCard.astro';
-import { Image } from 'astro:assets';
 import moment from 'moment';
 import BlogCardHeader from '@components/blog/BlogCardHeader.astro';
-import BlogCardList from '@components/blog/BlogCardList.astro';
 
 
 // Set the locale to Spanish, TODO: make this dynamic with i18n
@@ -19,7 +13,7 @@ moment.locale("es");
 
 export async function getStaticPaths() {
   // Fetch all posts from the `articles` collection
-  const allPosts = await getCollection('articles');
+  const allPosts = await getCollection('blog');
   // Use a Set to collect unique tags
   const tags: string[] = [];
 
@@ -49,21 +43,18 @@ export async function getStaticPaths() {
 
 interface Props {
   tag: string;
-  blogposts: CollectionEntry<'articles'>[];
+  blogposts: CollectionEntry<'blog'>[];
 }
 
 const { tag, blogposts } = Astro.props;
 
 // Format the category name
 const formattedCategory = tag;
-const description = `All articles related to ${formattedCategory}`;
+const description = `All blog posts related to ${formattedCategory}`;
 
 const [firstArticle, ...remainingArticles] = blogposts;
+console.log(formattedCategory)
 
-
-const featured = remainingArticles
-    .filter((post) => post.data.top === true)
-    .slice(0, 5); // Normalize during comparison
 
 ---
 
@@ -73,39 +64,9 @@ const featured = remainingArticles
   pageTitle={`Brutal Blog | Blogposts tagged with ${tag}`}
 >
 
-<div class='mx-auto px-4 sm:px-6 lg:px-8 gap-16 sm:gap-y-24'>
-    <div class="flex -mx-4"> <!-- Elimina flex-wrap -->
-      <!-- Columna principal -->
-      <div class="w-full md:w-2/3 lg:w-2/3 px-4 md:pe-12">
-        <SectionTitle title={formattedCategory} />
-        
-        {firstArticle && (
-                <BlogCardHeader post={firstArticle} />
-        )}
-  
-        <div class='grid gap-4 pointer-events-auto m-6'>
-          {remainingArticles.map((post) => (
-            <BlogCardList post={post} />
-          ))}
-        </div>
-      </div>
-    
-      <!-- Sidebar -->
-      <div class="w-full md:w-1/3 lg:w-1/3 px-4">
-        <div class="sticky top-4"> <!-- Envuelve el contenido del sidebar en un div sticky -->
-          <SectionTitle title="Destacados" />
-          <div class='grid gap-4 pointer-events-auto m-6'>
-            {featured.map((post, index) => (
-              <Card href={`/blog/${post.id}`} hrefText="Lee el post" classList='p-4 mb-4'>
-                <span before={`${String(index + 1).padStart(2, '0')}`}
-                  class='before:content-[attr(before)] before:text-2xl before:mr-2 before:text-gray-500 before:italic before:absolute before:mr-4'>
-                  <h3 class='text-xl font-bold mb-4 mt-8 relative'>{post.data.title}</h3>
-                </span>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<BlogListArticles posts={remainingArticles} title={tag}>
+    {firstArticle && (
+        <BlogCardHeader post={firstArticle} title={formattedCategory} />
+    )}
+</BlogListArticles>
 </Layout>

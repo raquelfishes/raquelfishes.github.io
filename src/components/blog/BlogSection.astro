@@ -17,8 +17,6 @@ const blogposts = posts
     .filter((post) => post.data.tags.map((t) => t.toLowerCase()).includes(tag ?? ''))
     .slice(0, count ?? 3); // Normalize during comparison
 
-const [firstArticle, ...remainingArticles] = blogposts;
-
 ---
   
 <div class='mx-auto px-4 sm:px-6 lg:px-8 gap-16 sm:gap-y-24 flex flex-col'>

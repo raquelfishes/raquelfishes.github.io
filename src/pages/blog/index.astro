@@ -1,13 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '@layouts/Default.astro';
-import BlogTopArticles from '@components/blog/BlogTopArticles.astro';
-import BlogLatestNews from '@components/blog/BlogLatestNews.astro';
-import BlogCustomerStories from '@components/blog/BlogCustomerStories.astro';
-import BlogSection from '@components/blog/BlogSection.astro';
 import BlogListArticles from '@components/blog/BlogListArticles.astro';
 
-const posts = await getCollection('articles').then((collection) =>
+const posts = await getCollection('blog').then((collection) =>
   collection.reverse()
 );
 ---
@@ -17,14 +13,8 @@ const posts = await getCollection('articles').then((collection) =>
   description='Brutal Blog | On this page you can find a collection of blogposts'
   pageTitle='Brutal Blog'
 >
-<BlogSection tag='behind-the-scenes' posts={posts}/>
+<!--<BlogSection tag='behind-the-scenes' posts={posts}/>-->
 
-<BlogListArticles posts={posts}/>
-<!--
-<BlogSection posts={posts}/>-->
-<!--
-<BlogTopArticles/>
-<BlogLatestNews/>
-<BlogCustomerStories/>
--->
+<BlogListArticles posts={posts} title='Todos los posts'/>
+
 </Layout>

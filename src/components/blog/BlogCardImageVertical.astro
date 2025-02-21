@@ -9,15 +9,6 @@ const { post } = Astro.props;
 moment.locale("es"); 
 
 ---
-
-<!--
-<div class="overflow-hidden p-4 rounded-lg border-3 border-black shadow-brutal hover:shadow-brutal-hover transition-all duration-500 ease-in-out bg-red h-full">
-    <div class="grid grid-cols-2 flex h-full -m-4">
-        <div class="h-full bg-blue">aaaa</div>
-        <div class="h-full bg-green">bbb</div>
-    </div>
-</div>
--->
 <Card href={`/blog/${post.id}`} hrefText="Lee el post">
     <div class="grid md:grid-cols-2 gap-8 h-full">
         <div class='relative h-full overflow-hidden'>
