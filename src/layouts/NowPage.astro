@@ -15,11 +15,13 @@ const { author, pubDate, headings, title } = Astro.props;
 ---
 
 <Layout title={title} description="blalbla">
-  <main class='p-6 lg:grid lg:grid-cols-3 flex justify-center'>
+  <main class='p-6 lg:grid flex justify-center'>
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl grid grid-cols-[1fr_3fr]">
     <SideBar headings={headings as any[]} />
     <NowContent {pubDate} {author}>
       <slot />
     </NowContent>
+    
   </main>
   <!-- LatestNowPosts component will display the latest 6 posts -->
   <section class='p-6'>

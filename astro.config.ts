@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import UnoCSS from 'unocss/astro';
 
 import tailwind from '@astrojs/tailwind';
 
@@ -10,7 +9,11 @@ export default defineConfig({
   // used to generate images
   site: 'https://raquelfishes.github.io',
   trailingSlash: 'ignore',
-  integrations: [sitemap(), UnoCSS({ injectReset: true }), tailwind(), icon()],
+  integrations: [ 
+    sitemap(), 
+    tailwind(), 
+    icon()
+  ],
   vite: {
     optimizeDeps: {
       exclude: ['@resvg/resvg-js'],
