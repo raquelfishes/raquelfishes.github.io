@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 interface Props {
   pageTitle?: string;
 }
@@ -12,14 +14,14 @@ const socialIcons = [
   {
     name: 'GitHub',
     url: 'https://github.com/raquelfishes',
-    icon: 'i-uil-github',
+    icon: 'logos:github-icon',
   },
   {
-    name: 'Twitter',
-    url: 'https://www.twitter.com/raquelfishes',
-    icon: 'i-uil-twitter',
+    name: 'X',
+    url: 'https://www.x.com/raquelfishes',
+    icon: 'logos:x',
   },
-  { name: 'RSS', url: '/feed.xml', icon: 'i-uil-rss' },
+  { name: 'RSS', url: '/feed.xml', icon: 'uil:rss' },
 ];
 
 const { pageTitle } = Astro.props;
@@ -55,7 +57,7 @@ const { pageTitle } = Astro.props;
               target='_blank'
               title={`'See @RaquelFishes on ${item.name}`}
             >
-              <div class:list={[item.icon, 'w-6 h-6']} />
+              <Icon name={item.icon} class='inline-block' />
             </a>
           </li>
         ))
