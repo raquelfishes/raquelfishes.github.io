@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
+import ThemeIcon from '@components/layout/ThemeIcon.astro';
 
 interface Props {
   pageTitle?: string;
@@ -34,7 +35,9 @@ const { pageTitle } = Astro.props;
   </a>
   <nav class='hidden md:inline-block'>
     <h2 class='hidden'>Navigation</h2>
+    
     <ul class='flex gap-8 poppins'>
+      <li><ThemeIcon/></li>
       {
         navigationItems.map((item) => (
           <li>

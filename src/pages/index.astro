@@ -7,6 +7,7 @@ import CanonCard from '@components/home/CanonCard.astro';
 import Contact from '@components/home/Contact.astro';
 import TimeZone from '@components/home/TimeZone.astro';
 import RecentBlogPosts from '@components/blog/RecentBlogPosts.astro';
+import Greeting from '@components/Greetings';
 
 const interest = [
   { name: 'C++' },
@@ -36,6 +37,8 @@ const interest = [
   <main class='flex-grow bg-pink-500 p-6'>
     <MobileSocials />
     <AboutMe />
+    
+    <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
       
       <section id='built-with' class='grid 
                                     md:grid-cols-2 md:grid-rows-2
