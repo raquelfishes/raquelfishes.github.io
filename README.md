@@ -102,3 +102,5 @@ https://momentjs.com/
 Icons: Iconify
 
 SocialShare: https://github.com/silent1mezzo/astro-social-share
+
+Colorize: VsCode para ver los colorinchis

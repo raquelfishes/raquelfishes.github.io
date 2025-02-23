@@ -24,7 +24,7 @@ const relatedArticles = articles
 ---
 
 <Layout title={title} description={description} ogImage={image}>
-  <main class='p-6 lg:grid flex justify-center'>
+  <main class='p-6 lg:grid flex justify-center background-light-background_page dark:background-dark-background_page'>
     <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
     <BlogPostContent headings={headings as any[]} tags={tags} title={title} description={description} pubDate={pubDate} image={image} authors={authors}>
         <slot/>

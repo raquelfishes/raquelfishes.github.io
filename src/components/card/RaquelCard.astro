@@ -19,9 +19,8 @@ const { color, href, hrefText, classList } = Astro.props;
 
 ---
 
-<style define:vars={{ color: color }}>
+<style>
   div.brutal-card {
-    background-color: var(--color);
     filter: drop-shadow(7px 7px 0 rgb(0 0 0 / 1));
   }
   div.brutal-card:hover {
