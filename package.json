@@ -39,6 +39,7 @@
   "devDependencies": {
     "@iconify-json/circle-flags": "^1.0.0",
     "@iconify-json/logos": "^1.2.4",
+    "@iconify-json/ri": "^1.2.5",
     "@iconify-json/uil": "^1.1.8",
     "@resvg/resvg-js": "^2.6.0",
     "sharp": "^0.32.6"
