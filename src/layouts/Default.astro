@@ -4,6 +4,7 @@ import BaseFooter from '@components/layout/BaseFooter.astro';
 import BaseHead from '../components/layout/BaseHead.astro';
 import BuyMeACoffee from '@components/generic/BuyMeACoffee.astro';
 import '../styles/global.css';
+import GoogleAnalytics from '@components/layout/GoogleAnalytics.astro';
 
 interface Props {
   title: string;
@@ -18,7 +19,7 @@ const { title, description, classList, pageTitle, ogImage } = Astro.props;
 
 <html lang='en' class='h-full'>
   <BaseHead ogImage={ogImage} title={title} description={description} />
-
+  <GoogleAnalytics/>
   <body class:list={[classList]} class='flex flex-col min-h-screen'>
     <BaseNavigation {pageTitle} />
     <slot />
