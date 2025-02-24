@@ -15,11 +15,11 @@ const { headings } = Astro.props;
             <span class='inline-block w-4' />
           ))}
           <a
-            class='hover:text-stone transition-all duration-150 ease-in-out text-dark poppins'
+            class='hover:text-stone transition-all duration-150 ease-in-out text-light-sidebar_text dark:text-dark-sidebar_text poppins '
             href={`#${heading.slug}`}
             data-slug={heading.slug}
           >
-            {heading.text}
+            <span class="text-light-sidebar_symbol dark:text-dark-sidebar_symbol">&gt;</span>{heading.text}
           </a>
         </li>
       ))}
