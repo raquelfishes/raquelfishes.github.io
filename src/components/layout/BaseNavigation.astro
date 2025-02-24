@@ -15,12 +15,12 @@ const socialIcons = [
   {
     name: 'GitHub',
     url: 'https://github.com/raquelfishes',
-    icon: 'logos:github-icon',
+    icon: 'ri:github-fill',
   },
   {
     name: 'X',
     url: 'https://www.x.com/raquelfishes',
-    icon: 'logos:x',
+    icon: 'ri:twitter-x-fill',
   },
   { name: 'RSS', url: '/feed.xml', icon: 'uil:rss' },
 ];
@@ -28,7 +28,7 @@ const socialIcons = [
 const { pageTitle } = Astro.props;
 ---
 
-<header class='border-b-4 border-black flex justify-between p-6 items-center'>
+<header class='border-b-4 border-black bg-light-background_header text-light-text dark:bg-dark-background_header dark:text-dark-text flex justify-between p-6 items-center'>
   {pageTitle && <h1 class='hidden'>{pageTitle}</h1>}
   <a href='/' title='Back to Home'>
     <p class='righteous md:text-5xl'>RaquelFishes</p>
@@ -37,7 +37,7 @@ const { pageTitle } = Astro.props;
     <h2 class='hidden'>Navigation</h2>
     
     <ul class='flex gap-8 poppins'>
-      <li><ThemeIcon/></li>
+      <li><ThemeIcon client:load/></li>
       {
         navigationItems.map((item) => (
           <li>

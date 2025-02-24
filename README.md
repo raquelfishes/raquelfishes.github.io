@@ -103,3 +103,7 @@ Icons: Iconify
 
 PartyTown: https://docs.astro.build/en/guides/integrations-guide/partytown/
 https://daniel.es/blog/the-ultimate-astro-google-analytics-guide/
+
+SocialShare: https://github.com/silent1mezzo/astro-social-share
+
+Colorize: VsCode para ver los colorinchis
