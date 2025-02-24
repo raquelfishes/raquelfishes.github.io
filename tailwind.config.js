@@ -13,7 +13,10 @@ export default {
             typography: (theme) => ({
               DEFAULT: {
                 css: {
-                  color: theme('colors.light.text'), // Color de texto en modo claro
+                  color: theme('colors.light.text_page'), // Color de texto en modo claro
+                  h2: {
+                    color: theme('colors.light.text_page'), // Color de texto de h1 en modo claro
+                  },
                   a: {
                     color: theme('colors.light.primary'), // Color de enlaces en modo claro
                     '&:hover': {
@@ -24,7 +27,10 @@ export default {
               },
               dark: {
                 css: {
-                  color: theme('colors.dark.text'), // Color de texto en modo oscuro
+                  color: theme('colors.dark.text_page'), // Color de texto en modo oscuro
+                  h2: {
+                    color: theme('colors.dark.text_page'), // Color de texto de h1 en modo claro
+                  },
                   a: {
                     color: theme('colors.dark.primary'), // Color de enlaces en modo oscuro
                     '&:hover': {
