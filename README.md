@@ -101,4 +101,5 @@ https://momentjs.com/
 
 Icons: Iconify
 
-SocialShare: https://github.com/silent1mezzo/astro-social-share
+PartyTown: https://docs.astro.build/en/guides/integrations-guide/partytown/
+https://daniel.es/blog/the-ultimate-astro-google-analytics-guide/
