@@ -10,7 +10,10 @@
       "background_page":"#FFFFFF",
       "text_page":"#364153",
       "sidebar_symbol":"#bb86c0",
-      "sidebar_text":"#9cdcfe",
+      "sidebar_text":"#007F73",
+      "background_canon":"#F8FAFC",
+      "background_canon_card":"#F8FAFC",
+      "black": "#000000",
       "purple":"#c084fc",
       "pink":"#f472b6",
       "coral":"#fb7185",
@@ -26,7 +29,10 @@
       "chartreuse":"#a3e635",
       "yellow":"#F8E620",
       "orange":"#FF9B00",
-      "red":"#f87171"
+      "red":"#f87171",
+      "bg_header_footer": "#ffffff",
+      "text_header_footer": "#000000"
+
     },
     "dark": {
       "background": "#000000",
@@ -36,10 +42,12 @@
       "background_header":"#000000",
       "background_index":"#b3598a",
       "background_footer":"#000000",
-      "background_page":"#030712",
-      "text_page":"#d1d5dc",
+      "background_page":"#282932",
+      "text_page":"#ffffff",
       "sidebar_symbol":"#bb86c0",
-      "sidebar_text":"#9cdcfe",
+      "sidebar_text":"#93B1A6",
+      "background_canon_card":"#212121",
+      "black": "#000000",
       "purple": "#9c6ad1",
       "pink": "#d46fa3",
       "coral": "#d95f6f",
@@ -55,6 +63,9 @@
       "chartreuse": "#8ac42d",
       "yellow": "#d1a812",
       "orange": "#d17a32",
-      "red": "#d15f5f"
+      "red": "#d15f5f",
+      
+      "bg_header_footer": "#212121",
+      "text_header_footer": "#e2e2e2"
     }
   }

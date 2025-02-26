@@ -22,9 +22,9 @@ const { author, pubDate, headings, title } = Astro.props;
       <slot />
     </NowContent>
     
-  </main>
   <!-- LatestNowPosts component will display the latest 6 posts -->
   <section class='p-6'>
     <LatestNowPosts count={6} />
   </section>
+</main>
 </Layout>

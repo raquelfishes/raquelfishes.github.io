@@ -2,61 +2,7 @@
 import {Icon} from 'astro-icon/components'
 import Card from '@components/card/RaquelCard.astro'
 import { Button } from '@eliancodes/brutal-ui';
-
-// Define icons per type.
-const getIcon = (type) => {
-  switch (type) {
-    case 'book':
-      return 'uil:book-open';
-    case 'quote':
-      return 'uil:comment-dots';
-    case 'article':
-      return 'uil:newspaper';
-    case 'movie':
-      return 'uil:film';
-    case 'concept':
-      return 'uil:lightbulb-alt';
-    case 'image':
-        return 'uil:camera';
-    case 'podcast':
-        return 'uil:microphone';
-    case 'music':
-        return 'uil:music';
-    case 'person':
-        return 'uil:user';
-    case 'tv-series':
-        return 'uil:tv-retro';
-    default:
-      return 'uil:question-circle'; // Default icon
-  }
-};
-    
-const getColor = (type) => {
-  switch (type) {
-    case 'book':
-      return "#c084fc";
-    case 'quote':
-      return "#f472b6";
-    case 'article':
-      return "#fb7185";
-    case 'movie':
-      return "#e879f9";
-    case 'concept':
-      return "#a78bfa";
-    case 'image':
-        return "#818cf8";
-    case 'podcast':
-        return "#60a5fa";
-    case 'music':
-        return "#38bdf8";
-    case 'person':
-        return "#22d3ee";
-    case 'tv-series':
-        return '#2dd4bf';
-    default:
-      return "#ffffff";
-  }
-};
+import { getIcon, getColor } from '../../js/canon.js';
 
 const { canonItem } = Astro.props; // Destructure the single `canonItem` passed from `CanonList`
 ---
@@ -108,10 +54,11 @@ p.blockquote {
 }
 </style>
 
+<script src="../../js/canon.js"></script>
 
-<Card color="white">
+<Card classList='p-4 bg-light-background_canon_card dark:bg-dark-background_canon_card'>
 <div class="flex-container">
-    <div class="canon-card-header" style={`--heading-color: ${getColor(canonItem.type)}`}>
+    <div class="canon-card-header text-light-black dark:text-dark-black" style={`--heading-color: ${getColor(canonItem.type)}`}>
         <h2 class="sanchez mt-2 mb-2 text-lg md:text-xl lg:text-3xl">
             <Icon name={getIcon(canonItem.type)} class="icon-inline"/>{canonItem.type}
         </h2>
