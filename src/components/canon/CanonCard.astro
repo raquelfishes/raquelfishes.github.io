@@ -1,10 +1,12 @@
 ---
 import {Icon} from 'astro-icon/components'
 import Card from '@components/card/RaquelCard.astro'
-import { Button } from '@eliancodes/brutal-ui';
+import Button from '@components/generic/Button.astro';
 import { getIcon, getColor } from '../../js/canon.js';
 
 const { canonItem } = Astro.props; // Destructure the single `canonItem` passed from `CanonList`
+
+const color = getColor(canonItem.type);
 ---
 
 <style>
@@ -58,7 +60,7 @@ p.blockquote {
 
 <Card classList='p-4 bg-light-background_canon_card dark:bg-dark-background_canon_card'>
 <div class="flex-container">
-    <div class="canon-card-header text-light-black dark:text-dark-black" style={`--heading-color: ${getColor(canonItem.type)}`}>
+    <div class="canon-card-header text-light-black dark:text-dark-black" style={`--heading-color: ${color}`}>
         <h2 class="sanchez mt-2 mb-2 text-lg md:text-xl lg:text-3xl">
             <Icon name={getIcon(canonItem.type)} class="icon-inline"/>{canonItem.type}
         </h2>
@@ -68,23 +70,19 @@ p.blockquote {
             {canonItem.title}
         </p>
         {
-            canonItem.quote ? (
+            canonItem.quote && (
             <blockquote class="mt-2 opacity-70">
                 <p class='text-xl md:text-3xl lg:text-2xl italic blockquote'>{canonItem.quote}</p>
             </blockquote>
-            ):(<slot/>)
+            )
         }
         <p class='mt-2 outfit text-xl md:text-3xl lg:text-2xl'>{canonItem.text}</p>
     </div>
     {
-        canonItem.link ? (
-            <footer class="canon-card-footer mt-8">
-                <Button target={'_self'} href={canonItem.link}>
+        canonItem.link && (
+            <Button target={'_self'} href={canonItem.link} color={color} classList='bg-light-bg-page text-light-black dark:bg-dark-bg-page dark:text-dark-black'>
                 Link &rarr;
             </Button>
-        </footer>
-        ) : (
-        <slot/>
         )
     }
 </div>
