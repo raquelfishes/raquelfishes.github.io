@@ -33,14 +33,11 @@ const { pageTitle } = Astro.props;
   <a href='/' title='Back to Home'>
     <p class='righteous md:text-5xl'>RaquelFishes</p>
   </a>
-  <nav class='inline-block md:hidden'>
-    <div class='flex'><ThemeIcon/></div>
-  </nav>
+  <div class='inline-icon self-center ml-auto mr-4'><ThemeIcon/></div>
   <nav class='hidden md:inline-block'>
     <h2 class='hidden'>Navigation</h2>
     
     <ul class='flex gap-8 poppins'>
-      <li><ThemeIcon/></li>
       {
         navigationItems.map((item) => (
           <li>
