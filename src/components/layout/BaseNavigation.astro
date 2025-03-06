@@ -33,11 +33,11 @@ const { pageTitle } = Astro.props;
   <a href='/' title='Back to Home'>
     <p class='righteous md:text-5xl'>RaquelFishes</p>
   </a>
+  <div class='inline-icon self-center ml-auto mr-4'><ThemeIcon/></div>
   <nav class='hidden md:inline-block'>
     <h2 class='hidden'>Navigation</h2>
     
     <ul class='flex gap-8 poppins'>
-      <li><ThemeIcon/></li>
       {
         navigationItems.map((item) => (
           <li>
@@ -69,10 +69,8 @@ const { pageTitle } = Astro.props;
   </nav>
   <nav class='md:hidden flex'>
     <h2 class='hidden'>Mobile Navigation</h2>
-    <!--
     <ul>
       <li><a href='/blog/'>Blog</a></li>
     </ul>
-    -->
   </nav>
 </header>
