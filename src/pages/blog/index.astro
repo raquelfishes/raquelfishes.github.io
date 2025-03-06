@@ -13,8 +13,10 @@ const posts = await getCollection('blog').then((collection) =>
   description='Brutal Blog | On this page you can find a collection of blogposts'
   pageTitle='Brutal Blog'
 >
+<main class='flex-grow bg-light-background_page text-light-text_page dark:bg-dark-background_page dark:text-dark-text_page'>
 <!--<BlogSection tag='behind-the-scenes' posts={posts}/>-->
 
 <BlogListArticles posts={posts} title='Todos los posts'/>
 
+</main>
 </Layout>

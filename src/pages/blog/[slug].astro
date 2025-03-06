@@ -24,7 +24,6 @@ const { Content } = await render(blogpost);
   tags={blogpost.data.tags}
   image={blogpost.data.image}
   pubDate={blogpost.data.pubDate}
-  author={blogpost.data.authors[0].name}
   headings={blogpost.rendered?.metadata?.headings}
 >
   <Content />

@@ -15,7 +15,7 @@ const { posts } = Astro.props;
     posts.map((post) => {
       return (
         <li>
-          <BlogCardImageHorizontal post={post} />
+          <BlogCardImageHorizontal post={post} classList='bg-light-background_canon_card text-light-text dark:text-dark-text dark:bg-dark-background_canon_card'/>
         </li>
       );
     })

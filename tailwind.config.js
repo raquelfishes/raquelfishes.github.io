@@ -17,6 +17,9 @@ export default {
                   h2: {
                     color: theme('colors.light.text_page'), // Color de texto de h1 en modo claro
                   },
+                  h3: {
+                    color: theme('colors.light.text_page'), // Color de texto de h1 en modo claro
+                  },
                   a: {
                     color: theme('colors.light.primary'), // Color de enlaces en modo claro
                     '&:hover': {
@@ -29,6 +32,9 @@ export default {
                 css: {
                   color: theme('colors.dark.text_page'), // Color de texto en modo oscuro
                   h2: {
+                    color: theme('colors.dark.text_page'), // Color de texto de h1 en modo claro
+                  },
+                  h3: {
                     color: theme('colors.dark.text_page'), // Color de texto de h1 en modo claro
                   },
                   a: {

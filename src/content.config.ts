@@ -30,21 +30,15 @@ const canonCollection = defineCollection({
 
 const blogCollection = defineCollection({
     loader: glob({ pattern: '**/[^_]*.md', base: "./src/data/blog" }),
-    schema: z.object({
+    schema: ({ image }) =>
+      z.object({
         title: z.string(), // Title of the article (required)
         description: z.string(), // Description of the article (required)
         image: z.object({
-          src: z.string().url(), // Image source URL (required)
+          src: image(), // Usa image() para manejar la optimización
           alt: z.string(), // Alternate text for the image (required)
         }),
         tags: z.array(z.string()), // Array of tags (required)
-        authors: z.array(
-          z.object({
-            name: z.string(), // Author's name (required)
-            avatar: z.string().url(), // Avatar URL (required)
-            social: z.string().url(), // Author's social profile URL (required)
-          })
-        ),
         pubDate: z.date(), // Publication date (required)
         top: z.boolean().optional(), // Optional top-level key, e.g., featured article marker (if used)
     }),

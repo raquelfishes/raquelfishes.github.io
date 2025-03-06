@@ -32,7 +32,7 @@ const featured = posts
       <div class='grid gap-4 pointer-events-auto m-6'>
         {posts.map((post) => (
             <Card href={`/blog/${post.id}`} hrefText="Lee el post">
-            <div class="flex gap-8 h-full">
+            <div class="flex gap-8 h-full bg-light-background_canon_card dark:bg-dark-background_canon_card">
                 <div class='relative h-full overflow-hidden'>
                     <Image 
                     src={post.data.image.src}

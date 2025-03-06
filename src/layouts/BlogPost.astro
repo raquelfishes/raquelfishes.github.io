@@ -3,6 +3,7 @@ import Layout from './Default.astro';
 import { getCollection } from 'astro:content';
 import BlogPostContent from '@components/blog/BlogPostContent.astro';
 import BlogRelatedPosts from '@components/blog/BlogRelatedPosts.astro';
+import ALink from '@components/generic/ALink.astro';
 
 
 // Fetch all articles from the content collection
@@ -11,7 +12,7 @@ const articles = await getCollection('blog');
 // Get the dynamic slug from the URL
 const { slug } = Astro.params;
 
-const { title, description, tags, authors, pubDate, image, headings, _path } = Astro.props;
+const { title, description, tags, pubDate, image, headings, _path } = Astro.props;
 
 // Fetch related articles based on categories
 const relatedArticles = articles
@@ -24,14 +25,15 @@ const relatedArticles = articles
 ---
 
 <Layout title={title} description={description} ogImage={image}>
-  <main class='p-6 lg:grid flex justify-center background-light-background_page dark:background-dark-background_page'>
+  <main class='p-6 lg:grid flex flex-grow justify-center bg-light-background_page text-light-text_page dark:bg-dark-background_page dark:text-dark-text_page'>
     <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-    <BlogPostContent headings={headings as any[]} tags={tags} title={title} description={description} pubDate={pubDate} image={image} authors={authors}>
+        <ALink href='/blog/' hrefText='Back to blog'/>
+    <BlogPostContent headings={headings as any[]} tags={tags} title={title} description={description} pubDate={pubDate} image={image}>
         <slot/>
     </BlogPostContent>
 
     <BlogRelatedPosts relatedArticles={relatedArticles}/>
-    
+    <ALink href='/blog/' hrefText='Back to blog'/>
     </div>
   </main>
 </Layout>

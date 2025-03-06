@@ -12,7 +12,7 @@ const { title, description, tags, pubDate, image, headings } = Astro.props;
 
 <div class='mt-8 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[96px_768px_1fr]'>
     <SharePost title={title} />
-    <article class='prose-slate w-sm md:w-prose md:prose poppins'>
+    <article class='prose-slate w-sm md:w-prose md:prose poppins dark:prose-dark'>
         <slot />
     </article>
     <SideBar headings={headings as any[]} />
