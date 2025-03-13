@@ -21,7 +21,10 @@ const { post } = Astro.props;
       </div>
       <div class="mr-2">
         <h3 class='text-l font-bold mb-4 mt-8'>{post.data.title}</h3>
-        <p>{post.data.description}</p>
+        <p>
+            <span class="font-bold">RPV;</span>
+            {post.data.description}
+        </p>
         <p class="text-gray-800 mb-8">{moment(post.data.pubDate).format("DD [de] MMMM [de] YYYY")}</p>
       </div>
     </div>

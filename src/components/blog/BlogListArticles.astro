@@ -31,7 +31,7 @@ const featured = posts
       <slot />
       <div class='grid gap-4 pointer-events-auto m-6'>
         {posts.map((post) => (
-            <Card href={`/blog/${post.id}`} hrefText="Lee el post">
+            <Card href={`/blog/${post.id}`} hrefText="Lee el post" classList='bg-light-background_canon_card text-light-text dark:text-dark-text dark:bg-dark-background_canon_card'>
             <div class="flex gap-8 h-full bg-light-background_canon_card dark:bg-dark-background_canon_card">
                 <div class='relative h-full overflow-hidden'>
                     <Image 
@@ -43,7 +43,10 @@ const featured = posts
                 </div>
                 <div class="mr-2">
                     <h3 class='text-l font-bold mb-4 mt-8'>{post.data.title}</h3>
-                    <p>{post.data.description}</p>
+                    <p class='truncate'>
+                        <span class="font-bold">RPV;</span>
+                        {post.data.description}
+                    </p>
                     <p class="text-gray-800 mb-8">{moment(post.data.pubDate).format("DD [de] MMMM [de] YYYY")}</p>
                 </div>
             </div>
@@ -58,7 +61,7 @@ const featured = posts
           <SectionTitle title="Destacados" />
           <div class='grid gap-4 pointer-events-auto m-6'>
             {featured.map((post, index) => (
-              <Card href={`/blog/${post.id}`} hrefText="Lee el post" classList='p-4 mb-4'>
+              <Card href={`/blog/${post.id}`} hrefText="Lee el post" classList='p-4 mb-4 bg-light-background_canon_card text-light-text dark:text-dark-text dark:bg-dark-background_canon_card'>
                 <span before={`${String(index + 1).padStart(2, '0')}`}
                   class='before:content-[attr(before)] before:text-2xl before:mr-2 before:text-gray-500 before:italic before:absolute before:mr-4'>
                   <h3 class='text-xl font-bold mb-4 mt-8 relative'>{post.data.title}</h3>

@@ -63,10 +63,11 @@ console.log(formattedCategory)
   description={`Brutal Blog | All posts tagged with ${tag}`}
   pageTitle={`Brutal Blog | Blogposts tagged with ${tag}`}
 >
-
+<main class='flex-grow bg-light-background_page text-light-text_page dark:bg-dark-background_page dark:text-dark-text_page'>
 <BlogListArticles posts={remainingArticles} title={tag}>
     {firstArticle && (
-        <BlogCardHeader post={firstArticle} title={formattedCategory} />
+        <BlogCardHeader post={firstArticle} title={formattedCategory} classList='bg-light-background_canon_card text-light-text dark:text-dark-text dark:bg-dark-background_canon_card'/>
     )}
 </BlogListArticles>
+</main>
 </Layout>
